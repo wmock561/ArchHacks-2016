@@ -115,7 +115,7 @@
 
                         <div id="chartDiv"></div>
 
-                        <div>
+                        <div id="selectionDiv">
                             <a href="#scroll-tab-1">Tab 1</a>
                             <a href="#scroll-tab-2">Tab 2</a>
                             <a href="#scroll-tab-3">Tab 3</a>
