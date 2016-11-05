@@ -83,9 +83,7 @@
         <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
             <div class="mdl-layout--large-screen-only mdl-layout__header-row">
 
-                <a href="{{ url('/') }}">
-                    <img src="img/Asset_3.png" alt="LOGO" id="logo" height="96.3px" width="126.6px">
-                </a>
+
                 <div class="mdl-cell mdl-cell--1-col"></div>
                 <div class="mdl-cell mdl-cell--1-col"></div>
                 <div class="mdl-cell mdl-cell--1-col"></div>
@@ -115,8 +113,14 @@
                     </form>
                 </div>
             </div>
+            <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+                <a class="navbar-brand" href="{{ url('/') }}">
+                    <img src="img/Asset_3.png" alt="LOGO" id="logo" height="96.3px" width="126.6px">
+                </a>
+            </div>
             
-            <!--<div class="mdl-layout--large-screen-only mdl-layout__header-row"></div>-->
+            <div class="mdl-layout--large-screen-only mdl-layout__header-row"></div>
+            
             <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
                 <!--<a href="#tab3Ref" class="mdl-layout__tab" id="tab3">Overview</a>-->
                 <a href="#feedRef" class="mdl-layout__tab is-active" id="feed">Feed</a>
