@@ -23,8 +23,10 @@
         @foreach($mySurveys as $survey)
         
             //PARSE DATE AND TIME INTO 2 HERE
+        
+            
     
-            console.log({{ $survey->created_at }});
+            console.log( ''+{{ $survey->created_at }} );
             //var time = ???;
         
             //id.push(LARAVEL $survey->created_at }});//can be string so good to leave
