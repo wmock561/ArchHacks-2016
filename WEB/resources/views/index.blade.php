@@ -124,10 +124,7 @@
                             <a href="#scroll-tab-6">Tab 6</a>
                         </div>
                     </div>
-                    <br>
-                    <br>
-                    <br>
-
+                    
                     <script>
                         $("#careNetwork").click(function () {
                             $('#chartDiv').load('/care');
