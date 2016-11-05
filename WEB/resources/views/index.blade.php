@@ -81,6 +81,7 @@
 
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
+           <div class="mdl-layout-spacer"></div>
             <div class="mdl-layout--large-screen-only mdl-layout__header-row">
             
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
