@@ -59,8 +59,6 @@
 
 <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
 
-    @yield('topTabContent')
-
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
             <div class="mdl-layout--large-screen-only mdl-layout__header-row">
@@ -72,16 +70,20 @@
             <div class="mdl-layout--large-screen-only mdl-layout__header-row">
             </div>
             <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
-                <a href="#feed" class="mdl-layout__tab is-active">Feed</a>
-                <a href="#careNetwork" class="mdl-layout__tab">Care Network</a>
-                <a href="#tab3" class="mdl-layout__tab">Tab 3</a>
-                <a href="#settings" class="mdl-layout__tab">Settings</a>
+                <a href="#feed" class="mdl-layout__tab is-active" id="feed">Feed</a>
+                <a href="#careNetwork" class="mdl-layout__tab" id="careNetwork">Care Network</a>
+                <a href="#tab3" class="mdl-layout__tab" id="tab3">Tab 3</a>
+                <a href="#settings" class="mdl-layout__tab" id="settings">Settings</a>
             </div>
         </header>
         <main class="mdl-layout__content">
             <div class="mdl-layout__tab-panel is-active" id="feed">
                 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-                    @yield('feedTabContent')
+                    <script>
+                        $("#target").click(function () {
+                            $.get('/feed');
+                        });
+                    </script>
                 </section>
             </div>
             <div class="mdl-layout__tab-panel" id="careNetwork">

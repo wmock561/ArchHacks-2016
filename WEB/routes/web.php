@@ -15,6 +15,11 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/feed', function () {
+    return view('feed');
+});
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
