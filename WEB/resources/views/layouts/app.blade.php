@@ -34,7 +34,7 @@
 
             <div class="mdl-layout--large-screen-only mdl-layout__header-row">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="img/Asset_3.png" alt="LOGO" id="logo" height="96.3px" width="126.6px">StressLess
+                    <img src="img/Asset_3.png" alt="LOGO" id="logo" height="96.3px" width="126.6px">
                 </a>
             </div>
 
