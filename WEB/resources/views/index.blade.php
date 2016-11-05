@@ -114,7 +114,7 @@
                 </div>
             </div>
             <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-                <img src="" alt="LOGO" id="logo">
+                <img src="img/Assest_3.png" alt="LOGO" id="logo">
                 <h3>StressLess</h3>
             </div>
             <div class="mdl-layout--large-screen-only mdl-layout__header-row">
