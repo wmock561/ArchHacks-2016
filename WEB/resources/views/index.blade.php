@@ -84,17 +84,17 @@
             <div class="mdl-layout--large-screen-only mdl-layout__header-row">
 
 
-                <div class="mdl-cell mdl-cell--1-col">1</div>
-                <div class="mdl-cell mdl-cell--1-col">1</div>
-                <div class="mdl-cell mdl-cell--1-col">1</div>
-                <div class="mdl-cell mdl-cell--1-col">1</div>
-                <div class="mdl-cell mdl-cell--1-col">1</div>
-                <div class="mdl-cell mdl-cell--1-col">1</div>
-                <div class="mdl-cell mdl-cell--1-col">1</div>
-                <div class="mdl-cell mdl-cell--1-col">1</div>
-                <div class="mdl-cell mdl-cell--1-col">1</div>
-                <div class="mdl-cell mdl-cell--1-col">1</div>
-                <div class="mdl-cell mdl-cell--1-col">1</div>
+                <div class="mdl-cell mdl-cell--1-col"></div>
+                <div class="mdl-cell mdl-cell--1-col"></div>
+                <div class="mdl-cell mdl-cell--1-col"></div>
+                <div class="mdl-cell mdl-cell--1-col"></div>
+                <div class="mdl-cell mdl-cell--1-col"></div>
+                <div class="mdl-cell mdl-cell--1-col"></div>
+                <div class="mdl-cell mdl-cell--1-col"></div>
+                <div class="mdl-cell mdl-cell--1-col"></div>
+                <div class="mdl-cell mdl-cell--1-col"></div>
+                <div class="mdl-cell mdl-cell--1-col"></div>
+                <div class="mdl-cell mdl-cell--1-col"></div>
 
                 <div class="mdl-cell mdl-cell--1-col">
 
