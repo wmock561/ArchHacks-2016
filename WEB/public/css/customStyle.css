@@ -3,6 +3,8 @@
 }
 #chartHolder{
     padding-left: 25px;
+    height: 600px;
+    overflow: scroll;
 }
 #selectionDiv{
     padding-left: 25%;
