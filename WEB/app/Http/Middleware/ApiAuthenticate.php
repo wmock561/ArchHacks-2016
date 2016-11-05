@@ -18,7 +18,6 @@ class ApiAuthenticate
     public function handle($request, Closure $next)
     {
         $user = User::where('token', '=', $request->input('token'))->first();
-        Log::info($request->input('token'));
         if($user != null){
             //return response("Hello world", 200);
             $request->user = $user;
