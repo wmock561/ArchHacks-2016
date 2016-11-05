@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		D65547331DCD6BFC004882FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65547321DCD6BFC004882FA /* AppDelegate.swift */; };
 		D65547351DCD6BFC004882FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65547341DCD6BFC004882FA /* ViewController.swift */; };
-		D65547381DCD6BFC004882FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D65547361DCD6BFC004882FA /* Main.storyboard */; };
 		D655473B1DCD6BFC004882FA /* Stress_Less.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D65547391DCD6BFC004882FA /* Stress_Less.xcdatamodeld */; };
 		D655473D1DCD6BFC004882FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D655473C1DCD6BFC004882FA /* Assets.xcassets */; };
 		D65547401DCD6BFC004882FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D655473E1DCD6BFC004882FA /* LaunchScreen.storyboard */; };
@@ -17,13 +16,62 @@
 		D655474A1DCD71D7004882FA /* WebWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65547491DCD71D7004882FA /* WebWorker.swift */; };
 		D65547501DCD7538004882FA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D655474F1DCD7538004882FA /* LoginViewController.swift */; };
 		D65547521DCD7F26004882FA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65547511DCD7F26004882FA /* RegisterViewController.swift */; };
+		D65547571DCDA3E2004882FA /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65547551DCDA3E2004882FA /* User+CoreDataProperties.swift */; };
+		D65547581DCDA3E2004882FA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65547561DCDA3E2004882FA /* User.swift */; };
+		D655475A1DCDC182004882FA /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65547591DCDC182004882FA /* InfoViewController.swift */; };
+		D655475D1DCDCAC6004882FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D655475B1DCDCAC6004882FA /* Main.storyboard */; };
+		D655475F1DCDCEE6004882FA /* PinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D655475E1DCDCEE6004882FA /* PinViewController.swift */; };
+		D655478B1DCE1A01004882FA /* ConsentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D655478A1DCE1A01004882FA /* ConsentViewController.swift */; };
+		D65547BA1DCE1B80004882FA /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D65547B71DCE1B78004882FA /* ResearchKit.framework */; };
+		D65547BB1DCE1B80004882FA /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D65547B71DCE1B78004882FA /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D65547C01DCE1C8B004882FA /* ConsentDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65547BF1DCE1C8B004882FA /* ConsentDocument.swift */; };
+		D65547C21DCE1CA7004882FA /* ConsentTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65547C11DCE1CA7004882FA /* ConsentTask.swift */; };
+		D65547C41DCE1CC4004882FA /* SurveyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65547C31DCE1CC4004882FA /* SurveyTask.swift */; };
+		D65547C61DCE55BD004882FA /* CoreDataWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65547C51DCE55BD004882FA /* CoreDataWorker.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D65547B61DCE1B78004882FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D65547B01DCE1B78004882FA /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B183A5951A8535D100C76870;
+			remoteInfo = ResearchKit;
+		};
+		D65547B81DCE1B78004882FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D65547B01DCE1B78004882FA /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 86CC8E9A1AC09332001CCD89;
+			remoteInfo = ResearchKitTests;
+		};
+		D65547BC1DCE1B80004882FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D65547B01DCE1B78004882FA /* ResearchKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B183A4731A8535D100C76870;
+			remoteInfo = ResearchKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D65547901DCE1A65004882FA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D65547BB1DCE1B80004882FA /* ResearchKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D655472F1DCD6BFC004882FA /* Stress Less.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stress Less.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D65547321DCD6BFC004882FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D65547341DCD6BFC004882FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D65547371DCD6BFC004882FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D655473A1DCD6BFC004882FA /* Stress_Less.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Stress_Less.xcdatamodel; sourceTree = "<group>"; };
 		D655473C1DCD6BFC004882FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D655473F1DCD6BFC004882FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -32,6 +80,17 @@
 		D65547491DCD71D7004882FA /* WebWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebWorker.swift; sourceTree = "<group>"; };
 		D655474F1DCD7538004882FA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D65547511DCD7F26004882FA /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		D65547551DCDA3E2004882FA /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D65547561DCDA3E2004882FA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D65547591DCDC182004882FA /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		D655475C1DCDCAC6004882FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D655475E1DCDCEE6004882FA /* PinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinViewController.swift; sourceTree = "<group>"; };
+		D655478A1DCE1A01004882FA /* ConsentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentViewController.swift; sourceTree = "<group>"; };
+		D65547B01DCE1B78004882FA /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = ../../../../Desktop/ResearchKit/ResearchKit.xcodeproj; sourceTree = "<group>"; };
+		D65547BF1DCE1C8B004882FA /* ConsentDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentDocument.swift; sourceTree = "<group>"; };
+		D65547C11DCE1CA7004882FA /* ConsentTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentTask.swift; sourceTree = "<group>"; };
+		D65547C31DCE1CC4004882FA /* SurveyTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyTask.swift; sourceTree = "<group>"; };
+		D65547C51DCE55BD004882FA /* CoreDataWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataWorker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D65547BA1DCE1B80004882FA /* ResearchKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,8 +108,11 @@
 		D65547261DCD6BFC004882FA = {
 			isa = PBXGroup;
 			children = (
+				D65547551DCDA3E2004882FA /* User+CoreDataProperties.swift */,
+				D65547561DCDA3E2004882FA /* User.swift */,
 				D65547311DCD6BFC004882FA /* Stress Less */,
 				D65547301DCD6BFC004882FA /* Products */,
+				D65547B01DCE1B78004882FA /* ResearchKit.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +127,7 @@
 		D65547311DCD6BFC004882FA /* Stress Less */ = {
 			isa = PBXGroup;
 			children = (
+				D65547891DCE19EC004882FA /* Research Kit */,
 				D655474E1DCD7200004882FA /* StoryBoards */,
 				D655474D1DCD71F3004882FA /* View Controllers */,
 				D655474C1DCD71E9004882FA /* Images */,
@@ -81,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				D65547491DCD71D7004882FA /* WebWorker.swift */,
+				D65547C51DCE55BD004882FA /* CoreDataWorker.swift */,
 			);
 			name = Workers;
 			sourceTree = "<group>";
@@ -98,6 +163,8 @@
 			children = (
 				D655474F1DCD7538004882FA /* LoginViewController.swift */,
 				D65547511DCD7F26004882FA /* RegisterViewController.swift */,
+				D65547591DCDC182004882FA /* InfoViewController.swift */,
+				D655475E1DCDCEE6004882FA /* PinViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -105,10 +172,30 @@
 		D655474E1DCD7200004882FA /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
+				D655475B1DCDCAC6004882FA /* Main.storyboard */,
 				D655473E1DCD6BFC004882FA /* LaunchScreen.storyboard */,
-				D65547361DCD6BFC004882FA /* Main.storyboard */,
 			);
 			name = StoryBoards;
+			sourceTree = "<group>";
+		};
+		D65547891DCE19EC004882FA /* Research Kit */ = {
+			isa = PBXGroup;
+			children = (
+				D655478A1DCE1A01004882FA /* ConsentViewController.swift */,
+				D65547BF1DCE1C8B004882FA /* ConsentDocument.swift */,
+				D65547C11DCE1CA7004882FA /* ConsentTask.swift */,
+				D65547C31DCE1CC4004882FA /* SurveyTask.swift */,
+			);
+			name = "Research Kit";
+			sourceTree = "<group>";
+		};
+		D65547B11DCE1B78004882FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D65547B71DCE1B78004882FA /* ResearchKit.framework */,
+				D65547B91DCE1B78004882FA /* ResearchKitTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,10 +208,12 @@
 				D655472B1DCD6BFC004882FA /* Sources */,
 				D655472C1DCD6BFC004882FA /* Frameworks */,
 				D655472D1DCD6BFC004882FA /* Resources */,
+				D65547901DCE1A65004882FA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D65547BD1DCE1B80004882FA /* PBXTargetDependency */,
 			);
 			name = "Stress Less";
 			productName = "Stress Less";
@@ -157,12 +246,35 @@
 			mainGroup = D65547261DCD6BFC004882FA;
 			productRefGroup = D65547301DCD6BFC004882FA /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D65547B11DCE1B78004882FA /* Products */;
+					ProjectRef = D65547B01DCE1B78004882FA /* ResearchKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				D655472E1DCD6BFC004882FA /* Stress Less */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D65547B71DCE1B78004882FA /* ResearchKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ResearchKit.framework;
+			remoteRef = D65547B61DCE1B78004882FA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D65547B91DCE1B78004882FA /* ResearchKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ResearchKitTests.xctest;
+			remoteRef = D65547B81DCE1B78004882FA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D655472D1DCD6BFC004882FA /* Resources */ = {
@@ -172,7 +284,7 @@
 				D65547481DCD6D53004882FA /* logo.png in Resources */,
 				D65547401DCD6BFC004882FA /* LaunchScreen.storyboard in Resources */,
 				D655473D1DCD6BFC004882FA /* Assets.xcassets in Resources */,
-				D65547381DCD6BFC004882FA /* Main.storyboard in Resources */,
+				D655475D1DCDCAC6004882FA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,31 +296,48 @@
 			buildActionMask = 2147483647;
 			files = (
 				D655473B1DCD6BFC004882FA /* Stress_Less.xcdatamodeld in Sources */,
+				D65547C01DCE1C8B004882FA /* ConsentDocument.swift in Sources */,
 				D65547351DCD6BFC004882FA /* ViewController.swift in Sources */,
 				D655474A1DCD71D7004882FA /* WebWorker.swift in Sources */,
+				D65547C41DCE1CC4004882FA /* SurveyTask.swift in Sources */,
+				D65547C61DCE55BD004882FA /* CoreDataWorker.swift in Sources */,
+				D65547571DCDA3E2004882FA /* User+CoreDataProperties.swift in Sources */,
+				D655475A1DCDC182004882FA /* InfoViewController.swift in Sources */,
+				D655478B1DCE1A01004882FA /* ConsentViewController.swift in Sources */,
+				D65547581DCDA3E2004882FA /* User.swift in Sources */,
 				D65547521DCD7F26004882FA /* RegisterViewController.swift in Sources */,
 				D65547501DCD7538004882FA /* LoginViewController.swift in Sources */,
+				D655475F1DCDCEE6004882FA /* PinViewController.swift in Sources */,
+				D65547C21DCE1CA7004882FA /* ConsentTask.swift in Sources */,
 				D65547331DCD6BFC004882FA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		D65547361DCD6BFC004882FA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D65547371DCD6BFC004882FA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
+/* Begin PBXTargetDependency section */
+		D65547BD1DCE1B80004882FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ResearchKit;
+			targetProxy = D65547BC1DCE1B80004882FA /* PBXContainerItemProxy */;
 		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
 		D655473E1DCD6BFC004882FA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				D655473F1DCD6BFC004882FA /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D655475B1DCDCAC6004882FA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D655475C1DCDCAC6004882FA /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -303,6 +432,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "Stress Less/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.reikerseiffe.Stress-Less";
@@ -314,6 +444,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "Stress Less/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.reikerseiffe.Stress-Less";
@@ -340,6 +471,7 @@
 				D65547461DCD6BFC004882FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

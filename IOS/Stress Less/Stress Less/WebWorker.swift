@@ -11,7 +11,7 @@ import UIKit
 class WebWorker: NSObject {
     
     func login(username:String, password:String, completion: (result:NSDictionary?, error:String?)->Void){
-        let url = "http://ec2-35-162-10-43.us-west-2.compute.amazonaws.com/api/login"
+        let url = "http://ec2-35-162-212-55.us-west-2.compute.amazonaws.com/api/login"
         let post:String = "username=\(username)&password=\(password)"
         
         self.requestHandler(url, post: post){
@@ -24,7 +24,7 @@ class WebWorker: NSObject {
     }
     
     func register(email:String, password:String, completion: (result:NSDictionary?, error:String?)->Void){
-        let url = "http://ec2-35-162-10-43.us-west-2.compute.amazonaws.com/api/register"
+        let url = "http://ec2-35-162-212-55.us-west-2.compute.amazonaws.com/api/register"
         let post:String = "email=\(email)&password=\(password)"
         
         print(post)
@@ -39,8 +39,70 @@ class WebWorker: NSObject {
     
     }
     
+    /*func extraInfo(token:String, firstName:String, lastName:String, age:String, gender:String, ethnicity:String, occupation:String, completion: (result:NSDictionary?, error:String?)->Void){
+    
+        let url = "http://ec2-35-162-10-43.us-west-2.compute.amazonaws.com/api/savePersonalInformation"
+        let post:String = "token=\(token)&firstName=\(firstName)&lastName=\(lastName)&age=\(age)&gender=\(gender)&ethnicity=\(ethnicity)&occupation=\(occupation)"
+        
+        let escapedAddress = post.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
+        
+        print("post string" + (escapedAddress)!)
+        
+        
+        
+        self.requestHandlerNoJSON(url, post: escapedAddress!){
+            (result:NSDictionary?, error:String?) in
+            if let result = result{
+                completion(result:result, error:error)
+            }
+        }
+    }*/
+    
+    func pin(token:String, pin:String, completion: (result:NSDictionary?, error:String?)->Void){
+        let url = "http://ec2-35-162-212-55.us-west-2.compute.amazonaws.com/api/pin"
+        let post:String = "token=\(token)&pin=\(pin)"
+        
+        print(post)
+        
+        
+        self.requestHandler(url, post: post){
+            (result:NSDictionary?, error:String?) in
+            if let result = result{
+                completion(result:result, error:error)
+            }
+        }
+        
+    }
+    
     
 /*---------------------------DONT TOUCH----------------------------------*/
+    
+    /*func requestHandlerNoJSON(url:String, post: String, completion: (result:NSDictionary?, error:String?)->Void){
+        let postData: NSData = post.dataUsingEncoding(NSASCIIStringEncoding, allowLossyConversion: true)!
+        let postLength: String = "\(postData.length)"
+        let request: NSMutableURLRequest = NSMutableURLRequest()
+        request.URL = NSURL(string: url)
+        request.HTTPMethod = "POST"
+        request.setValue(postLength, forHTTPHeaderField: "Content-Length")
+        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        request.HTTPBody = postData
+        
+        //print("Request: " + String(request))
+        
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
+            (let data, let response, let error) in
+            //print("Ran the request and the data was: \(data)")
+            if (data != nil) {
+                print("Ran the request and the data was: \(data!)")
+                completion(result:data, error:error)
+            }
+            
+        }
+        
+        task.resume()// run the call
+        
+    }*/
+
     
 
     func requestHandler(url:String, post: String, completion: (result:NSDictionary?, error:String?)->Void){
@@ -62,7 +124,7 @@ class WebWorker: NSObject {
                 print("Ran the request and the data was: \(data!)")
                 self.parseJSON(data!){
                     (result:NSDictionary?, error:String?) in
-                    print("Got the JSON array back: \(result)")
+                    //print("Got the JSON array back: \(result)")
                     completion(result:result, error:error)
                 }
             }else{
@@ -85,7 +147,7 @@ class WebWorker: NSObject {
         //print("JSON data: " + dataString!)
         var jsonResultWrapped: NSDictionary?//array variable
         do {//do try catch
-            print("Trying to parse")
+            //print("Trying to parse")
             jsonResultWrapped = try NSJSONSerialization.JSONObjectWithData(jsonData, options: .MutableContainers) as? NSDictionary//casts as NSDictionary
             
         } catch let caught as NSError {
@@ -96,7 +158,7 @@ class WebWorker: NSObject {
         }
         //print("\(jsonResultWrapped)")
         if let jsonResult = jsonResultWrapped {//unwrap the optional
-            print("parseJSON completion -> success")
+            //print("parseJSON completion -> success")
             completion(result:jsonResult, error:nil)
             
         }

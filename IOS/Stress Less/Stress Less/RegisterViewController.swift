@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class RegisterViewController: UIViewController {
     
@@ -19,12 +20,18 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var createButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     
+    
     var userToken:String?
+    
+    var managedObjectContext: NSManagedObjectContext!
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate //set the correct appDelegate to the one apple gives us for core data
+        managedObjectContext = appDelegate.managedObjectContext //set variable to the managed context function in appDelegate
 
         // Do any additional setup after loading the view.
     }
@@ -51,21 +58,66 @@ class RegisterViewController: UIViewController {
                     print("Result" + String(result))
                     self.userToken = String(result["token"]!)
                     print(self.userToken!)
+                    
+                    let entityDescription = NSEntityDescription.entityForName("User", inManagedObjectContext: self.managedObjectContext)
+                    
+                    // Initialize Item
+                    let userDataObject = User(entity: entityDescription!, insertIntoManagedObjectContext: self.managedObjectContext)
+                    
+                    userDataObject.token = self.userToken
+                    userDataObject.email = self.usernameField.text
+                    
+                    do {
+                        try userDataObject.managedObjectContext?.save()
+                        print("Saved Group")
+                        //performSegueWithIdentifier("popBackToMyGroups", sender: nil)
+                    } catch {
+                        let saveError = error as NSError
+                        print("\(saveError), \(saveError.userInfo)")
+                    }
+                    
+                    /*if(userDataObject != nil){
+                        print("core data was not nil")
+                    }*/
+                    
+                    //let entityDescription = NSEntityDescription.entityForName("User", inManagedObjectContext: self.managedObjectContext)
+                    
+                    // Initialize Item
+                    //let dataObject = User(entity: entityDescription!, insertIntoManagedObjectContext: self.managedObjectContext)
+                    
+                    
+
+                    print("filled data object")
+                    
+                    print(userDataObject.token!)
+                    
+                    dispatch_async(dispatch_get_main_queue()){
+                        self.performSegueWithIdentifier("afterRegister", sender: self)
+                    }
+                    
+                    
+                    
+                    
                 }
             }
         }
+        
+        
     }
     
     
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        let controller = segue.destinationViewController as! InfoViewController
+        controller.token = userToken!
+        
     }
-    */
+    
 
 }
