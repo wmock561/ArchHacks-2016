@@ -16,7 +16,7 @@
 
         var options = {
             title: 'Company Performance',
-            curveType: 'function',
+            curveType: 'linear',
             legend: {
                 position: 'bottom'
             }
