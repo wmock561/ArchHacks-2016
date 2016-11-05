@@ -1,5 +1,6 @@
 <?php
 
+use App\User;
 use Illuminate\Http\Request;
 
 /*
@@ -16,3 +17,28 @@ use Illuminate\Http\Request;
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:api');
+
+Route::post('/register', function (Request $request){
+	$user = User::create([
+		'email' => $request->input('email'),
+		'password' => bcrypt($request->input('password')),
+		'token' => bcrypt($request->input('email') . $request->input('password'))
+		]);
+	return $user;
+});
+
+Route::post('/login', function (Request $request){
+	$email = $request->input('email');
+	$password = $request->input('password');
+	if(Auth::attempt(['email' => $email, 'password' => $password])){
+		return Auth::user();
+	}
+});
+Route::group(['middleware' => 'api-auth'], function(){
+
+	Route::post('/test', function (Request $request){
+		return $request->user;
+	});
+
+});
+
