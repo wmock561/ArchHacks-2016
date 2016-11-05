@@ -94,8 +94,7 @@
             <div class="mdl-layout__tab-panel" id="careNetworkRef">
                 <section class="mdl-grid mdl-grid--no-spacing" id="careNetworkSection">
 
-                    <!--
-                       <aside class="mdl-components__nav docs-text-styling mdl-shadow--4dp">
+                    <aside class="mdl-components__nav docs-text-styling mdl-shadow--4dp">
                         <a href="#badges-section" class="mdl-components__link mdl-component badges">
                             <div class="mdl-components__link-image" style="background-image: url('../assets/comp_badges.png')">
                             </div>
@@ -181,13 +180,13 @@
                         </a>
 
                         <a href="#tooltips-section" class="mdl-components__link mdl-component tooltips">
-                            <div class="mdl-components__link-image" style="background-image: url('../assets/comp_tooltips.png')">
-                            </div>
-                            <span class="mdl-components__link-text">Tooltips</span>
+                            <span class="mdl-list__item-primary-content">
+                                <i class="material-icons mdl-list__item-icon">person</i>Bryan Cranston
+                            </span>
                         </a>
                     </aside>
-                    -->
 
+                    <!--
 
                     <ul class="demo-list-icon mdl-list">
                         <li class="mdl-list__item">
@@ -206,6 +205,7 @@
                             </span>
                         </li>
                     </ul>
+                    -->
 
                 </section>
             </div>
