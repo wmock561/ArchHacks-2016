@@ -116,11 +116,11 @@
                         <div id="chartDiv"></div>
 
                         <div id="selectionDiv">
-                            <button id="dayButton">Day</button>
-                            <button id="weekButton">Week</button>
-                            <button id="monthButton">Month</button>
-                            <button id="yearButton">Year</button>
-                            <button id="allButton">All</button>
+                            <button id="dayButton" class="chartNavButton">Day</button>
+                            <button id="weekButton" class="chartNavButton">Week</button>
+                            <button id="monthButton" class="chartNavButton">Month</button>
+                            <button id="yearButton" class="chartNavButton">Year</button>
+                            <button id="allButton" class="chartNavButton">All</button>
                         </div>
                     </div>
                     

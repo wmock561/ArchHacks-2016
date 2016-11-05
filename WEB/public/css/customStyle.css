@@ -4,12 +4,13 @@
 #chartHolder{
     padding-left: 25px;
 }
-#chartHolder button{
-    padding-left: 25px;
-}
 #selectionDiv{
     padding-left: 25%;
 }
 #careNetworkSection{
     padding-bottom: 40px;
+}
+
+#chartNavButton{
+    margin-left: 25px;
 }
