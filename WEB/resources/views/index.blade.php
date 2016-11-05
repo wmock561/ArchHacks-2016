@@ -93,7 +93,7 @@
             </div>
             <div class="mdl-layout__tab-panel" id="careNetworkRef">
                 <section class="section--center mdl-grid mdl-grid--no-spacing" id="careNetworkSection">
-                    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
+                    <div class="mdl-layout mdl-layout--fixed-drawer">
                         <div class="mdl-layout__drawer">
                             <span class="mdl-layout-title">Title</span>
                             <nav class="mdl-navigation">
