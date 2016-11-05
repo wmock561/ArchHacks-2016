@@ -1,11 +1,8 @@
 @foreach ($surveys as $survey)
 
-<header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--teal-100 mdl-color-text--white">
-    <i class="material-icons">play_circle_filled</i>
-</header>
 <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
     <div class="mdl-card__supporting-text">
-        <h2>This is a user {{ $survey->user->personalInformation->firstName }} {{ $survey->user->personalInformation->lastName }}</h2> Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Nostrud in laboris labore nisi amet do dolor eu fugiat consectetur elit cillum esse. TEST
+        <h2>{{ $survey->user->personalInformation->firstName }} {{ $survey->user->personalInformation->lastName }} shared data from a panic attack with you.</h2> Summary of data here? Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Nostrud in laboris labore nisi amet do dolor eu fugiat consectetur elit cillum esse.
     </div>
     <div class="mdl-card__actions">
         <a href="#" class="mdl-button">View Now</a><!--can open a overlay with info about that survey?-->
