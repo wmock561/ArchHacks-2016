@@ -93,17 +93,23 @@
             </div>
             <div class="mdl-layout__tab-panel" id="careNetworkRef">
                 <section class="section--center mdl-grid mdl-grid--no-spacing" id="careNetworkSection">
-                    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
-                        <div class="mdl-layout__drawer">
-                            <span class="mdl-layout-title">Title</span>
-                            <nav class="mdl-navigation">
-                                <a class="mdl-navigation__link" href="">Link</a>
-                                <a class="mdl-navigation__link" href="">Link</a>
-                                <a class="mdl-navigation__link" href="">Link</a>
-                                <a class="mdl-navigation__link" href="">Link</a>
-                            </nav>
-                        </div>
-                    </div>
+                    <ul class="demo-list-icon mdl-list">
+                        <li class="mdl-list__item">
+                            <span class="mdl-list__item-primary-content">
+                                <i class="material-icons mdl-list__item-icon">person</i>Bryan Cranston
+                            </span>
+                        </li>
+                        <li class="mdl-list__item">
+                            <span class="mdl-list__item-primary-content">
+                               <i class="material-icons mdl-list__item-icon">person</i>Aaron Paul
+                            </span>
+                        </li>
+                        <li class="mdl-list__item">
+                            <span class="mdl-list__item-primary-content">
+                                <i class="material-icons mdl-list__item-icon">person</i>Bob Odenkirk
+                            </span>
+                        </li>
+                    </ul>
                 </section>
             </div>
             <div class="mdl-layout__tab-panel" id="tab3Ref">
