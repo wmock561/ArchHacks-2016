@@ -94,10 +94,6 @@
             <div class="mdl-layout__tab-panel" id="careNetworkRef">
                 <section class="section--center mdl-grid mdl-grid--no-spacing" id="careNetworkSection">
                     <script>
-                        $(document).ready(function () {
-                            $('#careNetworkSection').load('/care');
-                        });
-                        
                         $("#careNetwork").click(function () {
                             $('#careNetworkSection').load('/care');
                         });
