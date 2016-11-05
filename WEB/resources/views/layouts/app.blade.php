@@ -30,7 +30,7 @@
 
 <body>
     <div id="app">
-        <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary" style="padding-bottom:20px;">
+        <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
 
             <div class="mdl-layout--large-screen-only mdl-layout__header-row">
                 <a class="navbar-brand" href="{{ url('/') }}">
