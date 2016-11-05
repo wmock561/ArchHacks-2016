@@ -16,7 +16,8 @@ class Survey extends Model
 	    'question2_answers',
 	    'question3_answers',
 	    'question4_answers',
-	    'question5_answers'
+	    'question5_answers',
+	    'user'
     ];
 
     public function user(){
