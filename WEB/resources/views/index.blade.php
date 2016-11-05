@@ -93,19 +93,14 @@
             </div>
             <div class="mdl-layout__tab-panel" id="careNetworkRef">
                 <section class="mdl-grid mdl-grid--no-spacing" id="careNetworkSection">
-
-                    <!--Aside will need to be loaded with php to display the users that this user has access to-->
-                    <div class="mdl-components mdl-js-components mdl-cell mdl-cell--12-col">
-                        <aside class="mdl-components__nav docs-text-styling mdl-shadow--4dp">
-                            <a href="#tooltips-section" class="mdl-components__link mdl-component tooltips">
-                                <span class="mdl-list__item-primary-content">
+                   
+                    <aside class="mdl-components__nav docs-text-styling mdl-shadow--4dp">
+                        <a href="#tooltips-section" class="mdl-components__link mdl-component tooltips">
+                            <span class="mdl-list__item-primary-content">
                                 <i class="material-icons mdl-list__item-icon">person</i>Bryan Cranston
                             </span>
-                            </a>
-                        </aside>
-                        
-                        <main class="mdl-components__pages"></main>
-                    </div>
+                        </a>
+                    </aside>
 
                 </section>
             </div>
