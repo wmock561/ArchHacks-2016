@@ -95,6 +95,7 @@
                 <div class="mdl-cell mdl-cell--1-col">1</div>
                 <div class="mdl-cell mdl-cell--1-col">1</div>
                 <div class="mdl-cell mdl-cell--1-col">1</div>
+                <div class="mdl-cell mdl-cell--1-col">1</div>
 
                 <div class="mdl-cell mdl-cell--1-col">
 
