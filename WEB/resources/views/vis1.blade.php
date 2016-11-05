@@ -24,9 +24,16 @@
         
             //PARSE DATE AND TIME INTO 2 HERE
         
+            var up = '{{ $survey->created_at }}';
+            
+            var parsed = up.split(' ');
+        
+            var dt = parsed[0];
+            var time1 = parsed[1];
+        
             
     
-            console.log( '{{ $survey->created_at }}' );
+            console.log( dt + " AND " +time1 );
             //var time = ???;
         
             //id.push(LARAVEL $survey->created_at }});//can be string so good to leave
