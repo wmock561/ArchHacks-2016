@@ -23,6 +23,7 @@ Route::group(['middleware' => 'api-auth'], function(){
 	Route::post('/storeSurveyAnswers', 'ApiSurveyAnswersController@store');
 	Route::post('/getSurveyAnswers', 'ApiSurveyAnswersController@index');
 	Route::post('/savePersonalInformation', 'PersonalInformationController@store');
+	Route::post('/pin', 'ApiAuthController@storePin');
 
 });
 

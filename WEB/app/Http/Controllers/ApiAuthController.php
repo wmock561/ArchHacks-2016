@@ -32,4 +32,12 @@ class ApiAuthController extends Controller
 			]);
 		return $user;
     }
+
+    public function storePin(Request $request){
+    	$user = $request->user;
+    	$user->pin = bcrypt($request->input('pin'));
+    	$user->save();
+
+    	return response('', 200);
+    }
 }
