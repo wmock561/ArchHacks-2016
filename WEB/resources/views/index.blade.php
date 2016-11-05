@@ -73,9 +73,9 @@
             </div>
             <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
                 <a href="#feed" class="mdl-layout__tab is-active">Feed</a>
-                <a href="#myCareNetwork" class="mdl-layout__tab">myCareNetwork</a>
-                <a href="#Tab3" class="mdl-layout__tab">Tab3</a>
-                <a href="#Settings" class="mdl-layout__tab">Settings</a>
+                <a href="#careNetwork" class="mdl-layout__tab">Care Network</a>
+                <a href="#tab3" class="mdl-layout__tab">Tab 3</a>
+                <a href="#settings" class="mdl-layout__tab">Settings</a>
             </div>
         </header>
         <main class="mdl-layout__content">
@@ -102,17 +102,17 @@
                     </ul>
                 </section>
             </div>
-            <div class="mdl-layout__tab-panel" id="features">
+            <div class="mdl-layout__tab-panel" id="careNetwork">
                 <section class="section--center mdl-grid mdl-grid--no-spacing">
 
                 </section>
             </div>
-            <div class="mdl-layout__tab-panel" id="Tab3">
+            <div class="mdl-layout__tab-panel" id="tab3">
                 <section class="section--center mdl-grid mdl-grid--no-spacing">
 
                 </section>
             </div>
-            <div class="mdl-layout__tab-panel" id="Settings">
+            <div class="mdl-layout__tab-panel" id="settings">
                 <section class="section--center mdl-grid mdl-grid--no-spacing">
 
                 </section>
