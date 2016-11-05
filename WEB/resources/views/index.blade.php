@@ -93,7 +93,7 @@
             </div>
             <div class="mdl-layout__tab-panel" id="careNetwork">
                 <section class="section--center mdl-grid mdl-grid--no-spacing" id="careNetworkSection">
-                    <script>
+                    <!--<script>
                         $(document).ready(function () {
                             //$('#careNetworkSection').load('');
                         });
@@ -102,12 +102,12 @@
                         $("#feed").click(function () {
                             //$('#careNetworkSection').load('');
                         });
-                    </script>
+                    </script>-->
                 </section>
             </div>
             <div class="mdl-layout__tab-panel" id="tab3">
                 <section class="section--center mdl-grid mdl-grid--no-spacing" id="tab3Section">
-                    <script>
+                    <!--<script>
                         $(document).ready(function () {
                             $('#tab3Section').load('');
                         });
@@ -116,12 +116,12 @@
                         $("#feed").click(function () {
                             $('#tab3Section').load('');
                         });
-                    </script>
+                    </script>-->
                 </section>
             </div>
             <div class="mdl-layout__tab-panel" id="settings">
                 <section class="section--center mdl-grid mdl-grid--no-spacing" id="settingsSection">
-                    <script>
+                    <!--<script>
                         $(document).ready(function () {
                             $('#settingsSection').load('');
                         });
@@ -130,7 +130,7 @@
                         $("#feed").click(function () {
                             $('#settingsSection').load('');
                         });
-                    </script>
+                    </script>-->
                 </section>
             </div>
 
