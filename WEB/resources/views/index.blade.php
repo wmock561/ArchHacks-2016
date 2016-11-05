@@ -3,6 +3,8 @@
 
 <head>
     <title>@yield('title')</title>
+    
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
     <!--jquery-->
     <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
@@ -55,8 +57,6 @@
 
 
     <!--intial chart script will need to do onclick of each a tag reference-->
-
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
         google.charts.load('current', {
             'packages': ['corechart']
