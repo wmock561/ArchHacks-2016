@@ -113,8 +113,8 @@
                     </form>
                 </div>
             </div>
-            <img src="img/Assest_3.png" alt="LOGO" id="logo">
             <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+                <img src="img/Asset_3.png" alt="LOGO" id="logo">
                 <h3>StressLess</h3>
             </div>
             <div class="mdl-layout--large-screen-only mdl-layout__header-row">
@@ -169,7 +169,7 @@
                             <button id="yearButton1" class="chartNavButton">Year</button>
                             <button id="allButton1" class="chartNavButton">All</button>
                         </div>
-                        
+
                         <div id="chartDiv2"></div>
 
                         <div id="selectionDiv2" style="display:none;">
@@ -179,7 +179,7 @@
                             <button id="yearButton2" class="chartNavButton">Year</button>
                             <button id="allButton2" class="chartNavButton">All</button>
                         </div>
-                        
+
                         <div id="chartDiv3"></div>
 
                         <div id="selectionDiv3" style="display:none;">
@@ -189,7 +189,7 @@
                             <button id="yearButton3" class="chartNavButton">Year</button>
                             <button id="allButton3" class="chartNavButton">All</button>
                         </div>
-                        
+
                     </div>
 
                     <script>
