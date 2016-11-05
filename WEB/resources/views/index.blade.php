@@ -145,8 +145,9 @@
                 <section class="mdl-grid mdl-grid--no-spacing" id="careNetworkSection">
 
                     <aside class="mdl-components__nav docs-text-styling mdl-shadow--4dp">
-                        <a href="#tooltips-section" class="mdl-components__link mdl-component tooltips">
+                        <a class="mdl-components__link mdl-component">
                             <span class="mdl-list__item-primary-content">
+                             
                               <i class="material-icons mdl-list__item-icon">person</i>{{ $mySurveys->user->personalInformation->firstName }} {{ $mySurveys->user->personalInformation->lastName }}
                               
                                @foreach ($surveys as $survey)
