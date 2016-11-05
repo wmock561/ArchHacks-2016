@@ -53,8 +53,8 @@
                 <div class="mdl-cell mdl-cell--1-col"></div>
 
                 @if (Auth::guest())
-                <div class="mdl-cell mdl-cell--1-col"><a href="{{ url('/login') }}">Login</a></div>
-                <div class="mdl-cell mdl-cell--1-col"><a href="{{ url('/register') }}">Register</a></div>
+                <div class="mdl-cell mdl-cell--1-col"><button href="{{ url('/login') }}">Login</button></div>
+                <div class="mdl-cell mdl-cell--1-col"><button href="{{ url('/register') }}">Register</button></div>
                 @else
                 <script>
                     window.location.href = '/index';
