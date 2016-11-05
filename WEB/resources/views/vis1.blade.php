@@ -23,11 +23,8 @@
         @foreach($mySurveys as $survey)
         
             //PARSE DATE AND TIME INTO 2 HERE
-        
-            
-        
-            var up = {{ $survey->created_at }};
-            console.log(up);
+    
+            console.log({{ $survey->created_at }});
             //var time = ???;
         
             //id.push({{ $survey->created_at }});//can be string so good to leave
@@ -58,9 +55,9 @@
 
         @endforeach
 
-        /*for (i = 0; i < id.length; i++) {
+        for (i = 0; i < id.length; i++) {
             data.addRow([id[i], Date[i], timeofDay[i], severity[i], duration[i]);
-        }*/
+        }
         
 
         var options = {

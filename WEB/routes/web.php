@@ -21,23 +21,20 @@ Route::get('/index', function () {
     return view('index', compact('surveys','mySurveys'));
 });
 
-
 Route::get('/feed', function () {
     $surveys = Auth::user()->authorizedSurveys;
     return view('feed', compact('surveys'));
-});
-
-Route::get('/care', function () {
-    return view('care');
 });
 
 Route::get('/vis1', function () {
     $mySurveys = Auth::user()->surveys;
     return view('vis1', compact('mySurveys'));
 });
+
 Route::get('/vis2', function () {
     return view('vis2');
 });
+
 Route::get('/vis3', function () {
     return view('vis3');
 });
