@@ -26,7 +26,7 @@
         
             
     
-            console.log( ''+{{ $survey->created_at }} );
+            console.log( '{{ $survey->created_at }}' );
             //var time = ???;
         
             //id.push(LARAVEL $survey->created_at }});//can be string so good to leave
