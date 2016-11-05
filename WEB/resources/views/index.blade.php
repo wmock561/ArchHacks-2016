@@ -162,7 +162,7 @@
 
                         <div id="chartDiv"></div>
 
-                        <div id="selectionDiv">
+                        <div id="selectionDiv" style="display:none;">
                             <button id="dayButton" class="chartNavButton">Day</button>
                             <button id="weekButton" class="chartNavButton">Week</button>
                             <button id="monthButton" class="chartNavButton">Month</button>
@@ -175,6 +175,7 @@
                     <script>
                         $("#careNetwork").click(function () {
                             $('#chartDiv').load('/care');
+                            $('#selectionDiv').show();
                         });
                     </script>
 
