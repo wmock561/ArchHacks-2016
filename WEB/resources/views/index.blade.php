@@ -93,11 +93,22 @@
             </div>
             <div class="mdl-layout__tab-panel" id="careNetworkRef">
                 <section class="section--center mdl-grid mdl-grid--no-spacing" id="careNetworkSection">
-                    <script>
-                        $("#careNetwork").click(function () {
-                            $('#careNetworkSection').load('/care');
-                        });
-                    </script>
+                    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
+                        <div class="mdl-layout__drawer">
+                            <span class="mdl-layout-title">Title</span>
+                            <nav class="mdl-navigation">
+                                <a class="mdl-navigation__link" href="">Link</a>
+                                <a class="mdl-navigation__link" href="">Link</a>
+                                <a class="mdl-navigation__link" href="">Link</a>
+                                <a class="mdl-navigation__link" href="">Link</a>
+                            </nav>
+                        </div>
+                        <main class="mdl-layout__content">
+                            <div class="page-content">
+                                <!-- Your content goes here -->
+                            </div>
+                        </main>
+                    </div>
                 </section>
             </div>
             <div class="mdl-layout__tab-panel" id="tab3Ref">
