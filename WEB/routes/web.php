@@ -19,6 +19,10 @@ Route::get('/feed', function () {
     return view('feed');
 });
 
+Route::get('/care', function () {
+    return view('care');
+});
+
 
 Auth::routes();
 
