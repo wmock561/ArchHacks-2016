@@ -21,9 +21,9 @@
             }
         };
 
-        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart2'));
 
         chart.draw(data, options);
     }
 </script>
-<div id="curve_chart" style="width: 900px; height: 500px"></div>
+<div id="curve_chart2" style="width: 900px; height: 500px"></div>
