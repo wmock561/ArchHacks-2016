@@ -116,12 +116,11 @@
                         <div id="chartDiv"></div>
 
                         <div id="selectionDiv">
-                            <a href="#scroll-tab-1">Tab 1</a>
-                            <a href="#scroll-tab-2">Tab 2</a>
-                            <a href="#scroll-tab-3">Tab 3</a>
-                            <a href="#scroll-tab-4">Tab 4</a>
-                            <a href="#scroll-tab-5">Tab 5</a>
-                            <a href="#scroll-tab-6">Tab 6</a>
+                            <button id="dayButton">Day</button>
+                            <button id="weekButton">Week</button>
+                            <button id="monthButton">Month</button>
+                            <button id="yearButton">Year</button>
+                            <button id="allButton">All</button>
                         </div>
                     </div>
                     
