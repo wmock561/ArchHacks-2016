@@ -1,27 +1,37 @@
-.inheritWidth{
+.inheritWidth {
     width: inherit;
 }
-#chartHolder{
+
+#chartHolder {
     padding-left: 25px;
     height: 600px;
     overflow: scroll;
 }
-#selectionDiv1{
+
+#selectionDiv1 {
     padding-left: 25%;
 }
-#selectionDiv2{
+
+#selectionDiv2 {
     padding-left: 25%;
 }
-#selectionDiv3{
+
+#selectionDiv3 {
     padding-left: 25%;
 }
-#careNetworkSection{
+
+#careNetworkSection {
     padding-bottom: 40px;
 }
 
-.chartNavButton{
+.chartNavButton {
     margin-left: 25px;
 }
-.headerSize{
+
+.headerSize {
     height: 20px;
+}
+
+img.logo {
+    height: 45px;
 }

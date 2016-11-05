@@ -87,7 +87,7 @@
             <div class="mdl-layout--large-screen-only mdl-layout__header-row">
                 <div class="mdl-cell mdl-cell--6-col">
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        <img src="img/Asset_3.png" alt="LOGO" id="logo" height="96.3px" width="126.6px">
+                        <img src="img/Asset_5.png" alt="LOGO" id="logo" class="logo">
                     </a>
                 </div>
 
