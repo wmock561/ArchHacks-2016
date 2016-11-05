@@ -36,7 +36,7 @@
             console.log(id);
             
             //date manipulation here
-            var ts = moment('{{ $survey->created_at }}', "M/D/YYYY H:mm").valueOf();
+            var ts = moment('{{ $survey->created_at }}', "M/D/YYYY hh:mm:ss").valueOf();
 
             console.log(ts);
         
