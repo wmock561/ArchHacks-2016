@@ -39,6 +39,7 @@ class ApiSurveyAnswersController extends Controller
        //$answers = new Survey($request->all());
        //$request->user->surveys()->save($answers);
        $surveyData = json_decode($request->input('surveyData'));
+       Log::info($request->all());
        $survey = new Survey();
        $request->user->surveys()->save($survey);
        for($i = 0; $i<count($surveyData); $i++){
