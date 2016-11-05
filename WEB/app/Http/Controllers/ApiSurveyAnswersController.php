@@ -44,6 +44,7 @@ class ApiSurveyAnswersController extends Controller
        $request->user->surveys()->save($survey);
        for($i = 0; $i<count($surveyData); $i++){
             $question = $surveyData[$i];
+            Log::info($question);
             for($j = 0; $j<count($question); $j++){
                 $v = $i + 2;
 
