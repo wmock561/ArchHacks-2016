@@ -81,14 +81,14 @@
                 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="feedSection">
                     <script>
                         $(document).ready(function () {
-                            $('#feedSection').empty();
-                            $('#feedSection').get('/feed');
+                            //$('#feedSection').empty();
+                            $('#feedSection').load('/feed');
                         });
                     </script>
                     <script>
                         $("#feed").click(function () {
-                            $('#feedSection').empty();
-                            $.get('/feed');
+                            //$('#feedSection').empty();
+                            $('#feedSection').load('/feed');
                         });
                     </script>
                 </section>
