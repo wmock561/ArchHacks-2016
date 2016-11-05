@@ -30,40 +30,46 @@
 
 <body>
     <div id="app">
-            <div class="container">
+        <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
+
+            <div class="mdl-layout--large-screen-only mdl-layout__header-row">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <img src="img/Asset_3.png" alt="LOGO" id="logo" height="96.3px" width="126.6px">StressLess
                 </a>
-                <!-- Collapsed Hamburger -->
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                    <span class="sr-only">Toggle Navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+            </div>
 
-                <!-- Branding Image -->
+            <div class="mdl-layout--large-screen-only mdl-layout__header-row">
 
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
-                    </ul>
 
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
-                        @if (Auth::guest())
-                        <li><a href="{{ url('/login') }}">Login</a></li>
-                        <li><a href="{{ url('/register') }}">Register</a></li>
-                        @else
-                        <script>
-                            window.location.href = '/index';
-                        </script>
-                        @endif
-                    </ul>
+                <div class="mdl-cell mdl-cell--1-col"></div>
+                <div class="mdl-cell mdl-cell--1-col"></div>
+                <div class="mdl-cell mdl-cell--1-col"></div>
+                <div class="mdl-cell mdl-cell--1-col"></div>
+                <div class="mdl-cell mdl-cell--1-col"></div>
+                <div class="mdl-cell mdl-cell--1-col"></div>
+                <div class="mdl-cell mdl-cell--1-col"></div>
+                <div class="mdl-cell mdl-cell--1-col"></div>
+                <div class="mdl-cell mdl-cell--1-col"></div>
+                <div class="mdl-cell mdl-cell--1-col"></div>
+
+                <div class="mdl-cell mdl-cell--1-col"></div>
+
+                <div class="mdl-cell mdl-cell--1-col">
+                    @if (Auth::guest())
+                    <a href="{{ url('/login') }}">Login</a>
+                    <a href="{{ url('/register') }}">Register</a>
+                    @else
+                    <script>
+                        window.location.href = '/index';
+                    </script>
+                    @endif
+                    
                 </div>
             </div>
+
+            <div class="mdl-layout--large-screen-only mdl-layout__header-row"></div>
+
+        </header>
 
         @yield('content')
     </div>
