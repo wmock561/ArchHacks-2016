@@ -88,6 +88,24 @@
                 <h3>StressLess</h3>
             </div>
             <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="{{ url('/logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Logout
+                                        </a>
+
+                            <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                                {{ csrf_field() }}
+                            </form>
+                        </li>
+                    </ul>
+                </li>
             </div>
             <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
                 <!--<a href="#tab3Ref" class="mdl-layout__tab" id="tab3">Overview</a>-->
@@ -95,24 +113,6 @@
                 <a href="#careNetworkRef" class="mdl-layout__tab" id="careNetwork">Care Network</a>
                 <a href="#settingsRef" class="mdl-layout__tab" id="settings">Settings</a>
             </div>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                <ul class="dropdown-menu" role="menu">
-                    <li>
-                        <a href="{{ url('/logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Logout
-                                        </a>
-
-                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                            {{ csrf_field() }}
-                        </form>
-                    </li>
-                </ul>
-            </li>
         </header>
         <main class="mdl-layout__content">
 
