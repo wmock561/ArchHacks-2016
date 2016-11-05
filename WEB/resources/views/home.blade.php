@@ -10,6 +10,10 @@
                 <div class="panel-body">
                     You are logged in!
                 </div>
+                <div>
+                    @yield('main')
+                </div>
+                
             </div>
         </div>
     </div>
