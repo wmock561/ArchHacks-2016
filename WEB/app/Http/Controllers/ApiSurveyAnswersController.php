@@ -46,7 +46,7 @@ class ApiSurveyAnswersController extends Controller
             $array = array();
             for($j = 0; $j<count($question); $j++){
                 $className = "App\Question" . $i . "Answers";
-                $survey->{"question" . $i . "_answers"}->save(new $className(['answer' => $question[$j]]));
+                $survey->{"question" . $i . "_answers"}()->save(new $className(['answer' => $question[$j]]));
             }
        }
        //Log::info($request->all());
