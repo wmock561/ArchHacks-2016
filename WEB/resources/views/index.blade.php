@@ -10,7 +10,7 @@
 @else
 
 <script>
-        window.Laravel = <?php echo json_encode([
+    window.Laravel = <?php echo json_encode([
             'csrfToken' => csrf_token(),
         ]); ?>
 </script>
@@ -95,6 +95,24 @@
                 <a href="#careNetworkRef" class="mdl-layout__tab" id="careNetwork">Care Network</a>
                 <a href="#settingsRef" class="mdl-layout__tab" id="settings">Settings</a>
             </div>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                <ul class="dropdown-menu" role="menu">
+                    <li>
+                        <a href="{{ url('/logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Logout
+                                        </a>
+
+                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                            {{ csrf_field() }}
+                        </form>
+                    </li>
+                </ul>
+            </li>
         </header>
         <main class="mdl-layout__content">
 
@@ -139,7 +157,7 @@
                             <button id="allButton" class="chartNavButton">All</button>
                         </div>
                     </div>
-                    
+
                     <script>
                         $("#careNetwork").click(function () {
                             $('#chartDiv').load('/care');
@@ -212,4 +230,5 @@
 
 </body>
 @endif
+
 </html>
