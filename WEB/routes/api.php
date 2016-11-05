@@ -20,12 +20,9 @@ Route::post('/login', 'ApiAuthController@login');
 
 Route::group(['middleware' => 'api-auth'], function(){
 
-	Route::post('/test', function (Request $request){
-		return $request->user;
-	});
-
 	Route::post('/storeSurveyAnswers', 'ApiSurveyAnswersController@store');
 	Route::post('/getSurveyAnswers', 'ApiSurveyAnswersController@index');
+	Route::post('/savePersonalInformation', 'PersonalInformationController@store');
 
 });
 

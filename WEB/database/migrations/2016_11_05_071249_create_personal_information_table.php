@@ -23,6 +23,8 @@ class CreatePersonalInformationTable extends Migration
             $table->string('ethnicity')->nullable();
             $table->string('occupation')->nullable();
             $table->timestamps();
+
+             $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
