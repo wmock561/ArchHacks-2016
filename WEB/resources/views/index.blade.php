@@ -93,6 +93,8 @@
             </div>
             <div class="mdl-layout__tab-panel" id="careNetworkRef">
                 <section class="mdl-grid mdl-grid--no-spacing" id="careNetworkSection">
+                  
+                  <!--Aside will need to be loaded with php to display the users that this user has access to-->
                    
                     <aside class="mdl-components__nav docs-text-styling mdl-shadow--4dp">
                         <a href="#tooltips-section" class="mdl-components__link mdl-component tooltips">
@@ -101,27 +103,6 @@
                             </span>
                         </a>
                     </aside>
-
-                    <!--
-
-                    <ul class="demo-list-icon mdl-list">
-                        <li class="mdl-list__item">
-                            <span class="mdl-list__item-primary-content">
-                                <i class="material-icons mdl-list__item-icon">person</i>Bryan Cranston
-                            </span>
-                        </li>
-                        <li class="mdl-list__item">
-                            <span class="mdl-list__item-primary-content">
-                               <i class="material-icons mdl-list__item-icon">person</i>Aaron Paul
-                            </span>
-                        </li>
-                        <li class="mdl-list__item">
-                            <span class="mdl-list__item-primary-content">
-                                <i class="material-icons mdl-list__item-icon">person</i>Bob Odenkirk
-                            </span>
-                        </li>
-                    </ul>
-                    -->
 
                 </section>
             </div>
