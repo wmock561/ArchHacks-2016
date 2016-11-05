@@ -1,5 +1,5 @@
 @foreach ($surveys as $survey)
-    <p>This is a survey {{ $survey->id }}</p>
+    <p>This is a survey {{ $survey->user}}</p>
 @endforeach
    
 
