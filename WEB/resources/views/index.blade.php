@@ -81,10 +81,13 @@
 
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
-           <div class="mdl-layout-spacer"></div>
             <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-            
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+
+                <div class="mdl-cell mdl-cell--6-col">6</div>
+                <div class="mdl-cell mdl-cell--4-col">4</div>
+                <div class="mdl-cell mdl-cell--2-col">2</div>
+
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
@@ -97,7 +100,7 @@
                 <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
                     {{ csrf_field() }}
                 </form>
-            
+
             </div>
             <div class="mdl-layout--large-screen-only mdl-layout__header-row">
                 <img src="" alt="LOGO" id="logo">
