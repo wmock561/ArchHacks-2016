@@ -31,6 +31,16 @@ Route::get('/care', function () {
     return view('care');
 });
 
+Route::get('/vis1', function () {
+    return view('vis1');
+});
+Route::get('/vis2', function () {
+    return view('vis2');
+});
+Route::get('/vis3', function () {
+    return view('vis3');
+});
+
 
 Auth::routes();
 
