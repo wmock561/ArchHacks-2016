@@ -82,6 +82,8 @@
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
 
+            <div class="mdl-layout--large-screen-only mdl-layout__header-row" style="height:15px;"></div>
+
             <div class="mdl-layout--large-screen-only mdl-layout__header-row">
                 <div class="mdl-cell mdl-cell--6-col">
                     <a class="navbar-brand" href="{{ url('/') }}">
@@ -109,6 +111,8 @@
                 </div>
 
             </div>
+            
+            <div class="mdl-layout--large-screen-only mdl-layout__header-row" style="height:15px;"></div>
 
             <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
                 <!--<a href="#tab3Ref" class="mdl-layout__tab" id="tab3">Overview</a>-->
