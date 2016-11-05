@@ -142,11 +142,11 @@
                     <aside class="mdl-components__nav docs-text-styling mdl-shadow--4dp">
                         <a class="mdl-components__link mdl-component">
                             <span class="mdl-list__item-primary-content">
-                             <!--<i class="material-icons mdl-list__item-icon">person</i>{{ $mySurveys->user->personalInformation->firstName }} {{ $mySurveys->user->personalInformation->lastName }}-->
+                             <i class="material-icons mdl-list__item-icon">person</i>{{ $mySurveys[0]->user->personalInformation->firstName }} {{ $mySurveys[0]->user->personalInformation->lastName }}
                               
-                               <!--@foreach ($surveys as $survey)
+                               @foreach ($surveys as $survey)
                                 <i class="material-icons mdl-list__item-icon">person</i>{{ $survey->user->personalInformation->firstName }} {{ $survey->user->personalInformation->lastName }}
-                                @endforeach-->
+                                @endforeach
                             </span>
                         </a>
                     </aside>
