@@ -106,6 +106,12 @@
                             </span>
                         </a>
                     </aside>
+                    
+                    <script>
+                        $("#careNetwork").click(function () {
+                            $('#careNetworkSection').load('/care');
+                        });
+                    </script>
 
                 </section>
             </div>
