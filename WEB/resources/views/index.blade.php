@@ -94,18 +94,51 @@
                 </section>
             </div>
             <div class="mdl-layout__tab-panel" id="careNetwork">
-                <section class="section--center mdl-grid mdl-grid--no-spacing">
-                    @yield('careNetworkTabContent')
+                <section class="section--center mdl-grid mdl-grid--no-spacing" id="careNetworkSection">
+                    <script>
+                        $(document).ready(function () {
+                            //$('#feedSection').empty();
+                            $('#careNetworkSection').load('/feed');
+                        });
+                    </script>
+                    <script>
+                        $("#feed").click(function () {
+                            //$('#feedSection').empty();
+                            $('#careNetworkSection').load('/feed');
+                        });
+                    </script>
                 </section>
             </div>
             <div class="mdl-layout__tab-panel" id="tab3">
-                <section class="section--center mdl-grid mdl-grid--no-spacing">
-                    @yield('tab3TabContent')
+                <section class="section--center mdl-grid mdl-grid--no-spacing" id="tab3Section">
+                    <script>
+                        $(document).ready(function () {
+                            //$('#feedSection').empty();
+                            $('#tab3Section').load('/feed');
+                        });
+                    </script>
+                    <script>
+                        $("#feed").click(function () {
+                            //$('#feedSection').empty();
+                            $('#tab3Section').load('/feed');
+                        });
+                    </script>
                 </section>
             </div>
             <div class="mdl-layout__tab-panel" id="settings">
-                <section class="section--center mdl-grid mdl-grid--no-spacing">
-                    @yield('settingsTabContent')
+                <section class="section--center mdl-grid mdl-grid--no-spacing" id="settingsSection">
+                    <script>
+                        $(document).ready(function () {
+                            //$('#feedSection').empty();
+                            $('#settingsSection').load('/feed');
+                        });
+                    </script>
+                    <script>
+                        $("#feed").click(function () {
+                            //$('#feedSection').empty();
+                            $('#settingsSection').load('/feed');
+                        });
+                    </script>
                 </section>
             </div>
 
