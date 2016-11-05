@@ -23,7 +23,7 @@
         hAxis: {title: 'Date'},
         vAxis: {title: 'Time of Day'},
         bubble: {textStyle: {fontSize: 11}},
-        colorAxis: {colors: ['green','red']}
+        colorAxis: {colors: ['yellow','red']}
       };
 
       var chart = new google.visualization.BubbleChart(document.getElementById('chart1'));
