@@ -9,3 +9,6 @@
         <a href="#" class="mdl-button">View Now</a>
     </div>
 </div>
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn1">
+    <i class="material-icons">more_vert</i>
+</button>
