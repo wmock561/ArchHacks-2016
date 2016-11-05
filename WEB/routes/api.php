@@ -19,6 +19,13 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:api');
 
 Route::post('/register', function (Request $request){
+	$validator = Validator::make($request->all(), [
+           'email' => 'required|email|max:255|unique:users',
+            'password' => 'required|min:6|confirmed',
+        ]);
+	if($validator->fails()){
+		return $validator->errors();
+	}
 	$user = User::create([
 		'email' => $request->input('email'),
 		'password' => bcrypt($request->input('password')),
