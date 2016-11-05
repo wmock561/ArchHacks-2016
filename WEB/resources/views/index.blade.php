@@ -98,13 +98,13 @@
                     <script>
                         $(document).ready(function () {
                             //$('#feedSection').empty();
-                            $('#careNetworkSection').load('/feed');
+                            $('#careNetworkSection').load('/');
                         });
                     </script>
                     <script>
                         $("#feed").click(function () {
                             //$('#feedSection').empty();
-                            $('#careNetworkSection').load('/feed');
+                            $('#careNetworkSection').load('/');
                         });
                     </script>
                 </section>
@@ -114,13 +114,13 @@
                     <script>
                         $(document).ready(function () {
                             //$('#feedSection').empty();
-                            $('#tab3Section').load('/feed');
+                            $('#tab3Section').load('/');
                         });
                     </script>
                     <script>
                         $("#feed").click(function () {
                             //$('#feedSection').empty();
-                            $('#tab3Section').load('/feed');
+                            $('#tab3Section').load('/');
                         });
                     </script>
                 </section>
@@ -130,13 +130,13 @@
                     <script>
                         $(document).ready(function () {
                             //$('#feedSection').empty();
-                            $('#settingsSection').load('/feed');
+                            $('#settingsSection').load('/');
                         });
                     </script>
                     <script>
                         $("#feed").click(function () {
                             //$('#feedSection').empty();
-                            $('#settingsSection').load('/feed');
+                            $('#settingsSection').load('/');
                         });
                     </script>
                 </section>
