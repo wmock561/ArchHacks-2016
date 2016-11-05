@@ -93,44 +93,14 @@
             </div>
             <div class="mdl-layout__tab-panel" id="careNetwork">
                 <section class="section--center mdl-grid mdl-grid--no-spacing" id="careNetworkSection">
-                    <!--<script>
-                        $(document).ready(function () {
-                            //$('#careNetworkSection').load('');
-                        });
-                    </script>
-                    <script>
-                        $("#feed").click(function () {
-                            //$('#careNetworkSection').load('');
-                        });
-                    </script>-->
                 </section>
             </div>
             <div class="mdl-layout__tab-panel" id="tab3">
                 <section class="section--center mdl-grid mdl-grid--no-spacing" id="tab3Section">
-                    <!--<script>
-                        $(document).ready(function () {
-                            $('#tab3Section').load('');
-                        });
-                    </script>
-                    <script>
-                        $("#feed").click(function () {
-                            $('#tab3Section').load('');
-                        });
-                    </script>-->
                 </section>
             </div>
             <div class="mdl-layout__tab-panel" id="settings">
                 <section class="section--center mdl-grid mdl-grid--no-spacing" id="settingsSection">
-                    <!--<script>
-                        $(document).ready(function () {
-                            $('#settingsSection').load('');
-                        });
-                    </script>
-                    <script>
-                        $("#feed").click(function () {
-                            $('#settingsSection').load('');
-                        });
-                    </script>-->
                 </section>
             </div>
 
