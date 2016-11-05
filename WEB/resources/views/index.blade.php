@@ -116,7 +116,6 @@
                         <div id="chartDiv"></div>
                         <br>
                         <div class="mdl-layout mdl-js-layout inheritWidth">
-                            <header class="mdl-layout__header">
                                 <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
                                     <a href="#scroll-tab-1" class="mdl-layout__tab is-active">Tab 1</a>
                                     <a href="#scroll-tab-2" class="mdl-layout__tab">Tab 2</a>
@@ -125,7 +124,6 @@
                                     <a href="#scroll-tab-5" class="mdl-layout__tab">Tab 5</a>
                                     <a href="#scroll-tab-6" class="mdl-layout__tab">Tab 6</a>
                                 </div>
-                            </header>
                         </div>
                     </div>
 
