@@ -83,23 +83,35 @@
         <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
             <div class="mdl-layout--large-screen-only mdl-layout__header-row">
 
-                <div class="mdl-cell mdl-cell--6-col">6</div>
-                <div class="mdl-cell mdl-cell--5-col">5</div>
 
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                <div class="mdl-cell mdl-cell--1-col">1</div>
+                <div class="mdl-cell mdl-cell--1-col">1</div>
+                <div class="mdl-cell mdl-cell--1-col">1</div>
+                <div class="mdl-cell mdl-cell--1-col">1</div>
+                <div class="mdl-cell mdl-cell--1-col">1</div>
+                <div class="mdl-cell mdl-cell--1-col">1</div>
+                <div class="mdl-cell mdl-cell--1-col">1</div>
+                <div class="mdl-cell mdl-cell--1-col">1</div>
+                <div class="mdl-cell mdl-cell--1-col">1</div>
+                <div class="mdl-cell mdl-cell--1-col">1</div>
+                <div class="mdl-cell mdl-cell--1-col">1</div>
+
+                <div class="mdl-cell mdl-cell--1-col">
+
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
 
-                <a href="{{ url('/logout') }}" onclick="event.preventDefault();
+                    <a href="{{ url('/logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                             Logout
                                         </a>
 
-                <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                    {{ csrf_field() }}
-                </form>
-
+                    <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                        {{ csrf_field() }}
+                    </form>
+                </div>
             </div>
             <div class="mdl-layout--large-screen-only mdl-layout__header-row">
                 <img src="" alt="LOGO" id="logo">
