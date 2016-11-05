@@ -111,7 +111,7 @@
                 </div>
 
             </div>
-            
+
             <div class="mdl-layout--large-screen-only mdl-layout__header-row headerSize"></div>
 
             <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
@@ -147,7 +147,9 @@
                     <aside class="mdl-components__nav docs-text-styling mdl-shadow--4dp">
                         <a href="#tooltips-section" class="mdl-components__link mdl-component tooltips">
                             <span class="mdl-list__item-primary-content">
-                                <i class="material-icons mdl-list__item-icon">person</i>Bryan Cranston
+                               @foreach ($surveys as $survey)
+                                <i class="material-icons mdl-list__item-icon">person</i>{{ $survey->user->personalInformation->firstName }} {{ $survey->user->personalInformation->lastName }}
+                                @endforeach
                             </span>
                         </a>
                     </aside>
