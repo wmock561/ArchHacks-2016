@@ -2,7 +2,6 @@
 
 @section('content')
 <div class="container">
-   <div><img src="img/Asset_3.png" alt="LOGO"></div>
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
