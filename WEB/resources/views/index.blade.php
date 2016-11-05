@@ -95,11 +95,6 @@
 
                 <div class="mdl-cell mdl-cell--1-col">
 
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-
                     <a href="{{ url('/logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                             Logout
@@ -149,9 +144,9 @@
                             <span class="mdl-list__item-primary-content">
                              <!--<i class="material-icons mdl-list__item-icon">person</i>{{ $mySurveys->user->personalInformation->firstName }} {{ $mySurveys->user->personalInformation->lastName }}-->
                               
-                               @foreach ($surveys as $survey)
+                               <!--@foreach ($surveys as $survey)
                                 <i class="material-icons mdl-list__item-icon">person</i>{{ $survey->user->personalInformation->firstName }} {{ $survey->user->personalInformation->lastName }}
-                                @endforeach
+                                @endforeach-->
                             </span>
                         </a>
                     </aside>
