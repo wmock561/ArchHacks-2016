@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/index', function () {
+    $surveys = Auth::user()->authorizedSurveys;
     return view('index');
 });
 
