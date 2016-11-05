@@ -18,6 +18,7 @@ class PinViewController: UIViewController {
     @IBOutlet weak var continueButton: UIButton!
     
     
+    @IBOutlet var textInputs: [UITextField]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,6 +75,13 @@ class PinViewController: UIViewController {
             
         }
     }
+    
+    @IBAction func resingKeyboard(sender: AnyObject) {
+        for input in textInputs{
+            input.resignFirstResponder()
+        }
+    }
+    
     
 
     /*

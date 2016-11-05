@@ -16,7 +16,8 @@ extension ConsentViewController : ORKTaskViewControllerDelegate {
         //Handle results with taskViewController.result
         //print(taskViewController.result.stepResultForStepIdentifier("ConsentReviewStep")!.results![0].valueForKey("consented"))
         taskViewController.dismissViewControllerAnimated(true, completion: nil)
-        if(taskViewController.result.identifier == "ConsentTask"){
+        
+        if(taskViewController.result.identifier == "ConsentTask"){/*
             let result = taskViewController.result
             if let stepResult = result.stepResultForStepIdentifier("ConsentReviewStep"),
                 let signatureResult = stepResult.results?.first as? ORKConsentSignatureResult {
@@ -39,7 +40,7 @@ extension ConsentViewController : ORKTaskViewControllerDelegate {
                 }
             }else{
                 print("Unable to get consent value")
-            }
+            }*/
         }else{
             //print(taskViewController.result.stepResultForStepIdentifier("questionStepOne")?.results![1].valueForKey("answer")!)
             parseRKData(taskViewController)
@@ -226,9 +227,10 @@ class ConsentViewController: UIViewController,UIDocumentInteractionControllerDel
         
     }
     
-    func POSTData(masterArray:NSArray){
+    func POSTData(masterArray:[[String]]){
         var tokenO = dataWorker.getToken()
         var token = tokenO?.token
+        print("token: \(token)")
         
         
         let url = "http://ec2-35-162-212-55.us-west-2.compute.amazonaws.com/api/storeSurveyAnswers"
@@ -259,6 +261,13 @@ class ConsentViewController: UIViewController,UIDocumentInteractionControllerDel
                 dispatch_async(dispatch_get_main_queue()){
                     //self.performSegueWithIdentifier("afterInfo", sender: self)
                     print("successful")
+                    //self.displayAlert()
+                    dispatch_async(dispatch_get_main_queue()){
+                        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                        
+                        let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("TabBarController") as! UITabBarController
+                        self.presentViewController(nextViewController, animated:true, completion:nil)
+                    }
                 }
             }
             
@@ -268,8 +277,32 @@ class ConsentViewController: UIViewController,UIDocumentInteractionControllerDel
     }
     
     func displayAlert(){
-        let alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
+        let alert = UIAlertController(title: "Share?", message: "This feature will allow you to send this data to a friend or family member.", preferredStyle: UIAlertControllerStyle.Alert)
+        //alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Yes", style: .Default, handler: { action in
+            switch action.style{
+            case .Default:
+                print("default")
+                
+            case .Cancel:
+                print("cancel")
+                
+            case .Destructive:
+                print("destructive")
+            }
+        }))
+        alert.addAction(UIAlertAction(title: "No", style: .Default, handler: { action in
+            switch action.style{
+            case .Default:
+                print("default")
+                
+            case .Cancel:
+                print("cancel")
+                
+            case .Destructive:
+                print("destructive")
+            }
+        }))
         self.presentViewController(alert, animated: true, completion: nil)
     
     }

@@ -28,6 +28,13 @@
 		D65547C21DCE1CA7004882FA /* ConsentTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65547C11DCE1CA7004882FA /* ConsentTask.swift */; };
 		D65547C41DCE1CC4004882FA /* SurveyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65547C31DCE1CC4004882FA /* SurveyTask.swift */; };
 		D65547C61DCE55BD004882FA /* CoreDataWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65547C51DCE55BD004882FA /* CoreDataWorker.swift */; };
+		D65547C81DCE843B004882FA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65547C71DCE843B004882FA /* MainViewController.swift */; };
+		D65547CD1DCE894C004882FA /* callEmergency.png in Resources */ = {isa = PBXBuildFile; fileRef = D65547C91DCE894C004882FA /* callEmergency.png */; };
+		D65547CE1DCE894C004882FA /* calmingTechniques.png in Resources */ = {isa = PBXBuildFile; fileRef = D65547CA1DCE894C004882FA /* calmingTechniques.png */; };
+		D65547CF1DCE894C004882FA /* finishLater.png in Resources */ = {isa = PBXBuildFile; fileRef = D65547CB1DCE894C004882FA /* finishLater.png */; };
+		D65547D01DCE894C004882FA /* historical.png in Resources */ = {isa = PBXBuildFile; fileRef = D65547CC1DCE894C004882FA /* historical.png */; };
+		D65547D21DCE89F9004882FA /* attackStarted.png in Resources */ = {isa = PBXBuildFile; fileRef = D65547D11DCE89F9004882FA /* attackStarted.png */; };
+		D65547D41DCE8B71004882FA /* SelectPanicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65547D31DCE8B71004882FA /* SelectPanicViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +98,13 @@
 		D65547C11DCE1CA7004882FA /* ConsentTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentTask.swift; sourceTree = "<group>"; };
 		D65547C31DCE1CC4004882FA /* SurveyTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyTask.swift; sourceTree = "<group>"; };
 		D65547C51DCE55BD004882FA /* CoreDataWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataWorker.swift; sourceTree = "<group>"; };
+		D65547C71DCE843B004882FA /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D65547C91DCE894C004882FA /* callEmergency.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = callEmergency.png; sourceTree = "<group>"; };
+		D65547CA1DCE894C004882FA /* calmingTechniques.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calmingTechniques.png; sourceTree = "<group>"; };
+		D65547CB1DCE894C004882FA /* finishLater.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = finishLater.png; sourceTree = "<group>"; };
+		D65547CC1DCE894C004882FA /* historical.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = historical.png; sourceTree = "<group>"; };
+		D65547D11DCE89F9004882FA /* attackStarted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = attackStarted.png; sourceTree = "<group>"; };
+		D65547D31DCE8B71004882FA /* SelectPanicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPanicViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +167,11 @@
 		D655474C1DCD71E9004882FA /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D65547D11DCE89F9004882FA /* attackStarted.png */,
+				D65547C91DCE894C004882FA /* callEmergency.png */,
+				D65547CA1DCE894C004882FA /* calmingTechniques.png */,
+				D65547CB1DCE894C004882FA /* finishLater.png */,
+				D65547CC1DCE894C004882FA /* historical.png */,
 				D65547471DCD6D53004882FA /* logo.png */,
 			);
 			name = Images;
@@ -165,6 +184,8 @@
 				D65547511DCD7F26004882FA /* RegisterViewController.swift */,
 				D65547591DCDC182004882FA /* InfoViewController.swift */,
 				D655475E1DCDCEE6004882FA /* PinViewController.swift */,
+				D65547C71DCE843B004882FA /* MainViewController.swift */,
+				D65547D31DCE8B71004882FA /* SelectPanicViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -282,6 +303,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D65547481DCD6D53004882FA /* logo.png in Resources */,
+				D65547CD1DCE894C004882FA /* callEmergency.png in Resources */,
+				D65547D21DCE89F9004882FA /* attackStarted.png in Resources */,
+				D65547CE1DCE894C004882FA /* calmingTechniques.png in Resources */,
+				D65547D01DCE894C004882FA /* historical.png in Resources */,
+				D65547CF1DCE894C004882FA /* finishLater.png in Resources */,
 				D65547401DCD6BFC004882FA /* LaunchScreen.storyboard in Resources */,
 				D655473D1DCD6BFC004882FA /* Assets.xcassets in Resources */,
 				D655475D1DCDCAC6004882FA /* Main.storyboard in Resources */,
@@ -302,8 +328,10 @@
 				D65547C41DCE1CC4004882FA /* SurveyTask.swift in Sources */,
 				D65547C61DCE55BD004882FA /* CoreDataWorker.swift in Sources */,
 				D65547571DCDA3E2004882FA /* User+CoreDataProperties.swift in Sources */,
+				D65547C81DCE843B004882FA /* MainViewController.swift in Sources */,
 				D655475A1DCDC182004882FA /* InfoViewController.swift in Sources */,
 				D655478B1DCE1A01004882FA /* ConsentViewController.swift in Sources */,
+				D65547D41DCE8B71004882FA /* SelectPanicViewController.swift in Sources */,
 				D65547581DCDA3E2004882FA /* User.swift in Sources */,
 				D65547521DCD7F26004882FA /* RegisterViewController.swift in Sources */,
 				D65547501DCD7538004882FA /* LoginViewController.swift in Sources */,

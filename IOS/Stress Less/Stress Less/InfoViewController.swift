@@ -18,6 +18,8 @@ class InfoViewController: UIViewController {
     @IBOutlet weak var femaleButton: UIButton!
     @IBOutlet weak var otherButton: UIButton!
     
+    @IBOutlet var textInputs: [UITextField]!
+    
     var webController = WebWorker()
     
     var firstName = ""
@@ -109,6 +111,13 @@ class InfoViewController: UIViewController {
         
         
         
+    }
+    
+    
+    @IBAction func resignKeyboard(sender: AnyObject) {
+        for input in textInputs{
+            input.resignFirstResponder()
+        }
     }
     
     

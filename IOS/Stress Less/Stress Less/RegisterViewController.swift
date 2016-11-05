@@ -20,6 +20,8 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var createButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     
+    @IBOutlet var textInputs: [UITextField]!
+    
     
     var userToken:String?
     
@@ -106,6 +108,12 @@ class RegisterViewController: UIViewController {
     }
     
     
+    @IBAction func resignKeyboard(sender: AnyObject) {
+        for input in textInputs{
+            input.resignFirstResponder()
+        }
+    }
+
 
     // MARK: - Navigation
 
