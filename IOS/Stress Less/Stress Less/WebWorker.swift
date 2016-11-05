@@ -10,12 +10,12 @@ import UIKit
 
 class WebWorker: NSObject {
     
-    func login(username:String, password:String, completion: (result:NSArray?, error:String?)->Void){
+    func login(username:String, password:String, completion: (result:NSDictionary?, error:String?)->Void){
         let url = "http://ec2-35-162-10-43.us-west-2.compute.amazonaws.com/api/login"
         let post:String = "username=\(username)&password=\(password)"
         
         self.requestHandler(url, post: post){
-            (result:NSArray?, error:String?) in
+            (result:NSDictionary?, error:String?) in
             if let result = result{
                 completion(result:result, error:error)
             }
@@ -23,7 +23,7 @@ class WebWorker: NSObject {
         
     }
     
-    func register(email:String, password:String, completion: (result:NSArray?, error:String?)->Void){
+    func register(email:String, password:String, completion: (result:NSDictionary?, error:String?)->Void){
         let url = "http://ec2-35-162-10-43.us-west-2.compute.amazonaws.com/api/register"
         let post:String = "email=\(email)&password=\(password)"
         
@@ -31,7 +31,7 @@ class WebWorker: NSObject {
         
         
         self.requestHandler(url, post: post){
-            (result:NSArray?, error:String?) in
+            (result:NSDictionary?, error:String?) in
             if let result = result{
                 completion(result:result, error:error)
             }
@@ -43,7 +43,7 @@ class WebWorker: NSObject {
 /*---------------------------DONT TOUCH----------------------------------*/
     
 
-    func requestHandler(url:String, post: String, completion: (result:NSArray?, error:String?)->Void){
+    func requestHandler(url:String, post: String, completion: (result:NSDictionary?, error:String?)->Void){
         let postData: NSData = post.dataUsingEncoding(NSASCIIStringEncoding, allowLossyConversion: true)!
         let postLength: String = "\(postData.length)"
         let request: NSMutableURLRequest = NSMutableURLRequest()
@@ -59,10 +59,10 @@ class WebWorker: NSObject {
             (let data, let response, let error) in
             //print("Ran the request and the data was: \(data)")
             if (data != nil) {
-                print("Ran the request and the data was: \(data)")
+                print("Ran the request and the data was: \(data!)")
                 self.parseJSON(data!){
-                    (result:NSArray?, error:String?) in
-                    //print("Got the JSON array back: \(result)")
+                    (result:NSDictionary?, error:String?) in
+                    print("Got the JSON array back: \(result)")
                     completion(result:result, error:error)
                 }
             }else{
@@ -78,13 +78,16 @@ class WebWorker: NSObject {
     
     
     
-    func parseJSON(jsonData: NSData, completion: (result:NSArray?, error:String?)->Void) -> Void{
+    
+    func parseJSON(jsonData: NSData, completion: (result:NSDictionary?, error:String?)->Void) -> Void{
         //print("parse json called")
         //let dataString = String(data: jsonData, encoding: NSUTF8StringEncoding)
         //print("JSON data: " + dataString!)
-        var jsonResultWrapped: NSArray?//array variable
+        var jsonResultWrapped: NSDictionary?//array variable
         do {//do try catch
-            jsonResultWrapped = try NSJSONSerialization.JSONObjectWithData(jsonData, options: .MutableContainers) as? NSArray//casts as NSDictionary
+            print("Trying to parse")
+            jsonResultWrapped = try NSJSONSerialization.JSONObjectWithData(jsonData, options: .MutableContainers) as? NSDictionary//casts as NSDictionary
+            
         } catch let caught as NSError {
             
             print("\(caught)")//print the error

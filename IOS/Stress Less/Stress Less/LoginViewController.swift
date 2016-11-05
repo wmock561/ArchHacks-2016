@@ -35,7 +35,7 @@ class LoginViewController: UIViewController {
             errorLabel.text = "Please fill in both Username and Password"
         }else{
             webController.login(usernameField.text!, password: passwordField.text!){
-                (result:NSArray?, error:String?) in
+                (result:NSDictionary?, error:String?) in
                 if let result = result{
                     print("Result" + String(result))
                 }

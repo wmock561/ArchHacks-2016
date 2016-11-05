@@ -141,6 +141,7 @@
                                 <connections>
                                     <action selector="createAccount:" destination="pfD-uF-2V8" eventType="touchUpInside" id="Faf-rc-fHs"/>
                                     <action selector="login:" destination="R6I-Us-vi2" eventType="touchUpInside" id="PQP-0a-SyO"/>
+                                    <segue destination="hKe-kD-swq" kind="show" id="HDD-XN-QbP"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Txk-Tb-Lcx">
@@ -194,6 +195,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tYf-8p-3vc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1177" y="519"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="4dZ-WW-nvP">
+            <objects>
+                <viewController id="hKe-kD-swq" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BCh-R1-pnn"/>
+                        <viewControllerLayoutGuide type="bottom" id="0Af-zD-BDg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Bc9-q2-Z4I">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ec-ZA-0Sp">
+                                <rect key="frame" x="136.5" y="84" width="327" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5Ec-ZA-0Sp" firstAttribute="top" secondItem="BCh-R1-pnn" secondAttribute="bottom" constant="20" id="SFf-mZ-rrU"/>
+                            <constraint firstItem="5Ec-ZA-0Sp" firstAttribute="centerX" secondItem="Bc9-q2-Z4I" secondAttribute="centerX" id="qpt-j6-bvR"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wH8-0g-HAg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1865" y="519"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="ntV-5Z-cBe">

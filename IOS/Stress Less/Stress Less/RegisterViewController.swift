@@ -19,6 +19,8 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var createButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     
+    var userToken:String?
+    
     
     
     override func viewDidLoad() {
@@ -44,9 +46,11 @@ class RegisterViewController: UIViewController {
             passwordField.layer.borderColor = UIColor.redColor().CGColor
         }else{
             webController.register(usernameField.text!, password: passwordField.text!){
-                (result:NSArray?, error:String?) in
+                (result:NSDictionary?, error:String?) in
                 if let result = result{
                     print("Result" + String(result))
+                    self.userToken = String(result["token"]!)
+                    print(self.userToken!)
                 }
             }
         }
