@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.blue-light_green.min.css">
 
     <!-- CSRF Token -->
@@ -32,6 +32,9 @@
     <div id="app">
         <nav class="navbar navbar-default">
             <div class="container">
+                <a class="navbar-brand" href="{{ url('/') }}">
+                    <img src="img/Asset_3.png" alt="LOGO" id="logo" height="96.3px" width="126.6px">StressLess
+                </a>
                 <div class="navbar-header">
                     <!-- Collapsed Hamburger -->
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
@@ -42,9 +45,6 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        <img src="img/Asset_3.png" alt="LOGO" id="logo" height="96.3px" width="126.6px">StressLess
-                    </a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
