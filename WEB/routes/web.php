@@ -32,7 +32,8 @@ Route::get('/care', function () {
 });
 
 Route::get('/vis1', function () {
-    return view('vis1');
+    $mySurveys = Auth::user()->surveys;
+    return view('vis1', compact('mySurveys'));
 });
 Route::get('/vis2', function () {
     return view('vis2');
