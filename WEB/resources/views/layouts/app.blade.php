@@ -30,7 +30,6 @@
 
 <body>
     <div id="app">
-        <nav class="navbar navbar-default">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <img src="img/Asset_3.png" alt="LOGO" id="logo" height="96.3px" width="126.6px">StressLess
@@ -65,7 +64,6 @@
                     </ul>
                 </div>
             </div>
-        </nav>
 
         @yield('content')
     </div>
