@@ -81,22 +81,22 @@
         <main class="mdl-layout__content">
             <div class="mdl-layout__tab-panel is-active" id="feed">
                 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-                    
+                    @yield('feedTabContent')
                 </section>
             </div>
             <div class="mdl-layout__tab-panel" id="careNetwork">
                 <section class="section--center mdl-grid mdl-grid--no-spacing">
-
+                    @yield('careNetworkTabContent')
                 </section>
             </div>
             <div class="mdl-layout__tab-panel" id="tab3">
                 <section class="section--center mdl-grid mdl-grid--no-spacing">
-
+                    @yield('tab3TabContent')
                 </section>
             </div>
             <div class="mdl-layout__tab-panel" id="settings">
                 <section class="section--center mdl-grid mdl-grid--no-spacing">
-
+                    @yield('settingsTabContent')
                 </section>
             </div>
 
