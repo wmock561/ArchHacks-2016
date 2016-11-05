@@ -170,8 +170,6 @@
                             <button id="allButton" class="chartNavButton">All</button>
                         </div>
                         
-                        <div style="height:500px;"></div>
-                        
                     </div>
 
                     <script>
