@@ -103,6 +103,8 @@
                             </span>
                             </a>
                         </aside>
+                        
+                        <main class="mdl-components__pages"></main>
                     </div>
 
                 </section>
