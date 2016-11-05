@@ -1,6 +1,6 @@
 .inheritWidth{
     width: inherit;
 }
-#chartDiv{
+#chartHolder{
     padding-left: 25px;
 }
