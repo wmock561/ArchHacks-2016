@@ -73,14 +73,9 @@
             </div>
             <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
                 <a href="#feed" class="mdl-layout__tab is-active">Feed</a>
-                <a href="#features" class="mdl-layout__tab">Features</a>
-                <a href="#features" class="mdl-layout__tab">Details</a>
-                <a href="#features" class="mdl-layout__tab">Technology</a>
-                <a href="#features" class="mdl-layout__tab">FAQ</a>
-                <!--button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent" id="add">
-                    <i class="material-icons" role="presentation">add</i>
-                    <span class="visuallyhidden">Add</span>
-                </button>-->
+                <a href="#myCareNetwork" class="mdl-layout__tab">myCareNetwork</a>
+                <a href="#Tab3" class="mdl-layout__tab">Tab3</a>
+                <a href="#Settings" class="mdl-layout__tab">Settings</a>
             </div>
         </header>
         <main class="mdl-layout__content">
@@ -109,9 +104,20 @@
             </div>
             <div class="mdl-layout__tab-panel" id="features">
                 <section class="section--center mdl-grid mdl-grid--no-spacing">
-                    
+
                 </section>
             </div>
+            <div class="mdl-layout__tab-panel" id="Tab3">
+                <section class="section--center mdl-grid mdl-grid--no-spacing">
+
+                </section>
+            </div>
+            <div class="mdl-layout__tab-panel" id="Settings">
+                <section class="section--center mdl-grid mdl-grid--no-spacing">
+
+                </section>
+            </div>
+
             <footer class="mdl-mega-footer">
                 <div class="mdl-mega-footer--middle-section">
                     <div class="mdl-mega-footer--drop-down-section">
