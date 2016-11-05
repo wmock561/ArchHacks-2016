@@ -1,3 +1,8 @@
+@foreach ($surveys as $survey)
+    <p>This is a survey {{ $survey->id }}</p>
+@endforeach
+   
+
 <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--teal-100 mdl-color-text--white">
     <i class="material-icons">play_circle_filled</i>
 </header>

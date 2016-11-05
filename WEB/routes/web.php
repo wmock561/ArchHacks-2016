@@ -21,7 +21,8 @@ Route::get('/index', function () {
 
 
 Route::get('/feed', function () {
-    return view('feed');
+    $surveys = Auth::user()->authorizedSurveys;
+    return view('feed', compact('surveys'));
 });
 
 Route::get('/care', function () {
