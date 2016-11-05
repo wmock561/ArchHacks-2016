@@ -66,7 +66,8 @@
             <div class="mdl-layout--large-screen-only mdl-layout__header-row">
             </div>
             <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-                <h3>Name &amp; Title</h3>
+                <img src="" alt="LOGO" id="logo">
+                <h3>StressLess</h3>
             </div>
             <div class="mdl-layout--large-screen-only mdl-layout__header-row">
             </div>
