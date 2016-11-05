@@ -21,8 +21,12 @@ Route::get('/user', function (Request $request) {
 Route::post('/register', function (Request $request){
 	$validator = Validator::make($request->all(), [
            'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|min:6|confirmed',
+           'password' => 'required|min:6',
         ]);
+	$validator->after(function($validator) {
+	    $validator->errors()->add('success', 0);
+	});
+
 	if($validator->fails()){
 		return $validator->errors();
 	}
