@@ -93,6 +93,16 @@
             </div>
             <div class="mdl-layout__tab-panel" id="careNetwork">
                 <section class="section--center mdl-grid mdl-grid--no-spacing" id="careNetworkSection">
+                    <script>
+                        $(document).ready(function () {
+                            $('#careNetworkSection').load('/care');
+                        });
+                    </script>
+                    <script>
+                        $("#feed").click(function () {
+                            $('#careNetworkSection').load('/care');
+                        });
+                    </script>
                 </section>
             </div>
             <div class="mdl-layout__tab-panel" id="tab3">
