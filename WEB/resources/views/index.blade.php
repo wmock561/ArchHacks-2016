@@ -147,6 +147,8 @@
                     <aside class="mdl-components__nav docs-text-styling mdl-shadow--4dp">
                         <a href="#tooltips-section" class="mdl-components__link mdl-component tooltips">
                             <span class="mdl-list__item-primary-content">
+                              <i class="material-icons mdl-list__item-icon">person</i>{{ $mySurveys->user->personalInformation->firstName }} {{ $mySurveys->user->personalInformation->lastName }}
+                              
                                @foreach ($surveys as $survey)
                                 <i class="material-icons mdl-list__item-icon">person</i>{{ $survey->user->personalInformation->firstName }} {{ $survey->user->personalInformation->lastName }}
                                 @endforeach
