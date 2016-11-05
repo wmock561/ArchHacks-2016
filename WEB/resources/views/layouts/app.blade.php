@@ -63,8 +63,6 @@
 
             </div>
 
-            <div class="mdl-layout--large-screen-only mdl-layout__header-row"></div>
-
         </header>
 
         @yield('content')
