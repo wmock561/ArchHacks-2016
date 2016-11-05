@@ -97,9 +97,8 @@
                         $(document).ready(function () {
                             $('#careNetworkSection').load('/care');
                         });
-                    </script>
-                    <script>
-                        $("#feed").click(function () {
+                        
+                        $("#careNetwork").click(function () {
                             $('#careNetworkSection').load('/care');
                         });
                     </script>
