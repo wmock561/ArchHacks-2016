@@ -78,9 +78,16 @@
         </header>
         <main class="mdl-layout__content">
             <div class="mdl-layout__tab-panel is-active" id="feed">
-                <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="feedSection">
                     <script>
-                        $("#target").click(function () {
+                        $(document).ready(function () {
+                            $('#feedSection').empty();
+                            $('#feedSection').get('/feed');
+                        });
+                    </script>
+                    <script>
+                        $("#feed").click(function () {
+                            $('#feedSection').empty();
                             $.get('/feed');
                         });
                     </script>
