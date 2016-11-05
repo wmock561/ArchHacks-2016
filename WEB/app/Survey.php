@@ -42,4 +42,8 @@ class Survey extends Model
     public function question5_answers(){
     	return $this->hasMany('App\Question5Answers');
     }
+
+    public function users(){
+    	return $this->belongsToMany("App\User");
+    }
 }
