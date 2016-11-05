@@ -70,14 +70,14 @@
             <div class="mdl-layout--large-screen-only mdl-layout__header-row">
             </div>
             <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
-                <a href="#feed" class="mdl-layout__tab is-active" id="feed">Feed</a>
-                <a href="#careNetwork" class="mdl-layout__tab" id="careNetwork">Care Network</a>
-                <a href="#tab3" class="mdl-layout__tab" id="tab3">Tab 3</a>
-                <a href="#settings" class="mdl-layout__tab" id="settings">Settings</a>
+                <a href="#feedRef" class="mdl-layout__tab is-active" id="feed">Feed</a>
+                <a href="#careNetworkRef" class="mdl-layout__tab" id="careNetwork">Care Network</a>
+                <a href="#tab3Ref" class="mdl-layout__tab" id="tab3">Tab 3</a>
+                <a href="#settingsRef" class="mdl-layout__tab" id="settings">Settings</a>
             </div>
         </header>
         <main class="mdl-layout__content">
-            <div class="mdl-layout__tab-panel is-active" id="feed">
+            <div class="mdl-layout__tab-panel is-active" id="feedRef">
                 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="feedSection">
                     <script>
                         $(document).ready(function () {
@@ -91,7 +91,7 @@
                     </script>
                 </section>
             </div>
-            <div class="mdl-layout__tab-panel" id="careNetwork">
+            <div class="mdl-layout__tab-panel" id="careNetworkRef">
                 <section class="section--center mdl-grid mdl-grid--no-spacing" id="careNetworkSection">
                     <script>
                         $(document).ready(function () {
@@ -104,11 +104,11 @@
                     </script>
                 </section>
             </div>
-            <div class="mdl-layout__tab-panel" id="tab3">
+            <div class="mdl-layout__tab-panel" id="tab3Ref">
                 <section class="section--center mdl-grid mdl-grid--no-spacing" id="tab3Section">
                 </section>
             </div>
-            <div class="mdl-layout__tab-panel" id="settings">
+            <div class="mdl-layout__tab-panel" id="settingsRef">
                 <section class="section--center mdl-grid mdl-grid--no-spacing" id="settingsSection">
                 </section>
             </div>
