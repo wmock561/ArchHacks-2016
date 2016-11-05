@@ -109,10 +109,12 @@
                             </span>
                         </a>
                     </aside>
+                    
+                    <div id="chartDiv"></div>
 
                     <script>
                         $("#careNetwork").click(function () {
-                            $('#careNetworkSection').load('/care');
+                            $('#chartDiv').load('/care');
                         });
                     </script>
 
