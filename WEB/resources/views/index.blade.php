@@ -194,10 +194,10 @@
                     <script>
                         $("#careNetwork").click(function () {
                             $('#chartDiv1').load('/vis1');
-                            $('#chartDiv2').load('/vis2');
-                            $('#chartDiv3').load('/vis3');
                             $('#selectionDiv1').show();
+                            $('#chartDiv2').load('/vis2');
                             $('#selectionDiv2').show();
+                            $('#chartDiv3').load('/vis3');
                             $('#selectionDiv3').show();
                         });
                     </script>
