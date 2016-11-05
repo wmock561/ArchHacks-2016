@@ -14,7 +14,7 @@
         ]);
 
         var options = {
-            title: 'Company Performance',
+            title: 'Visualization 3',
             curveType: 'linear',
             legend: {
                 position: 'bottom'
