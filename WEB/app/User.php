@@ -27,10 +27,10 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    protected $relations = ['surveyAnswers', 'personalInformation'];
+    protected $relations = ['surveys', 'personalInformation'];
 
-    public function surveyAnswers(){
-        return $this->hasMany('App\SurveyAnswers');
+    public function surveys(){
+        return $this->hasMany('App\Survey');
     }
 
     public function personalInformation(){

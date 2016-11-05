@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\SurveyAnswers;
+use App\Survey;
 use Illuminate\Http\Request;
 
 class ApiSurveyAnswersController extends Controller
@@ -14,7 +14,7 @@ class ApiSurveyAnswersController extends Controller
      */
     public function index(Request $request)
     {
-        return $request->user->surveyAnswers->all();
+        return $request->user->surveys->all();
     }
 
     /**
@@ -35,8 +35,8 @@ class ApiSurveyAnswersController extends Controller
      */
     public function store(Request $request)
     {
-       $answers = new SurveyAnswers($request->all());
-       $request->user->surveyAnswers()->save($answers);
+       //$answers = new Survey($request->all());
+       //$request->user->surveys()->save($answers);
        return response('',200);
     }
 

@@ -15,5 +15,5 @@ class PersonalInformation extends Model
 	    'occupation'
     ];
 
-    protected $table = "PersonalInformation";
+    protected $table = "personalInformation";
 }

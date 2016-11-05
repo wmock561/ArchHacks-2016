@@ -13,7 +13,7 @@ class CreatePersonalInformationTable extends Migration
      */
     public function up()
     {
-        Schema::create('PersonalInformation', function (Blueprint $table) {
+        Schema::create('personalInformation', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned();
             $table->string('firstName')->nullable();
