@@ -29,7 +29,6 @@
 <body>
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top">
-            <a class="navbar-brand" href="{{ url('/') }}"><img src="img/Asset_3.png" alt="LOGO" id="logo" height="96.3px" width="126.6px"></a>
             <div class="container">
                 <div class="navbar-header">
                     <!-- Collapsed Hamburger -->
@@ -39,6 +38,11 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
+
+                    <!-- Branding Image -->
+                    <a class="navbar-brand" href="{{ url('/') }}">
+                        <img src="img/Asset_3.png" alt="LOGO" id="logo" height="96.3px" width="126.6px">StressLess
+                    </a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
