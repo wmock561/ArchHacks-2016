@@ -4,7 +4,7 @@
     });
     google.charts.setOnLoadCallback(drawSeriesChart);
 
-    var ts = moment("10/15/2014 9:00", "M/D/YYYY H:mm").valueOf();
+    var ts = moment("10/15/2014 13:00", "M/D/YYYY H:mm").valueOf();
     var m = moment(ts);
     var s = m.format("M/D/YYYY H:mm");
     
