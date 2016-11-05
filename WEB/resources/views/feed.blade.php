@@ -2,7 +2,7 @@
 
 <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
     <div class="mdl-card__supporting-text">
-        <h2>{{ $survey->user->personalInformation->firstName }} {{ $survey->user->personalInformation->lastName }} shared data from a panic attack with you.</h2> Summary of data here? Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Nostrud in laboris labore nisi amet do dolor eu fugiat consectetur elit cillum esse.
+        <h4>{{ $survey->user->personalInformation->firstName }} {{ $survey->user->personalInformation->lastName }} shared data from a panic attack with you.</h4> Summary of data here? Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Nostrud in laboris labore nisi amet do dolor eu fugiat consectetur elit cillum esse.
     </div>
     <div class="mdl-card__actions">
         <a href="#" class="mdl-button">View Now</a><!--can open a overlay with info about that survey?-->
