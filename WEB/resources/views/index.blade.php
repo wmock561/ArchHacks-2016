@@ -160,22 +160,46 @@
 
                     <div id="chartHolder">
 
-                        <div id="chartDiv"></div>
+                        <div id="chartDiv1"></div>
 
-                        <div id="selectionDiv" style="display:none;">
-                            <button id="dayButton" class="chartNavButton">Day</button>
-                            <button id="weekButton" class="chartNavButton">Week</button>
-                            <button id="monthButton" class="chartNavButton">Month</button>
-                            <button id="yearButton" class="chartNavButton">Year</button>
-                            <button id="allButton" class="chartNavButton">All</button>
+                        <div id="selectionDiv1" style="display:none;">
+                            <button id="dayButton1" class="chartNavButton">Day</button>
+                            <button id="weekButton1" class="chartNavButton">Week</button>
+                            <button id="monthButton1" class="chartNavButton">Month</button>
+                            <button id="yearButton1" class="chartNavButton">Year</button>
+                            <button id="allButton1" class="chartNavButton">All</button>
+                        </div>
+                        
+                        <div id="chartDiv2"></div>
+
+                        <div id="selectionDiv2" style="display:none;">
+                            <button id="dayButton2" class="chartNavButton">Day</button>
+                            <button id="weekButton2" class="chartNavButton">Week</button>
+                            <button id="monthButton2" class="chartNavButton">Month</button>
+                            <button id="yearButton2" class="chartNavButton">Year</button>
+                            <button id="allButton2" class="chartNavButton">All</button>
+                        </div>
+                        
+                        <div id="chartDiv3"></div>
+
+                        <div id="selectionDiv3" style="display:none;">
+                            <button id="dayButton3" class="chartNavButton">Day</button>
+                            <button id="weekButton3" class="chartNavButton">Week</button>
+                            <button id="monthButton3" class="chartNavButton">Month</button>
+                            <button id="yearButton3" class="chartNavButton">Year</button>
+                            <button id="allButton3" class="chartNavButton">All</button>
                         </div>
                         
                     </div>
 
                     <script>
                         $("#careNetwork").click(function () {
-                            $('#chartDiv').load('/care');
-                            $('#selectionDiv').show();
+                            $('#chartDiv1').load('/care');
+                            $('#selectionDiv1').show();
+                            $('#chartDiv2').load('/care');
+                            $('#selectionDiv2').show();
+                            $('#chartDiv3').load('/care');
+                            $('#selectionDiv3').show();
                         });
                     </script>
 
