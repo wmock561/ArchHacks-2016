@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Survey;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class ApiSurveyAnswersController extends Controller
 {
@@ -37,6 +38,7 @@ class ApiSurveyAnswersController extends Controller
     {
        //$answers = new Survey($request->all());
        //$request->user->surveys()->save($answers);
+       Log::info($request->all());
        return response('',200);
     }
 

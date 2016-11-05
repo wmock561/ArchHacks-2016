@@ -35,6 +35,6 @@ class CreatePersonalInformationTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('PersonalInformation');
+        Schema::dropIfExists('personalInformation');
     }
 }
