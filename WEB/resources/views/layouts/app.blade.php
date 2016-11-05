@@ -52,19 +52,15 @@
                 <div class="mdl-cell mdl-cell--1-col"></div>
                 <div class="mdl-cell mdl-cell--1-col"></div>
 
-                <div class="mdl-cell mdl-cell--1-col"></div>
+                @if (Auth::guest())
+                <div class="mdl-cell mdl-cell--1-col"><a href="{{ url('/login') }}">Login</a></div>
+                <div class="mdl-cell mdl-cell--1-col"><a href="{{ url('/register') }}">Register</a></div>
+                @else
+                <script>
+                    window.location.href = '/index';
+                </script>
+                @endif
 
-                <div class="mdl-cell mdl-cell--1-col">
-                    @if (Auth::guest())
-                    <a href="{{ url('/login') }}">Login</a>
-                    <a href="{{ url('/register') }}">Register</a>
-                    @else
-                    <script>
-                        window.location.href = '/index';
-                    </script>
-                    @endif
-                    
-                </div>
             </div>
 
             <div class="mdl-layout--large-screen-only mdl-layout__header-row"></div>
