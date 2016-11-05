@@ -6,7 +6,13 @@
     height: 600px;
     overflow: scroll;
 }
-#selectionDiv{
+#selectionDiv1{
+    padding-left: 25%;
+}
+#selectionDiv2{
+    padding-left: 25%;
+}
+#selectionDiv3{
     padding-left: 25%;
 }
 #careNetworkSection{
