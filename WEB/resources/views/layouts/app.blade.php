@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,11 +20,12 @@
             'csrfToken' => csrf_token(),
         ]); ?>
     </script>
-    
+
     <!--add-ons-->
-    
-    
+
+
 </head>
+
 <body>
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top">
@@ -54,20 +56,23 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <li><a href="{{ url('/login') }}">Login</a></li>
-                            <li><a href="{{ url('/register') }}">Register</a></li>
+                        <li><a href="{{ url('/login') }}">Login</a></li>
+                        <li><a href="{{ url('/register') }}">Register</a></li>
                         @else
-                            <script>
-                                window.localStorage.href = '/index';
-                            </script>
+                        <script>
+                            window.location.href = '/index';
+                        </script>
                         @endif
                     </ul>
                 </div>
             </div>
         </nav>
+
+        @yield('content')
     </div>
 
     <!-- Scripts -->
     <script src="/js/app.js"></script>
 </body>
+
 </html>
