@@ -30,10 +30,10 @@
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
-                <div class="navbar-header">
-                    
-                    <img src="img/Asset_3.png" alt="LOGO" id="logo" height="96.3px" width="126.6px">
 
+                <img src="img/Asset_3.png" alt="LOGO" id="logo" height="96.3px" width="126.6px">
+                <div class="navbar-header">
+                   
                     <!-- Collapsed Hamburger -->
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
                         <span class="sr-only">Toggle Navigation</span>
