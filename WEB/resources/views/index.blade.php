@@ -113,8 +113,8 @@
                     </form>
                 </div>
             </div>
+            <img src="img/Assest_3.png" alt="LOGO" id="logo">
             <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-                <img src="img/Assest_3.png" alt="LOGO" id="logo">
                 <h3>StressLess</h3>
             </div>
             <div class="mdl-layout--large-screen-only mdl-layout__header-row">
