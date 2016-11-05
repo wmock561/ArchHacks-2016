@@ -31,26 +31,18 @@
             var dt = parsed[0];
             var time1 = parsed[1];
         
-            
-    
-            console.log( dt + " AND " +time1 );
-            //var time = ???;
-        
-            //id.push(LARAVEL $survey->created_at }});//can be string so good to leave
+            id.push({{ $survey->created_at }});//can be string so good to leave
             
             //date manipulation here
-            /*var ts = moment( LARAVEL , "M/D/YYYY").valueOf();
-            var m = moment(ts);
-            var s = m.format("M/D/YYYY H:mm");
+            var ts = moment( dt , "M/D/YYYY").valueOf();
 
             console.log(ts);
-            console.log(s);
         
-            date.push();//TODO
+            //date.push();//TODO
         
             //time manipulation here
         
-            var hms =  LARAVEL  // your input string
+            /*var hms =  LARAVEL  // your input string
             var a = hms.split(':'); // split it at the colons
 
             // minutes are worth 60 seconds. Hours are worth 60 minutes.
