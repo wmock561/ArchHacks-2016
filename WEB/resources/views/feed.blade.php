@@ -1,6 +1,6 @@
 @foreach ($surveys as $survey)
 
-<div class="mdl-card mdl-cell mdl-cell--12-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone" style="margin-bottom:20px;">
+<div class="mdl-card mdl-cell mdl-cell--12-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone" style="margin-bottom:20px; margin-top:20px;">
     <div class="mdl-card__supporting-text">
         <h4>{{ $survey->user->personalInformation->firstName }} {{ $survey->user->personalInformation->lastName }} shared data with you.</h4>{{ $survey->user->personalInformation->firstName }} has shared data about a severity {{$survey->question5_answers[0]->answer}} panic attack with you.
     </div>
