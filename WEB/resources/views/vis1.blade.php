@@ -50,10 +50,10 @@
         
             //push for severity
         
-            severity.push('{{ (int)$survey->question5_answers->answer}}');
+            severity.push("{{ $survey->question5_answers->answer}}");
         
             //push duration
-            duration.push('{{ (int)$survey->question6_answers->answer}}');
+            duration.push("{{ (int)$survey->question6_answers->answer}}");
         
 
         @endforeach
