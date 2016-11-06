@@ -2,17 +2,25 @@
     google.charts.load('current', {
         'packages': ['corechart']
     });
-    google.charts.setOnLoadCallback(drawChart);
+    google.charts.setOnLoadCallback(getData);
     
-    $.get("/location", function (data) {
-        var parsed = JSON.parse(data);
+    function getData(){
+    
+        $.get("/location", function (data) {
+            var parsed = JSON.parse(data);
+
+            console.log(parsed);
+            
+            drawChart(parsed);
+
+        });
+         
         
-        console.log(parsed);
+        
+    }
 
-    });
 
-
-    function drawChart() {
+    function drawChart(chartData) {
 
         var masterData = google.visualization.arrayToDataTable([
           ['Task', 'Hours per Day'],
