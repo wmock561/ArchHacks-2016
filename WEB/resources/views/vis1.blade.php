@@ -64,6 +64,8 @@
             data.addRow([id[i], Date[i], timeofDay[i], severity[i], duration[i]]);
         }
         
+        console.log(data);
+        
 
         var options = {
             title: 'Correlation between Date, Time of Day, duration and severity of Panic Attacks ',
