@@ -119,3 +119,9 @@ div.gTitle {
     background-color: white;
     text-align: center;
 }
+
+#my_popup h3{
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+}
