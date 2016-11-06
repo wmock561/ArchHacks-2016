@@ -103,7 +103,7 @@
                     </script>
                 </section>
             </div>
-            <div class="mdl-layout__tab-panel" id="careNetworkRef" style="margin-bottom:40px;">
+            <div class="mdl-layout__tab-panel" id="careNetworkRef">
                 <section class="mdl-grid mdl-grid--no-spacing" id="careNetworkSection">
 
                     <aside class="mdl-components__nav docs-text-styling mdl-shadow--4dp">
@@ -231,7 +231,7 @@
 
                 </section>
             </div>
-            <div class="mdl-layout__tab-panel" id="settingsRef">
+            <div class="mdl-layout__tab-panel" id="settingsRef" style="margin-top:40px;">
                 <section class="section--center mdl-grid mdl-grid--no-spacing" id="settingsSection">
                 </section>
             </div>
