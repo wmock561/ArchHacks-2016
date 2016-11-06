@@ -23,7 +23,7 @@
             masterDataArray.push([chartData.data[i].answer, parseInt(chartData.data[i].count]));
         }*/
 
-        masterDataArray.push(['other', {{ $array->other }}]);
+        masterDataArray.push(['other', {{ $array["other"] }}]);
 
         console.log(masterDataArray);
         
