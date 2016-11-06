@@ -41,9 +41,9 @@
             
             <div class="mdl-layout--large-screen-only mdl-layout__header-row headerSize"></div>
 
-            <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+            <div class="mdl-layout--large-screen-only mdl-layout__header-row" style="padding-left:40px;">
                <div class="mdl-cell mdl-cell--6-col">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="" href="{{ url('/') }}">
                     <img src="img/Asset_5.png" alt="LOGO" id="logo" class="logo">
                 </a>
                 </div>
