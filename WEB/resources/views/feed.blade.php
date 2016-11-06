@@ -15,7 +15,7 @@
         <div>
             <h3>Test</h3>
 
-            <table>
+            <table align="center">
                 <tr>
                     <th>Location</th>
                     <th>Cause</th>
@@ -34,8 +34,7 @@
                 </tr>
             </table>
 
-            <p>Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Nostrud in laboris labore nisi amet do dolor eu fugiat consectetur elit cillum esse.</p>
-            <button class="my_popup_close">Close</button>
+            <button align="center" class="my_popup_close">Close</button>
         </div>
 
     </div>
