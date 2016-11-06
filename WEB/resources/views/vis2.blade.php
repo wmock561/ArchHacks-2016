@@ -4,7 +4,7 @@
     });
     google.charts.setOnLoadCallback(drawChart);
 
-    function drawChart(chartData) {
+    function drawChart() {
 
         var location = new Array();
         var numCount = new Array();

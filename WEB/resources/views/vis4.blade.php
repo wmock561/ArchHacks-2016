@@ -1,6 +1,6 @@
 <script type="text/javascript">
     google.charts.load('current', {packages: ['corechart', 'bar']});
-    google.charts.setOnLoadCallback(drawBasic);
+    google.charts.setOnLoadCallback(drawBarChart);
 
     function drawBasic() {
 
@@ -33,24 +33,24 @@
     
     
     
-    function drawBarChart(chartData) {
+    function drawBarChart() {
 
-        var location = new Array();
+        var symptom = new Array();
         var numCount = new Array();
 
         var masterDataArray = new Array();
 
-        masterDataArray.push(['Cause', 'Frequency']);
+        masterDataArray.push(['Symptom', 'Frequency']);
         
         @foreach($array['data'] as $chartData)
-            masterDataArray.push(['{{ $chartData->answer }}', {{ (int)$chartData->count }}]);
+            masterDataArray.push([ '{{ $chartData->symptom }}', {{ (int)$chartData->count }} ]);
         @endforeach
         /*for (i = 0; i < chartData.data.length; i++) {
 
             masterDataArray.push([chartData.data[i].answer, parseInt(chartData.data[i].count]));
         }*/
 
-        masterDataArray.push(['other', {{ (int)$array["other"] }}]);
+        masterDataArray.push(['other', {{ (int)$array["other"]->count }} ]);
 
         console.log(masterDataArray);
 
@@ -59,10 +59,17 @@
         console.log(masterData);
 
         var options = {
-            title: 'Cause'
+            title: 'Symptom',
+            hAxis: {
+                title: 'Count',
+                minValue: 0
+            },
+            vAxis: {
+                title: 'Symptoms'
+            }
         };
 
-        var chart = new google.visualization.PieChart(document.getElementById('chart3'));
+        var chart = new google.visualization.BarChart(document.getElementById('chart4'));
 
         chart.draw(masterData, options);
     }
