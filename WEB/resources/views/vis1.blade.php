@@ -35,16 +35,13 @@
             
             //date manipulation here
             
-            console.log("DATE MOTHA FUCKA: "+dt);
-            
-            //var dateArray = dt.split();
+            var dateArray = dt.split('-');
         
-            
-            var dateNum = moment(dt).valueOf();
-            
-            console.log(dateNum);//TWO
+            var finalDateArray = new Date(parseInt(dateArray[0]),parseInt(dateArray[1]),parseInt(dateArray[2]));
         
-            date.push(dateNum);
+            console.log(finalDateArray);
+        
+            date.push(finalDateArray);
         
             //time manipulation here
         
