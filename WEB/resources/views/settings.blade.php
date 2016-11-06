@@ -23,10 +23,11 @@
 	</div>
 	<br>
 	<div class="mdl-cell mdl-cell--12-col">
+	<p>The following people have access to the following surveys.  At any time, you may revoke their access to your personal information.</p>
 	<ul>
 		@foreach ($mySurveys as $survey)
 			@foreach ($survey->users as $user)
-				<li>{{ $user->personalInformation->firstName }} {{ $user->personalInformation->lastName }} taken on {{ $survey->created_at }}  <button>Revoke Access</button></li>
+				<li>{{ $user->personalInformation->firstName }} {{ $user->personalInformation->lastName }} taken on {{ \Carbon\Carbon::parse($survey->created_at)->toDayDateTimeString() }}  <button>Revoke Access</button></li>
 			@endforeach
 		@endforeach
 	</ul>
