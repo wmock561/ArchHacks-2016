@@ -30,21 +30,19 @@
         
             var dt = parsed[0];
             var time1 = parsed[1];
+            
+            console.log(time1);
         
             id.push('{{ $survey->created_at }}');//can be string so good to leave
             
-            console.log(id);
-            
             //date manipulation here
             var ts = moment('{{ $survey->created_at }}').valueOf();
-
-            console.log(ts);
         
-            //date.push();//TODO
+            date.push(ts);//TODO
         
             //time manipulation here
         
-            /*var hms =  LARAVEL  // your input string
+            var hms =  time1;  // your input string
             var a = hms.split(':'); // split it at the colons
 
             // minutes are worth 60 seconds. Hours are worth 60 minutes.
