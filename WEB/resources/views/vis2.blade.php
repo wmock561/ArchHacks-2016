@@ -46,4 +46,5 @@
         chart.draw(masterData, options);
     }
 </script>
+
 <div id="chart2" style="width: 900px; height: 500px"></div>
