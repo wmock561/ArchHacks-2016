@@ -71,7 +71,7 @@
         @endforeach
 
         for (i = 0; i < id.length; i++) {
-            data.addRow([id[i], Date[i], timeofDay[i], severity[i], duration[i]]);
+            data.addRow([id[i], date[i], timeofDay[i], severity[i], duration[i]]);
         }
         
         console.log(data);
