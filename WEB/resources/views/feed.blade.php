@@ -34,7 +34,7 @@
                 </tr>
             </table>
 
-            <button align="center" class="my_popup_close">Close</button>
+            <button align="center" class="my_popup_close"><img src="img/close.png" class="close" alt="close"></button>
         </div>
 
     </div>

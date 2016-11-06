@@ -114,33 +114,57 @@ div.gTitle {
     letter-spacing: .02em;
     display: inline-block;
 }
-#my_popup{
-    
+
+#my_popup {
     background-color: white;
     text-align: center;
     align-content: center;
 }
 
-#my_popup h3{
+#my_popup h3 {
     margin: auto;
     padding: 10px;
     text-align: center;
 }
 
-#my_popup button{
+#my_popup button {
     margin: 0 auto;
 }
 
 #careNetworkRef {
-padding: 0px;
+    padding: 0px;
 }
+
 .noDot {
-width: 250px;
+    width: 250px;
 }
+
 .noDot li {
-padding: 10px 20px;
-font-size: 20px;
+    padding: 10px 20px;
+    font-size: 20px;
 }
+
 #chartHolder {
-padding: 40px;
+    padding: 40px;
+}
+
+img.close {
+    height: 30px;
+    width: 30px;
+    top: 10px;
+    right: 10px;
+    position: absolute;
+}
+
+thead {
+    border-bottom: 1px solid #d0d0d0;
+}
+
+th,
+td {
+    padding: 15px 5px;
+    display: table-cell;
+    text-align: left;
+    vertical-align: middle;
+    border-radius: 2px;
 }
