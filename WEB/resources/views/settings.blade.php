@@ -27,7 +27,12 @@
 	<ul>
 		@foreach ($mySurveys as $survey)
 			@foreach ($survey->users as $user)
-				<li>{{ $user->personalInformation->firstName }} {{ $user->personalInformation->lastName }} taken on {{ \Carbon\Carbon::parse($survey->created_at)->toDayDateTimeString() }}  <button>Revoke Access</button></li>
+				<form action="/revokeAccess" method="post">
+					<li>{{ $user->personalInformation->firstName }} {{ $user->personalInformation->lastName }} taken on {{ \Carbon\Carbon::parse($survey->created_at)->toDayDateTimeString() }}  <button type="submit">Revoke Access</button></li>
+					{{ csrf_token() }}
+					<input type="hidden" name="survey_id" value="{{ $survey->id }}">
+					<input type="hidden" name="user_id" value="{{ $user->id }}">
+				</form>
 			@endforeach
 		@endforeach
 	</ul>
