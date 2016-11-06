@@ -28,9 +28,11 @@ class GraphDataController extends Controller
     	$good = $locations->filter(function($value, $key){
     		return $value->count > 1;
     	});
+        $good = array_values($good->toArray());
     	$array = array();
-    	$good["other"] = $other;
-    	$array["data"] = $good->toArray();
+    	//$good[] = $other;
+        $array["other"] = $other;
+    	$array["data"] = $good;
     	$array["count"] = $count;
     	return $array;
     }
@@ -54,9 +56,11 @@ class GraphDataController extends Controller
     	$good = $locations->filter(function($value, $key){
     		return $value->count > 1;
     	});
+        $good = array_values($good->toArray());
     	$array = array();
-    	$good["other"] = $other;
-    	$array["data"] = $good->toArray();
+    	//$good[] = $other;
+        $array["other"] = $other;
+    	$array["data"] = $good;
     	$array["count"] = $count;
     	return $array;
     }
@@ -88,14 +92,15 @@ class GraphDataController extends Controller
     	$good = $locations->filter(function($value, $key){
     		return $value->count > 1;
     	});
-
+        $good = array_values($good->toArray());
     	$otherArray = array();
     	$otherArray['count'] = $other;
     	$otherArray['severity'] = $otherDuration;
 
 		$array = array();
-    	$good["other"] = $otherArray;
-    	$array["data"] = $good->toArray();
+    	//$good[] = $otherArray;
+        $array["other"] = $otherArray;
+    	$array["data"] = $good;
     	$array["count"] = $count;
     	return $array;
     }
@@ -127,14 +132,15 @@ class GraphDataController extends Controller
     	$good = $locations->filter(function($value, $key){
     		return $value->count > 1;
     	});
-    	$good->toArray();
+    	$good = array_values($good->toArray());
     	$otherArray = array();
     	$otherArray['count'] = $other;
     	$otherArray['duration'] = $otherDuration;
 
     	$array = array();
-    	$good["other"] = $otherArray;
-    	$array["data"] = $good->toArray();
+    	//$good[] = $otherArray;
+        $array["other"] = $otherArray;
+    	$array["data"] = $good;
     	$array["count"] = $count;
     	return $array;
     }
