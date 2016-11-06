@@ -91,7 +91,7 @@
                 }
             },
             colorAxis: {
-                colors: ['yellow', 'red']
+                colors: ["#FFC107", "#F44336"]
             }
         };
 

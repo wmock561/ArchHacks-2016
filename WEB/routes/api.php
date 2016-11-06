@@ -24,6 +24,7 @@ Route::group(['middleware' => 'api-auth'], function(){
 	Route::post('/getSurveyAnswers', 'ApiSurveyAnswersController@index');
 	Route::post('/savePersonalInformation', 'PersonalInformationController@store');
 	Route::post('/pin', 'ApiAuthController@storePin');
+	Route::post('/shareSurvey', 'SharingController@shareSurvey');
 
 });
 

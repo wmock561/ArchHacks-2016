@@ -52,4 +52,8 @@ class Survey extends Model
     public function users(){
     	return $this->belongsToMany("App\User");
     }
+
+    public function scopeLatest($query){
+        return $query->orderBy('created_at');
+    }
 }
