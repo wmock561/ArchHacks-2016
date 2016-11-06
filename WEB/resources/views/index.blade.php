@@ -165,6 +165,8 @@
                     </aside>
 
                     <div id="chartHolder">
+                       
+                        <div id="networkChartDiv"></div>
                         
                         <img class="titleIcon" src="img/timing.png" alt="" /> <div class="gTitle">Timing and Duration</div>
 
@@ -230,6 +232,7 @@
 
                     <script>
                         $("#careNetwork").click(function () {
+                            $('#networkChartDiv').hide();
                             $('#chartDiv1').load('/vis1');
                             $('#chartDiv2').load('/vis2');
                             $('#chartDiv3').load('/vis3');
@@ -254,6 +257,8 @@
                     <script>
                         $("#clearDiv").click(function () {
                             $('#chartHolder').hide();
+                            //$('#networkChartDiv').load('/networkVis');//LOAD NETWORK CHART
+                            $('#networkChartDiv').show();
                         });
                     </script>
 
