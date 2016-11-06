@@ -24,7 +24,7 @@
         
         masterDataArray.push(['Location','Frequency']);
         
-        for(i=0;i<chartData.data.length-1;i++){
+        for(i=0; i<chartData.data.length; i++){
             
             masterDataArray.push([chartData.data[i].answer,chartData.data[i].count]);
         }
