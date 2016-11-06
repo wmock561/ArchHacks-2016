@@ -17,14 +17,20 @@
 
             <table>
                 <tr>
-                    <th>Q1</th>
-                    <th>Lastname</th>
-                    <th>Age</th>
+                    <th>Location</th>
+                    <th>Cause</th>
+                    <th>Symptom</th>
+                    <th>Calming Method</th>
+                    <th>Severity</th>
+                    <th>Duration</th>
                 </tr>
                 <tr>
                     <td>{{$survey->question1_answers[0]->answer}}</td>
-                    <td>Smith</td>
-                    <td>50</td>
+                    <td>{{$survey->question2_answers[0]->answer}}</td>
+                    <td>{{$survey->question3_answers[0]->answer}}</td>
+                    <td>{{$survey->question4_answers[0]->answer}}</td>
+                    <td>{{$survey->question5_answers[0]->answer}}</td>
+                    <td>{{$survey->question6_answers[0]->answer}}</td>
                 </tr>
                 <tr>
                     <td>Eve</td>
