@@ -24,6 +24,10 @@
 	<br>
 	<div class="mdl-cell mdl-cell--12-col">
 	<ul>
-		<li>People who have acces</li>
+		@foreach ($mySurveys as $survey)
+			@foreach ($survey->users as $user)
+				<li>{{ $user->personalInformation->firstName }} {{ $user->personalInformation->lastName }}</li>
+			@endforeach
+		@endforeach
 	</ul>
 	</div>
