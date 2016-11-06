@@ -13,10 +13,10 @@
     <!-- Add content to the popup -->
     <div id="my_popup">
 
-        ...popup content...
+        <div>
+            <button class="my_popup_close">Close</button>
 
-        <!-- Add an optional button to close the popup -->
-        <button class="my_popup_close">Close</button>
+        </div>
 
     </div>
 
