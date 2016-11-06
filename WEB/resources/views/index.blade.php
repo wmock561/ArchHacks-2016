@@ -235,6 +235,7 @@
                             $('#chartDiv3').load('/vis3');
                             $('#chartDiv4').load('/vis4');
                             $('#chartDiv5').load('/vis5');
+                            $('#chartHolder').show();
                             /*$('#selectionDiv1').show();
                             $('#selectionDiv2').show();
                             $('#selectionDiv3').show();
