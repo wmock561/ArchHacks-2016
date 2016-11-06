@@ -123,7 +123,7 @@ div.gTitle {
 
 #my_popup h3 {
     margin: auto;
-    padding: 10px;
+    padding: 20px;
     text-align: center;
 }
 
@@ -160,6 +160,14 @@ thead {
     border-bottom: 1px solid #d0d0d0;
 }
 
+#my_popup {
+    width: 600px;
+}
+
+table {
+    width: 550px;
+}
+
 th,
 td {
     padding: 15px 5px;
@@ -167,12 +175,4 @@ td {
     text-align: left;
     vertical-align: middle;
     border-radius: 2px;
-}
-
-#my_popup{
-    width: 600px;
-}
-
-table{
-    width: 550px;
 }

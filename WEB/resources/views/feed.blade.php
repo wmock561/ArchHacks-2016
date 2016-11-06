@@ -13,7 +13,7 @@
     <div id="my_popup">
 
         <div>
-            <h3>Test</h3>
+            <h3>Results for {{ $survey->user->personalInformation->firstName }}</h3>
 
             <table align="center">
                 <thead>
