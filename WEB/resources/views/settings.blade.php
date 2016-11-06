@@ -25,6 +25,7 @@
 	<div class="mdl-cell mdl-cell--12-col">
 	<ul>
 		@foreach ($mySurveys as $survey)
+			{{ json_encode($survey) }}
 			@foreach ($survey->users as $user)
 				<li>{{ $user->personalInformation->firstName }} {{ $user->personalInformation->lastName }}</li>
 			@endforeach
