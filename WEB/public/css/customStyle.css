@@ -168,3 +168,11 @@ td {
     vertical-align: middle;
     border-radius: 2px;
 }
+
+#my_popup{
+    width: 600px;
+}
+
+table{
+    width: 550px;
+}

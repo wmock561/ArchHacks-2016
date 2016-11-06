@@ -16,22 +16,26 @@
             <h3>Test</h3>
 
             <table align="center">
-                <tr>
-                    <th>Location</th>
-                    <th>Cause</th>
-                    <th>Symptom</th>
-                    <th>Calming Method</th>
-                    <th>Severity</th>
-                    <th>Duration</th>
-                </tr>
-                <tr>
-                    <td>{{$survey->question1_answers[0]->answer}}</td>
-                    <td>{{$survey->question2_answers[0]->answer}}</td>
-                    <td>{{$survey->question3_answers[0]->answer}}</td>
-                    <td>{{$survey->question4_answers[0]->answer}}</td>
-                    <td>{{$survey->question5_answers[0]->answer}}</td>
-                    <td>{{$survey->question6_answers[0]->answer}}</td>
-                </tr>
+                <thead>
+                    <tr>
+                        <th>Location</th>
+                        <th>Cause</th>
+                        <th>Symptom</th>
+                        <th>Calming Method</th>
+                        <th>Severity</th>
+                        <th>Duration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{$survey->question1_answers[0]->answer}}</td>
+                        <td>{{$survey->question2_answers[0]->answer}}</td>
+                        <td>{{$survey->question3_answers[0]->answer}}</td>
+                        <td>{{$survey->question4_answers[0]->answer}}</td>
+                        <td>{{$survey->question5_answers[0]->answer}}</td>
+                        <td>{{$survey->question6_answers[0]->answer}}</td>
+                    </tr>
+                </tbody>
             </table>
 
             <button align="center" class="my_popup_close"><img src="img/close.png" class="close" alt="close"></button>
