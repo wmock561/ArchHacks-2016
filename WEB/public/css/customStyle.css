@@ -125,3 +125,7 @@ div.gTitle {
     padding: 10px;
     text-align: center;
 }
+
+#my_popup button{
+    margin: auto;
+}
