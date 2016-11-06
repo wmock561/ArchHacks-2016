@@ -74,7 +74,6 @@
         
 
         var options = {
-            title: 'Correlation between Date, Time of Day, duration and severity of Panic Attacks ',
             hAxis: {
                 format: 'M/d/yy',
                 viewWindow: {
