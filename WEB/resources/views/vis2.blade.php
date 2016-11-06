@@ -50,7 +50,7 @@
 
         var chart = new google.visualization.PieChart(document.getElementById('chart2'));
 
-        chart.draw(dataTEST, options);
+        chart.draw(masterData, options);
     }
 </script>
 <div id="chart2" style="width: 900px; height: 500px"></div>
