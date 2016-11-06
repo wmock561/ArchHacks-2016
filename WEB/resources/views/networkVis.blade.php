@@ -2,9 +2,9 @@
    google.charts.load('current', {
         'packages': ['corechart']
     });
-    google.charts.setOnLoadCallback(drawSeriesChart);
+    google.charts.setOnLoadCallback(drawSeriesChart2);
 
-    function drawSeriesChart() {
+    function drawSeriesChart2() {
 
         var data = new google.visualization.DataTable();
 
@@ -78,7 +78,7 @@
         
 
         var options = {
-            title: 'Correlation between Date, Time of Day, duration and severity of Panic Attacks ',
+            title: 'Correlation between Date, Time of Day, duration and severity of Panic Attacks',
             hAxis: {
                 format: 'M/d/yy',
                 viewWindow: {
