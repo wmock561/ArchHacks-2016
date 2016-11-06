@@ -32,11 +32,6 @@
                     <td>{{$survey->question5_answers[0]->answer}}</td>
                     <td>{{$survey->question6_answers[0]->answer}}</td>
                 </tr>
-                <tr>
-                    <td>Eve</td>
-                    <td>Jackson</td>
-                    <td>94</td>
-                </tr>
             </table>
 
             <p>Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Nostrud in laboris labore nisi amet do dolor eu fugiat consectetur elit cillum esse.</p>
