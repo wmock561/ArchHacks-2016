@@ -26,7 +26,7 @@
 	<ul>
 		@foreach ($mySurveys as $survey)
 			@foreach ($survey->users as $user)
-				<li>{{ $user->personalInformation->firstName }} {{ $user->personalInformation->lastName }} taken on {{ $survey->created_on }}  <button>Revoke Access</button></li>
+				<li>{{ $user->personalInformation->firstName }} {{ $user->personalInformation->lastName }} taken on {{ $survey->created_at }}  <button>Revoke Access</button></li>
 			@endforeach
 		@endforeach
 	</ul>
