@@ -143,6 +143,9 @@ div.gTitle {
     padding: 10px 20px;
     font-size: 20px;
 }
+.noDot a{
+    color: #222;
+}
 
 #chartHolder {
     padding: 40px;
