@@ -9,8 +9,8 @@
         var data = new google.visualization.DataTable();
 
         data.addColumn('string', 'ID');
-        data.addColumn('number', 'Date');
-        data.addColumn('number', 'Time of Day');
+        data.addColumn('date', 'Date');
+        data.addColumn('timeofday', 'Time of Day');
         data.addColumn('number', 'Severity');
         data.addColumn('number', 'Duration');
 
@@ -31,11 +31,15 @@
             var dt = parsed[0];
             var time1 = parsed[1];
         
-            console.log('{{ $survey->created_at }}');//ONE
-        
             id.push('{{ $survey->created_at }}');//can be string so good to leave
             
             //date manipulation here
+            
+            console.log("DATE MOTHA FUCKA: "+dt);
+            
+            //var dateArray = dt.split();
+        
+            
             var dateNum = moment(dt).valueOf();
             
             console.log(dateNum);//TWO
