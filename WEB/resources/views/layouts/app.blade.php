@@ -18,8 +18,8 @@
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/public/css/customStyle.css">
-    <link rel="stylesheet" type="text/css" href="/public/css/customStyle.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/customStyle.css">
     
 
 
