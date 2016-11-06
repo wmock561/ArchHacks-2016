@@ -31,7 +31,7 @@
             var dt = parsed[0];
             var time1 = parsed[1];
         
-            id.push('{{ $survey->created_at }}');//can be string so good to leave
+            id.push(dt);//can be string so good to leave
             
             //date manipulation here
             
