@@ -39,6 +39,8 @@
         
             var finalDateArray = new Date(parseInt(dateArray[0]),parseInt(dateArray[1])-1,parseInt(dateArray[2]));
         
+            console.log(finalDateArray);
+        
             date.push(finalDateArray);
         
             //time manipulation here
@@ -48,6 +50,8 @@
 
             // minutes are worth 60 seconds. Hours are worth 60 minutes.
             var finalTimeArray = [parseInt(a[0]),parseInt(a[1]),parseInt(a[2])];
+        
+            console.log(finalTimeArray);
         
             timeofDay.push(finalTimeArray);
         
