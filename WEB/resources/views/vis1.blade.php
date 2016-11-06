@@ -30,8 +30,6 @@
         
             var dt = parsed[0];
             var time1 = parsed[1];
-            
-            console.log(time1);
         
             id.push('{{ $survey->created_at }}');//can be string so good to leave
             
