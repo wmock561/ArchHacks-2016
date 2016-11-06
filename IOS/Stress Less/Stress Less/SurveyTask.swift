@@ -134,6 +134,75 @@ public var SurveyTask: ORKOrderedTask {
     
     //let firstQuestionStep = ORKQuestionStep(identifier: "TextChoiceQuestionStep", title: firstQuestionStepTitle, answer: firstAnswerFormat)
     steps += [formFourth]
+    
+    /*STEP FIVE*/
+    let formFifth:ORKFormStep = ORKFormStep(identifier: "questionStepFive", title: "What tactics did you use to calm yourself down?", text: "Select all that apply")
+    
+    let formFiveChoice:[String] = ["1","2","3","4","5","6","7","8","9","10"]
+    
+    textChoices = [
+        ORKTextChoice(text: formFiveChoice[0], value: 1),
+        ORKTextChoice(text: formFiveChoice[1], value: 2),
+        ORKTextChoice(text: formFiveChoice[2], value: 3),
+        ORKTextChoice(text: formFiveChoice[3], value: 4),
+        ORKTextChoice(text: formFiveChoice[4], value: 5),
+        ORKTextChoice(text: formFiveChoice[5], value: 6),
+        ORKTextChoice(text: formFiveChoice[6], value: 7),
+        ORKTextChoice(text: formFiveChoice[7], value: 8),
+        ORKTextChoice(text: formFiveChoice[8], value: 9),
+        ORKTextChoice(text: formFiveChoice[9], value: 10),
+    ]
+    
+    
+    
+    //let FifthAnswerFormat: ORKTextChoiceAnswerFormat = ORKAnswerFormat.choiceAnswerFormatWithStyle(.MultipleChoice, textChoices: textChoices)
+    let FifthAnswerFormat: ORKValuePickerAnswerFormat = ORKAnswerFormat.valuePickerAnswerFormatWithTextChoices(textChoices)
+    
+    textFormItem = ORKFormItem(identifier: "questionStepFiveSelect", text: "Tap to select severity", answerFormat: FifthAnswerFormat, optional: true)
+    //textFormItemTwo = ORKFormItem(identifier: "inputChoiceFive", text: "Other", answerFormat: inputChoiceFive, optional: true)
+    
+    formItemArray = [textFormItem]
+    
+    formFifth.formItems = formItemArray
+    
+    
+    //let firstQuestionStep = ORKQuestionStep(identifier: "TextChoiceQuestionStep", title: firstQuestionStepTitle, answer: firstAnswerFormat)
+    steps += [formFifth]
+    
+    /*STEP SIX*/
+    let formSixth:ORKFormStep = ORKFormStep(identifier: "questionStepSix", title: "How long did the panic attack last?", text: "")
+    let tempArray = ["5 min","10 min","15 min","20 min","30 min","45 min","1 hr.","2 hr.","3hr"]
+    
+    textChoices = [
+        ORKTextChoice(text: tempArray[0], value: 5),
+        ORKTextChoice(text: tempArray[1], value: 10),
+        ORKTextChoice(text: tempArray[2], value: 15),
+        ORKTextChoice(text: tempArray[3], value: 20),
+        ORKTextChoice(text: tempArray[4], value: 30),
+        ORKTextChoice(text: tempArray[5], value: 45),
+        ORKTextChoice(text: tempArray[6], value: 60),
+        ORKTextChoice(text: tempArray[7], value: 120),
+        ORKTextChoice(text: tempArray[8], value: 180),
+    ]
+    
+    //let formSixChoice:[ORKTextChoice] = textChoices
+    //let pickerAnswer = ORKValuePickerAnswerFormat(textChoices: formSixChoice)
+    
+    
+    //let SixthAnswerFormat: ORKTextChoiceAnswerFormat = ORKAnswerFormat.choiceAnswerFormatWithStyle(.MultipleChoice, textChoices: textChoices)
+    
+    let SixthAnswerFormat: ORKValuePickerAnswerFormat = ORKAnswerFormat.valuePickerAnswerFormatWithTextChoices(textChoices)
+    textFormItem = ORKFormItem(identifier: "questionStepSixSelect", text: "Tap to Select duration", answerFormat: SixthAnswerFormat, optional: true)
+    //textFormItemTwo = ORKFormItem(identifier: "inputChoiceSix", text: "Other", answerFormat: inputChoiceSix, optional: true)
+    
+    formItemArray = [textFormItem]
+    
+    formSixth.formItems = formItemArray
+    
+    
+    //let firstQuestionStep = ORKQuestionStep(identifier: "TextChoiceQuestionStep", title: firstQuestionStepTitle, answer: firstAnswerFormat)
+    steps += [formSixth]
+
 
     
     return ORKOrderedTask(identifier: "SurveyTask", steps: steps)

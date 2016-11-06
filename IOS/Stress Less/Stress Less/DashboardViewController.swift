@@ -1,42 +1,29 @@
 //
-//  MainViewController.swift
+//  DashboardViewController.swift
 //  Stress Less
 //
-//  Created by Reiker Seiffe on 11/5/16.
+//  Created by Reiker Seiffe on 11/6/16.
 //  Copyright © 2016 Reiker R Seiffe. All rights reserved.
 //
 
 import UIKit
 
-class MainViewController: UIViewController {
-    
-    let dataWorker = CoreDataWorker()
+class DashboardViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
-    override func viewWillAppear(animated: Bool) {
-        let consent = dataWorker.getConcent()
-        print("THIS IS CONSENT: \(consent)")
-        if(consent == true){
-            print("Got consent")
-        }else{
-            print("Got nothing back form core data")
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("WelcomePage") as! UINavigationController
-            self.presentViewController(nextViewController, animated:true, completion:nil)
-        }
-    }
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func goToPortal(sender: AnyObject) {
+        UIApplication.sharedApplication().openURL(NSURL(string: "https://stresslessportal.com")!)
+    }
 
     /*
     // MARK: - Navigation

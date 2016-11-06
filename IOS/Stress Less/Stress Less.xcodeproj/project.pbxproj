@@ -39,6 +39,20 @@
 		D65547D91DCE9B5F004882FA /* ResearchKitGeneral+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65547D71DCE9B5F004882FA /* ResearchKitGeneral+CoreDataProperties.swift */; };
 		D65547DA1DCE9B5F004882FA /* ResearchKitGeneral.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65547D81DCE9B5F004882FA /* ResearchKitGeneral.swift */; };
 		D65547DC1DCEAF7C004882FA /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D65547DB1DCEAF7C004882FA /* logo.png */; };
+		D65547E11DCEDABA004882FA /* breathing.png in Resources */ = {isa = PBXBuildFile; fileRef = D65547DD1DCEDABA004882FA /* breathing.png */; };
+		D65547E21DCEDABA004882FA /* meditation.png in Resources */ = {isa = PBXBuildFile; fileRef = D65547DE1DCEDABA004882FA /* meditation.png */; };
+		D65547E31DCEDABA004882FA /* portalForward.png in Resources */ = {isa = PBXBuildFile; fileRef = D65547DF1DCEDABA004882FA /* portalForward.png */; };
+		D65547E41DCEDABA004882FA /* stretching.png in Resources */ = {isa = PBXBuildFile; fileRef = D65547E01DCEDABA004882FA /* stretching.png */; };
+		D65547E61DCEED8A004882FA /* attackStartedOld.png in Resources */ = {isa = PBXBuildFile; fileRef = D65547E51DCEED8A004882FA /* attackStartedOld.png */; };
+		D65547E81DCEF53E004882FA /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65547E71DCEF53E004882FA /* DashboardViewController.swift */; };
+		D65547EC1DCF0DB8004882FA /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = D65547E91DCF0DB8004882FA /* home.png */; };
+		D65547ED1DCF0DB8004882FA /* panic.png in Resources */ = {isa = PBXBuildFile; fileRef = D65547EA1DCF0DB8004882FA /* panic.png */; };
+		D65547EE1DCF0DB8004882FA /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = D65547EB1DCF0DB8004882FA /* settings.png */; };
+		D65547F01DCF89B0004882FA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65547EF1DCF89B0004882FA /* SettingsViewController.swift */; };
+		D65547F51DCF8CA1004882FA /* graph1.png in Resources */ = {isa = PBXBuildFile; fileRef = D65547F11DCF8CA1004882FA /* graph1.png */; };
+		D65547F61DCF8CA1004882FA /* graph2.png in Resources */ = {isa = PBXBuildFile; fileRef = D65547F21DCF8CA1004882FA /* graph2.png */; };
+		D65547F71DCF8CA1004882FA /* graph3.png in Resources */ = {isa = PBXBuildFile; fileRef = D65547F31DCF8CA1004882FA /* graph3.png */; };
+		D65547F81DCF8CA1004882FA /* graph4.png in Resources */ = {isa = PBXBuildFile; fileRef = D65547F41DCF8CA1004882FA /* graph4.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +127,20 @@
 		D65547D71DCE9B5F004882FA /* ResearchKitGeneral+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ResearchKitGeneral+CoreDataProperties.swift"; path = "Stress Less/ResearchKitGeneral+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D65547D81DCE9B5F004882FA /* ResearchKitGeneral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResearchKitGeneral.swift; path = "Stress Less/ResearchKitGeneral.swift"; sourceTree = "<group>"; };
 		D65547DB1DCEAF7C004882FA /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		D65547DD1DCEDABA004882FA /* breathing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = breathing.png; sourceTree = "<group>"; };
+		D65547DE1DCEDABA004882FA /* meditation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meditation.png; sourceTree = "<group>"; };
+		D65547DF1DCEDABA004882FA /* portalForward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = portalForward.png; sourceTree = "<group>"; };
+		D65547E01DCEDABA004882FA /* stretching.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stretching.png; sourceTree = "<group>"; };
+		D65547E51DCEED8A004882FA /* attackStartedOld.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = attackStartedOld.png; sourceTree = "<group>"; };
+		D65547E71DCEF53E004882FA /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		D65547E91DCF0DB8004882FA /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		D65547EA1DCF0DB8004882FA /* panic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = panic.png; sourceTree = "<group>"; };
+		D65547EB1DCF0DB8004882FA /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		D65547EF1DCF89B0004882FA /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		D65547F11DCF8CA1004882FA /* graph1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = graph1.png; sourceTree = "<group>"; };
+		D65547F21DCF8CA1004882FA /* graph2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = graph2.png; sourceTree = "<group>"; };
+		D65547F31DCF8CA1004882FA /* graph3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = graph3.png; sourceTree = "<group>"; };
+		D65547F41DCF8CA1004882FA /* graph4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = graph4.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +205,18 @@
 		D655474C1DCD71E9004882FA /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D65547F11DCF8CA1004882FA /* graph1.png */,
+				D65547F21DCF8CA1004882FA /* graph2.png */,
+				D65547F31DCF8CA1004882FA /* graph3.png */,
+				D65547F41DCF8CA1004882FA /* graph4.png */,
+				D65547E91DCF0DB8004882FA /* home.png */,
+				D65547EA1DCF0DB8004882FA /* panic.png */,
+				D65547EB1DCF0DB8004882FA /* settings.png */,
+				D65547E51DCEED8A004882FA /* attackStartedOld.png */,
+				D65547DD1DCEDABA004882FA /* breathing.png */,
+				D65547DE1DCEDABA004882FA /* meditation.png */,
+				D65547DF1DCEDABA004882FA /* portalForward.png */,
+				D65547E01DCEDABA004882FA /* stretching.png */,
 				D65547DB1DCEAF7C004882FA /* logo.png */,
 				D65547D11DCE89F9004882FA /* attackStarted.png */,
 				D65547C91DCE894C004882FA /* callEmergency.png */,
@@ -197,6 +237,8 @@
 				D655475E1DCDCEE6004882FA /* PinViewController.swift */,
 				D65547C71DCE843B004882FA /* MainViewController.swift */,
 				D65547D31DCE8B71004882FA /* SelectPanicViewController.swift */,
+				D65547E71DCEF53E004882FA /* DashboardViewController.swift */,
+				D65547EF1DCF89B0004882FA /* SettingsViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -315,15 +357,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				D65547481DCD6D53004882FA /* logoOld.png in Resources */,
+				D65547E31DCEDABA004882FA /* portalForward.png in Resources */,
+				D65547ED1DCF0DB8004882FA /* panic.png in Resources */,
 				D65547CD1DCE894C004882FA /* callEmergency.png in Resources */,
 				D65547D21DCE89F9004882FA /* attackStarted.png in Resources */,
+				D65547F61DCF8CA1004882FA /* graph2.png in Resources */,
+				D65547EC1DCF0DB8004882FA /* home.png in Resources */,
+				D65547EE1DCF0DB8004882FA /* settings.png in Resources */,
+				D65547E41DCEDABA004882FA /* stretching.png in Resources */,
 				D65547CE1DCE894C004882FA /* calmingTechniques.png in Resources */,
+				D65547F51DCF8CA1004882FA /* graph1.png in Resources */,
+				D65547F81DCF8CA1004882FA /* graph4.png in Resources */,
 				D65547D01DCE894C004882FA /* historical.png in Resources */,
 				D65547CF1DCE894C004882FA /* finishLater.png in Resources */,
 				D65547401DCD6BFC004882FA /* LaunchScreen.storyboard in Resources */,
+				D65547F71DCF8CA1004882FA /* graph3.png in Resources */,
+				D65547E61DCEED8A004882FA /* attackStartedOld.png in Resources */,
+				D65547E21DCEDABA004882FA /* meditation.png in Resources */,
 				D65547DC1DCEAF7C004882FA /* logo.png in Resources */,
 				D655473D1DCD6BFC004882FA /* Assets.xcassets in Resources */,
 				D655475D1DCDCAC6004882FA /* Main.storyboard in Resources */,
+				D65547E11DCEDABA004882FA /* breathing.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +389,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D65547D91DCE9B5F004882FA /* ResearchKitGeneral+CoreDataProperties.swift in Sources */,
+				D65547E81DCEF53E004882FA /* DashboardViewController.swift in Sources */,
 				D655473B1DCD6BFC004882FA /* Stress_Less.xcdatamodeld in Sources */,
 				D65547C01DCE1C8B004882FA /* ConsentDocument.swift in Sources */,
 				D65547351DCD6BFC004882FA /* ViewController.swift in Sources */,
@@ -346,6 +401,7 @@
 				D655475A1DCDC182004882FA /* InfoViewController.swift in Sources */,
 				D655478B1DCE1A01004882FA /* ConsentViewController.swift in Sources */,
 				D65547D41DCE8B71004882FA /* SelectPanicViewController.swift in Sources */,
+				D65547F01DCF89B0004882FA /* SettingsViewController.swift in Sources */,
 				D65547581DCDA3E2004882FA /* User.swift in Sources */,
 				D65547521DCD7F26004882FA /* RegisterViewController.swift in Sources */,
 				D65547DA1DCE9B5F004882FA /* ResearchKitGeneral.swift in Sources */,

@@ -3,12 +3,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="WelcomePage" id="BYZ-38-t0r" customClass="ViewController" customModule="Stress_Less" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Stress_Less" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -82,7 +83,7 @@
         <!--Navigation Controller-->
         <scene sceneID="67Z-nw-NJa">
             <objects>
-                <navigationController id="FRX-NH-HFO" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="WelcomePage" id="FRX-NH-HFO" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="u60-l6-A0W">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -407,30 +408,145 @@
             </objects>
             <point key="canvasLocation" x="2608" y="519"/>
         </scene>
-        <!--View Controller-->
+        <!--Dashboard View Controller-->
         <scene sceneID="ZU7-8F-DFh">
             <objects>
-                <viewController id="xfR-q3-JzU" sceneMemberID="viewController">
+                <viewController id="xfR-q3-JzU" customClass="DashboardViewController" customModule="Stress_Less" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Pi0-WU-mtH"/>
                         <viewControllerLayoutGuide type="bottom" id="ZLb-ED-8MD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3ef-6u-10b">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ST5-Fu-Fxs">
+                                <rect key="frame" x="0.0" y="64" width="600" height="1387"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QI9-RL-qMe">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="1100"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dashboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXH-rv-QOv">
+                                                <rect key="frame" x="227" y="0.0" width="146" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJb-RU-kGi">
+                                                <rect key="frame" x="28" y="41" width="544" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="D90-4b-kAx"/>
+                                                </constraints>
+                                                <string key="text">Tap the button below to visit our website, there you can find data and charts about what effects you the most what what works best for you! </string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pSW-rt-fW8">
+                                                <rect key="frame" x="175" y="151" width="250" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="250" id="3EQ-DV-y1B"/>
+                                                    <constraint firstAttribute="height" constant="50" id="7IM-Fw-xxh"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="portalForward.png"/>
+                                                <connections>
+                                                    <action selector="goToPortal:" destination="xfR-q3-JzU" eventType="touchUpInside" id="Mm5-aD-1Q7"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYP-Q5-tAa">
+                                                <rect key="frame" x="28" y="231" width="544" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="h6b-vp-JnR"/>
+                                                </constraints>
+                                                <string key="text">Below you can see some of the features built into the site, simply use the same email and password that you used to register. Data such what heps you best and what parts of your life effect you the most can be clearly seen to help you manage your panic attacks!</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="graph1.png" translatesAutoresizingMaskIntoConstraints="NO" id="3fp-FE-3qL">
+                                                <rect key="frame" x="175" y="351" width="250" height="150"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="LY6-EG-rNB"/>
+                                                    <constraint firstAttribute="width" constant="250" id="WWv-LU-7Sp"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="graph2.png" translatesAutoresizingMaskIntoConstraints="NO" id="3Ea-d6-1dy">
+                                                <rect key="frame" x="175" y="526" width="250" height="150"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="2wi-I0-Of5"/>
+                                                    <constraint firstAttribute="width" constant="250" id="WXB-BF-uBZ"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="graph3.png" translatesAutoresizingMaskIntoConstraints="NO" id="MeA-II-jb9">
+                                                <rect key="frame" x="175" y="701" width="250" height="150"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="Vik-Zk-bo9"/>
+                                                    <constraint firstAttribute="width" constant="250" id="iP3-WM-8WE"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="graph4.png" translatesAutoresizingMaskIntoConstraints="NO" id="VDd-uc-9Ez">
+                                                <rect key="frame" x="175" y="876" width="250" height="150"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="8J5-O8-fLW"/>
+                                                    <constraint firstAttribute="width" constant="250" id="qL4-Mh-osN"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="pSW-rt-fW8" firstAttribute="top" secondItem="TJb-RU-kGi" secondAttribute="bottom" constant="30" id="64A-W1-Zag"/>
+                                            <constraint firstItem="3Ea-d6-1dy" firstAttribute="centerX" secondItem="QI9-RL-qMe" secondAttribute="centerX" id="7Fz-JC-ugM"/>
+                                            <constraint firstItem="cXH-rv-QOv" firstAttribute="centerX" secondItem="QI9-RL-qMe" secondAttribute="centerX" id="BL4-8a-RrO"/>
+                                            <constraint firstItem="TJb-RU-kGi" firstAttribute="top" secondItem="cXH-rv-QOv" secondAttribute="bottom" constant="5" id="DAd-fB-npp"/>
+                                            <constraint firstItem="pSW-rt-fW8" firstAttribute="centerX" secondItem="QI9-RL-qMe" secondAttribute="centerX" id="DHz-48-o8z"/>
+                                            <constraint firstItem="MeA-II-jb9" firstAttribute="top" secondItem="3Ea-d6-1dy" secondAttribute="bottom" constant="25" id="EXI-On-Kes"/>
+                                            <constraint firstItem="3Ea-d6-1dy" firstAttribute="top" secondItem="3fp-FE-3qL" secondAttribute="bottom" constant="25" id="JV5-O4-guJ"/>
+                                            <constraint firstAttribute="height" constant="1100" id="LKO-pE-7Nc"/>
+                                            <constraint firstItem="3fp-FE-3qL" firstAttribute="centerX" secondItem="QI9-RL-qMe" secondAttribute="centerX" id="LWd-K6-Pr7"/>
+                                            <constraint firstItem="OYP-Q5-tAa" firstAttribute="top" secondItem="pSW-rt-fW8" secondAttribute="bottom" constant="30" id="RQX-KS-LSf"/>
+                                            <constraint firstItem="VDd-uc-9Ez" firstAttribute="centerX" secondItem="QI9-RL-qMe" secondAttribute="centerX" id="RrJ-wO-uv0"/>
+                                            <constraint firstItem="cXH-rv-QOv" firstAttribute="top" secondItem="QI9-RL-qMe" secondAttribute="top" id="S4A-vn-fID"/>
+                                            <constraint firstItem="MeA-II-jb9" firstAttribute="centerX" secondItem="QI9-RL-qMe" secondAttribute="centerX" id="VkK-fQ-3dt"/>
+                                            <constraint firstAttribute="trailing" secondItem="OYP-Q5-tAa" secondAttribute="trailing" constant="28" id="eYp-QH-zQH"/>
+                                            <constraint firstItem="OYP-Q5-tAa" firstAttribute="leading" secondItem="QI9-RL-qMe" secondAttribute="leading" constant="28" id="epZ-kv-Ezr"/>
+                                            <constraint firstItem="VDd-uc-9Ez" firstAttribute="top" secondItem="MeA-II-jb9" secondAttribute="bottom" constant="25" id="hKK-TN-IAd"/>
+                                            <constraint firstItem="TJb-RU-kGi" firstAttribute="centerX" secondItem="QI9-RL-qMe" secondAttribute="centerX" id="hnH-9D-Cb5"/>
+                                            <constraint firstItem="3fp-FE-3qL" firstAttribute="top" secondItem="OYP-Q5-tAa" secondAttribute="bottom" constant="20" id="lQe-vF-Lab"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="TJb-RU-kGi" secondAttribute="trailing" constant="20" id="o6E-iO-VMR"/>
+                                            <constraint firstItem="TJb-RU-kGi" firstAttribute="leading" secondItem="QI9-RL-qMe" secondAttribute="leadingMargin" constant="20" id="qed-Ph-cDG"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="QI9-RL-qMe" secondAttribute="bottom" id="W7O-XZ-ILc"/>
+                                    <constraint firstAttribute="trailing" secondItem="QI9-RL-qMe" secondAttribute="trailing" id="WQ9-If-lyc"/>
+                                    <constraint firstItem="QI9-RL-qMe" firstAttribute="top" secondItem="ST5-Fu-Fxs" secondAttribute="top" id="lde-Eg-xks"/>
+                                    <constraint firstItem="QI9-RL-qMe" firstAttribute="leading" secondItem="ST5-Fu-Fxs" secondAttribute="leading" id="z2m-i1-852"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QI9-RL-qMe" firstAttribute="width" secondItem="3ef-6u-10b" secondAttribute="width" id="2es-EL-Bgf"/>
+                            <constraint firstItem="ST5-Fu-Fxs" firstAttribute="leading" secondItem="3ef-6u-10b" secondAttribute="leading" id="4FG-0m-Ncs"/>
+                            <constraint firstAttribute="trailing" secondItem="ST5-Fu-Fxs" secondAttribute="trailing" id="FKC-0d-3nr"/>
+                            <constraint firstItem="ST5-Fu-Fxs" firstAttribute="top" secondItem="Pi0-WU-mtH" secondAttribute="bottom" id="Md3-PS-lsr"/>
+                            <constraint firstItem="ZLb-ED-8MD" firstAttribute="top" secondItem="ST5-Fu-Fxs" secondAttribute="bottom" id="bnq-Hg-ebY"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="topRated" id="6aX-FE-ZJh"/>
                     <navigationItem key="navigationItem" id="leF-pH-1YQ"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="1500"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nhq-WX-ERL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5731" y="424"/>
+            <point key="canvasLocation" x="6425" y="670"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="PfE-UB-Tga">
             <objects>
-                <viewController id="hQq-fq-RQn" sceneMemberID="viewController">
+                <viewController id="hQq-fq-RQn" customClass="SettingsViewController" customModule="Stress_Less" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MLA-sB-gNo"/>
                         <viewControllerLayoutGuide type="bottom" id="HTi-FB-Wiz"/>
@@ -438,14 +554,53 @@
                     <view key="view" contentMode="scaleToFill" id="G72-Fu-pSu">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="day-0M-oBO">
+                                <rect key="frame" x="245" y="74" width="110" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings are still in the works, check back soon to find them. You can use the settings menu on the website for all your needs." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vSB-gG-Haf">
+                                <rect key="frame" x="28" y="120" width="544" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="ls6-d2-aAb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5D-DC-Ckt">
+                                <rect key="frame" x="175" y="350" width="250" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="TyQ-Px-Otl"/>
+                                    <constraint firstAttribute="height" constant="50" id="omq-hK-IOk"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="portalForward.png"/>
+                                <connections>
+                                    <action selector="goToPortal:" destination="hQq-fq-RQn" eventType="touchUpInside" id="5Ox-y9-4XW"/>
+                                    <action selector="goToPortal:" destination="xfR-q3-JzU" eventType="touchUpInside" id="909-dd-ezN"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="vSB-gG-Haf" secondAttribute="trailing" constant="8" id="2bP-52-hYr"/>
+                            <constraint firstItem="vSB-gG-Haf" firstAttribute="leading" secondItem="G72-Fu-pSu" secondAttribute="leadingMargin" constant="8" id="3fF-J7-0x4"/>
+                            <constraint firstItem="K5D-DC-Ckt" firstAttribute="top" secondItem="vSB-gG-Haf" secondAttribute="bottom" constant="150" id="DB3-DJ-49Z"/>
+                            <constraint firstItem="day-0M-oBO" firstAttribute="top" secondItem="MLA-sB-gNo" secondAttribute="bottom" constant="10" id="Hbq-TD-71u"/>
+                            <constraint firstItem="vSB-gG-Haf" firstAttribute="top" secondItem="day-0M-oBO" secondAttribute="bottom" constant="10" id="LtD-8r-11b"/>
+                            <constraint firstItem="vSB-gG-Haf" firstAttribute="centerX" secondItem="G72-Fu-pSu" secondAttribute="centerX" id="Zdx-DQ-K0t"/>
+                            <constraint firstItem="day-0M-oBO" firstAttribute="centerX" secondItem="G72-Fu-pSu" secondAttribute="centerX" id="aaw-jl-WFa"/>
+                            <constraint firstItem="K5D-DC-Ckt" firstAttribute="centerX" secondItem="G72-Fu-pSu" secondAttribute="centerX" id="i66-bp-T1M"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="contacts" id="2CC-13-OX1"/>
                     <navigationItem key="navigationItem" id="mK3-hG-9Rk"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j5d-mG-f90" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5651" y="1218"/>
+            <point key="canvasLocation" x="5651" y="1292"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="4wq-g3-qHr">
@@ -460,8 +615,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lUu-Bs-wdD">
-                                <rect key="frame" x="113.5" y="329" width="373" height="100"/>
+                                <rect key="frame" x="150" y="329" width="300" height="100"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="J2B-XF-Ee2"/>
                                     <constraint firstAttribute="height" constant="100" id="hyn-W0-ZQ6"/>
                                 </constraints>
                                 <state key="normal" image="attackStarted.png"/>
@@ -469,7 +625,7 @@
                                     <segue destination="hAT-CP-Lel" kind="show" id="8E0-xC-390"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="J4t-4i-015">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="J4t-4i-015">
                                 <rect key="frame" x="109" y="104" width="381" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="wKU-3A-0sy"/>
@@ -532,6 +688,9 @@
                                     <constraint firstAttribute="width" constant="200" id="xMr-ja-lHc"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="finishLater.png"/>
+                                <connections>
+                                    <action selector="recordLater:" destination="hAT-CP-Lel" eventType="touchUpInside" id="3mi-1l-GUf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -561,30 +720,69 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23U-bx-6rV">
-                                <rect key="frame" x="276" y="285" width="48" height="30"/>
-                                <state key="normal" title="Survey"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gvw-7Z-fgh">
+                                <rect key="frame" x="239" y="114" width="121.5" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oI9-l4-jEt">
+                                <rect key="frame" x="50" y="182" width="500" height="81.5"/>
+                                <string key="text">You can send the results of your survey to someone in your care network. Enter an email, if this person has an account they will be able to see that you shared wiht them on the website, if not they willl recieve an email</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fIG-9f-gLb">
+                                <rect key="frame" x="50" y="343" width="500" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2O-rU-ndB">
+                                <rect key="frame" x="0.0" y="511" width="600" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="wRe-Ej-qNC"/>
+                                </constraints>
+                                <state key="normal" title="Share">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <action selector="consentButton:" destination="Zem-3U-Td5" eventType="touchUpInside" id="DCs-Y4-6IR"/>
+                                    <action selector="shareResults:" destination="Zem-3U-Td5" eventType="touchUpInside" id="mVp-pa-uGR"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="23U-bx-6rV" firstAttribute="centerX" secondItem="oEH-Es-uF4" secondAttribute="centerX" id="Nt5-AB-Yjm"/>
-                            <constraint firstItem="23U-bx-6rV" firstAttribute="centerY" secondItem="oEH-Es-uF4" secondAttribute="centerY" id="eBW-Jn-aBr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fIG-9f-gLb" secondAttribute="trailing" constant="30" id="2xm-8o-LaR"/>
+                            <constraint firstItem="t2O-rU-ndB" firstAttribute="leading" secondItem="oEH-Es-uF4" secondAttribute="leading" id="4He-xK-K9y"/>
+                            <constraint firstItem="Sv0-Kg-cCo" firstAttribute="top" secondItem="t2O-rU-ndB" secondAttribute="bottom" id="5RP-HD-xzm"/>
+                            <constraint firstItem="oI9-l4-jEt" firstAttribute="centerX" secondItem="oEH-Es-uF4" secondAttribute="centerX" id="8XQ-jG-sMU"/>
+                            <constraint firstItem="oI9-l4-jEt" firstAttribute="top" secondItem="Gvw-7Z-fgh" secondAttribute="bottom" constant="20" id="Jrb-Yr-U45"/>
+                            <constraint firstItem="Gvw-7Z-fgh" firstAttribute="top" secondItem="uM6-g9-ERd" secondAttribute="bottom" constant="50" id="LWs-cv-ZEx"/>
+                            <constraint firstAttribute="trailing" secondItem="t2O-rU-ndB" secondAttribute="trailing" id="NKx-eh-wn1"/>
+                            <constraint firstItem="fIG-9f-gLb" firstAttribute="leading" secondItem="oEH-Es-uF4" secondAttribute="leadingMargin" constant="30" id="QI8-ON-RUd"/>
+                            <constraint firstItem="Gvw-7Z-fgh" firstAttribute="centerX" secondItem="oEH-Es-uF4" secondAttribute="centerX" id="Wlc-OV-dVV"/>
+                            <constraint firstItem="oI9-l4-jEt" firstAttribute="leading" secondItem="oEH-Es-uF4" secondAttribute="leadingMargin" constant="30" id="gHw-Tq-Jff"/>
+                            <constraint firstItem="fIG-9f-gLb" firstAttribute="top" secondItem="oI9-l4-jEt" secondAttribute="bottom" constant="80" id="kcY-HF-bTA"/>
+                            <constraint firstItem="fIG-9f-gLb" firstAttribute="centerX" secondItem="oEH-Es-uF4" secondAttribute="centerX" id="p4g-Yu-EP8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oI9-l4-jEt" secondAttribute="trailing" constant="30" id="x0y-L3-aVk"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailInput" destination="t2O-rU-ndB" id="mdg-SZ-H5z"/>
+                        <outlet property="inputField" destination="fIG-9f-gLb" id="dxu-qi-yix"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GdO-UF-q9c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7771" y="-421"/>
+            <point key="canvasLocation" x="8703" y="-415"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5WI-ns-Ane">
             <objects>
                 <navigationController id="XeF-XP-JoQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="oFr-vC-6Tf"/>
+                    <tabBarItem key="tabBarItem" image="home.png" selectedImage="home.png" id="oFr-vC-6Tf"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="feF-0I-p7o">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -600,7 +798,7 @@
         <!--Consent View Controller-->
         <scene sceneID="fA1-2d-hiV">
             <objects>
-                <viewController id="SfW-Y2-ng3" customClass="ConsentViewController" customModule="Stress_Less" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ConsentVC" id="SfW-Y2-ng3" customClass="ConsentViewController" customModule="Stress_Less" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jK5-Bv-2a7"/>
                         <viewControllerLayoutGuide type="bottom" id="QsU-DX-S6j"/>
@@ -731,7 +929,7 @@
         <scene sceneID="Ar3-Jl-JNo">
             <objects>
                 <navigationController id="WD5-Ww-hCR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="recents" id="W7G-56-UiW"/>
+                    <tabBarItem key="tabBarItem" image="panic.png" selectedImage="panic.png" id="W7G-56-UiW"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qzG-Mi-Kqu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -748,7 +946,7 @@
         <scene sceneID="EdF-es-9cj">
             <objects>
                 <navigationController id="gjh-B0-hGm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="search" id="b4J-Fe-FZZ"/>
+                    <tabBarItem key="tabBarItem" image="settings.png" selectedImage="settings.png" id="b4J-Fe-FZZ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kwZ-wn-6ZU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -773,26 +971,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breathe, Yo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S1R-75-0UU">
-                                <rect key="frame" x="224" y="282" width="152" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bd9-kc-QRs">
-                                <rect key="frame" x="240" y="363" width="88" height="30"/>
-                                <state key="normal" title="Ok, I did that"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="utS-xU-s8k">
+                                <rect key="frame" x="200" y="124" width="200" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Opw-es-Cok"/>
+                                    <constraint firstAttribute="width" constant="200" id="jtk-MJ-viH"/>
+                                </constraints>
+                                <state key="normal" image="breathing.png"/>
                                 <connections>
-                                    <segue destination="Zem-3U-Td5" kind="show" id="U72-wj-kiL"/>
+                                    <segue destination="VlQ-qK-Zo2" kind="show" id="i4s-e6-faR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LpQ-oh-hNl">
+                                <rect key="frame" x="200" y="219" width="200" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="cw8-qv-Vwc"/>
+                                    <constraint firstAttribute="height" constant="45" id="qZU-WV-npo"/>
+                                </constraints>
+                                <state key="normal" image="stretching.png"/>
+                                <connections>
+                                    <action selector="callContact:" destination="hAT-CP-Lel" eventType="touchUpInside" id="2GY-sC-GRF"/>
+                                    <segue destination="WS4-VE-rgX" kind="show" id="RXv-gO-AcL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGe-bx-3vp">
+                                <rect key="frame" x="200" y="314" width="200" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Ctn-5u-qHT"/>
+                                    <constraint firstAttribute="height" constant="45" id="QOw-yj-klA"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="meditation.png"/>
+                                <connections>
+                                    <segue destination="3uf-ou-tG3" kind="show" id="1Hx-ys-nUP"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="bd9-kc-QRs" firstAttribute="top" secondItem="S1R-75-0UU" secondAttribute="bottom" constant="45" id="IK2-9w-spO"/>
-                            <constraint firstItem="bd9-kc-QRs" firstAttribute="centerX" secondItem="hgG-RY-a0d" secondAttribute="centerX" id="L9p-7a-xda"/>
-                            <constraint firstItem="S1R-75-0UU" firstAttribute="centerY" secondItem="hgG-RY-a0d" secondAttribute="centerY" id="ksa-b8-MhF"/>
-                            <constraint firstItem="S1R-75-0UU" firstAttribute="centerX" secondItem="hgG-RY-a0d" secondAttribute="centerX" id="oJ4-DT-qPc"/>
+                            <constraint firstItem="LpQ-oh-hNl" firstAttribute="top" secondItem="utS-xU-s8k" secondAttribute="bottom" constant="50" id="45s-98-jyf"/>
+                            <constraint firstItem="utS-xU-s8k" firstAttribute="top" secondItem="riZ-Z1-5gD" secondAttribute="bottom" constant="60" id="4hl-8c-edD"/>
+                            <constraint firstItem="FGe-bx-3vp" firstAttribute="top" secondItem="LpQ-oh-hNl" secondAttribute="bottom" constant="50" id="JoG-Lf-mgZ"/>
+                            <constraint firstItem="LpQ-oh-hNl" firstAttribute="centerX" secondItem="hgG-RY-a0d" secondAttribute="centerX" id="Y8n-EQ-Jrs"/>
+                            <constraint firstItem="utS-xU-s8k" firstAttribute="centerX" secondItem="hgG-RY-a0d" secondAttribute="centerX" id="eWS-17-2v1"/>
+                            <constraint firstItem="FGe-bx-3vp" firstAttribute="centerX" secondItem="hgG-RY-a0d" secondAttribute="centerX" id="jI7-4R-AZn"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -800,12 +1021,732 @@
             </objects>
             <point key="canvasLocation" x="7045" y="-421"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="WQ9-vo-vYg">
+            <objects>
+                <viewController id="3uf-ou-tG3" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vn9-hN-1nu"/>
+                        <viewControllerLayoutGuide type="bottom" id="0vM-CJ-xoH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BQ2-C1-aDK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GkI-aO-Nab">
+                                <rect key="frame" x="0.0" y="511" width="600" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Vb4-eN-kWa"/>
+                                </constraints>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Zem-3U-Td5" kind="show" id="JJl-wc-Dtu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="43" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9x-0D-KiE">
+                                <rect key="frame" x="0.0" y="64" width="600" height="447"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">1) Sit comfortably, with your spine erect, either in chair or cross-legged on a cushion.
+2) Close your eyes, take a few deep breaths, and feel the points of contact between your body and the chair or floor. Notice the sensations associated with sitting—feelings of pressure, warmth, tingling, vibration, etc.
+3) Gradually become aware of the process of breathing. Pay attention to wherever you feel the breath most clearly—either at the nostrils, or in the rising and falling your abdomen.
+4) Allow your attention to rest in the mere sensation of breathing. (There is no need to control your breath. Just let it come and go naturally.)
+5) Every time your mind wanders in thought, gently return it to the sensation of breathing.
+6) As you focus on the breath, you will notice that other perceptions and sensations continue to appear: sounds, feelings in the body, emotions, etc. Simply notice these phenomena as they emerge in the field of awareness, and then return to the sensation of breathing.
+7) The moment you observe that you have been lost in thought, notice the present thought itself as an object of consciousness. Then return your attention to the breath—or to whatever sounds or sensations arise in the next moment.
+8) Continue in this way until you can merely witness all objects of consciousness—sights, sounds, sensations, emotions, and even thoughts themselves—as they arise and pass away.
+9) Don’t fall.</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="15" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0vM-CJ-xoH" firstAttribute="top" secondItem="GkI-aO-Nab" secondAttribute="bottom" id="YSQ-zV-bcs"/>
+                            <constraint firstItem="Y9x-0D-KiE" firstAttribute="top" secondItem="Vn9-hN-1nu" secondAttribute="bottom" id="Z7Y-Ka-zXx"/>
+                            <constraint firstItem="GkI-aO-Nab" firstAttribute="leading" secondItem="BQ2-C1-aDK" secondAttribute="leading" id="ddt-EU-Iwk"/>
+                            <constraint firstItem="GkI-aO-Nab" firstAttribute="top" secondItem="Y9x-0D-KiE" secondAttribute="bottom" id="eyw-tX-jr6"/>
+                            <constraint firstAttribute="trailing" secondItem="Y9x-0D-KiE" secondAttribute="trailing" id="kgL-6f-FYX"/>
+                            <constraint firstItem="Y9x-0D-KiE" firstAttribute="leading" secondItem="BQ2-C1-aDK" secondAttribute="leading" id="nFb-vI-9a3"/>
+                            <constraint firstAttribute="trailing" secondItem="GkI-aO-Nab" secondAttribute="trailing" id="uZg-59-JlO"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nrO-bX-9hx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7721" y="295"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Gc3-Mo-RUg">
+            <objects>
+                <viewController id="WS4-VE-rgX" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0ck-Nh-31f"/>
+                        <viewControllerLayoutGuide type="bottom" id="IAX-bb-T73"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qJR-mO-3sL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Plp-QR-OGc">
+                                <rect key="frame" x="0.0" y="511" width="600" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="N3K-tG-1aJ"/>
+                                </constraints>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Zem-3U-Td5" kind="show" id="sCb-HI-FU9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="43" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bh7-55-0aq">
+                                <rect key="frame" x="0.0" y="64" width="2746" height="447"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">	.	</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" headIndent="36" minimumLineHeight="16" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="11">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="natural" location="36">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">Square Breathing: Shake off anxiety and clear your head.
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" headIndent="36" minimumLineHeight="16" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="11">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="natural" location="36">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">To begin square breathing, sit in a comfortable, upright position on the floor or in a chair. Inhale through your nose for four counts (1, 2, 3, 4). Hold that breath in for four counts. Exhale through your nose for four counts. Hold that breath out for four counts. That’s one cycle.
+Repeat 10 times, going at your own pace.
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" minimumLineHeight="16" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">	.	</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" headIndent="36" minimumLineHeight="16" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="11">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="natural" location="36">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">Shoulder stretch: Release neck and shoulder tension.
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" headIndent="36" minimumLineHeight="16" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="11">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="natural" location="36">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">Interlace your fingers, and raise your arms above your head, with your palms facing upwards. Try to keep your arms in line with your ears, while you look straight ahead and relax your shoulder blades down your back (don’t shrug them up!) Hold for five full breaths in and out through your nose.Let your arms fall down to your sides, roll your shoulders backwards and forwards a few times, then repeat the stretch, holding for five full breaths.
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" minimumLineHeight="16" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">	.	</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" headIndent="36" minimumLineHeight="16" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="11">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="natural" location="36">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">Eagle arms: Ease the deep-seated shoulder knots.
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" headIndent="36" minimumLineHeight="16" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="11">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="natural" location="36">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">Stand with your feet hip-distance apart. Hold your arms straight out from your sides, parallel to the floor. Swing your arms toward each other, bringing your left elbow over your right. Then bend your elbows, so the backs of your hands are touching. Now, hook one hand over the other so that your palms are facing each other. For a visual of this complicated explanation, watch this video.
+Once you have the arm wrap going, look straight ahead and try to keep your elbows lifted. Press your palms into each other, while you try to pull your elbows apart. Keep your shoulders relaxed. You should feel a powerful stretch in your neck and between your shoulder blades. Hold for five breaths.
+Unwrap your arms and hold them out to the side again. Swing them back toward each other, this time bringing the opposite elbow on top. Repeat the pose in the opposite position, holding for five breaths.
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" minimumLineHeight="16" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IAX-bb-T73" firstAttribute="top" secondItem="Plp-QR-OGc" secondAttribute="bottom" id="1oB-Ea-NuH"/>
+                            <constraint firstItem="Bh7-55-0aq" firstAttribute="leading" secondItem="qJR-mO-3sL" secondAttribute="leading" id="9BA-Xc-rSp"/>
+                            <constraint firstAttribute="trailing" secondItem="Bh7-55-0aq" secondAttribute="trailing" id="PIx-PB-5ew"/>
+                            <constraint firstItem="Plp-QR-OGc" firstAttribute="top" secondItem="Bh7-55-0aq" secondAttribute="bottom" id="SX6-yX-Wsr"/>
+                            <constraint firstItem="Plp-QR-OGc" firstAttribute="leading" secondItem="qJR-mO-3sL" secondAttribute="leading" id="Suj-D9-W3c"/>
+                            <constraint firstAttribute="trailing" secondItem="Plp-QR-OGc" secondAttribute="trailing" id="cyb-yc-lWr"/>
+                            <constraint firstItem="Bh7-55-0aq" firstAttribute="top" secondItem="0ck-Nh-31f" secondAttribute="bottom" id="k8D-sm-P3s"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2kW-eO-dkb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7713" y="-421"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6cN-Ey-YOF">
+            <objects>
+                <viewController id="y8M-hl-Rab" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eWC-yc-aRj"/>
+                        <viewControllerLayoutGuide type="bottom" id="Nnw-Py-t1c"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="E6h-lD-WIs">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7EZ-na-CyK">
+                                <rect key="frame" x="0.0" y="511" width="600" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="4Rf-5E-3KN"/>
+                                </constraints>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Zem-3U-Td5" kind="show" id="FHr-Jy-Ics"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="43" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tG1-7p-bQj">
+                                <rect key="frame" x="0.0" y="64" width="1923" height="447"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Calm breathing involves taking smooth, slow, and regular breaths. Sitting upright is usually better than lying down or slouching, because it can increase the capacity of your lungs to fill with air. It is best to 'take the weight' off your shoulders by supporting your arms on the side-arms of a chair, or on your lap.
+</string>
+                                        <attributes>
+                                            <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="NSColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="deviceRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" minimumLineHeight="16" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="deviceRGB"/>
+                                            <real key="NSStrokeWidth" value="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">	.	</string>
+                                        <attributes>
+                                            <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="NSColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="deviceRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" headIndent="36" minimumLineHeight="16" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="11">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="natural" location="36">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Take a slow breath in through the nose, breathing into your lower">
+                                        <attributes>
+                                            <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="NSColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="deviceRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" headIndent="36" minimumLineHeight="16" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="11">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="natural" location="36">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="deviceRGB"/>
+                                            <real key="NSStrokeWidth" value="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="deviceRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" headIndent="36" minimumLineHeight="16" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="11">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="natural" location="36">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="deviceRGB"/>
+                                            <real key="NSStrokeWidth" value="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="belly (for about 4 seconds)">
+                                        <attributes>
+                                            <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="NSColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="deviceRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" headIndent="36" minimumLineHeight="16" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="11">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="natural" location="36">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="deviceRGB"/>
+                                            <real key="NSStrokeWidth" value="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="deviceRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" headIndent="36" minimumLineHeight="16" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="11">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="natural" location="36">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="deviceRGB"/>
+                                            <real key="NSStrokeWidth" value="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">	.	</string>
+                                        <attributes>
+                                            <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="NSColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="deviceRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" headIndent="36" minimumLineHeight="16" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="11">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="natural" location="36">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Hold your breath for 1 or 2 seconds">
+                                        <attributes>
+                                            <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="NSColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="deviceRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" headIndent="36" minimumLineHeight="16" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="11">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="natural" location="36">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="deviceRGB"/>
+                                            <real key="NSStrokeWidth" value="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="deviceRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" headIndent="36" minimumLineHeight="16" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="11">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="natural" location="36">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="deviceRGB"/>
+                                            <real key="NSStrokeWidth" value="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">	.	</string>
+                                        <attributes>
+                                            <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="NSColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="deviceRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" headIndent="36" minimumLineHeight="16" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="11">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="natural" location="36">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Exhale slowly through the mouth (for about 4 seconds)">
+                                        <attributes>
+                                            <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="NSColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="deviceRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" headIndent="36" minimumLineHeight="16" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="11">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="natural" location="36">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="deviceRGB"/>
+                                            <real key="NSStrokeWidth" value="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="deviceRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" headIndent="36" minimumLineHeight="16" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="11">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="natural" location="36">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="deviceRGB"/>
+                                            <real key="NSStrokeWidth" value="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">	.	</string>
+                                        <attributes>
+                                            <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="NSColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="deviceRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" headIndent="36" minimumLineHeight="16" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="11">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="natural" location="36">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Wait a few seconds before taking another breath">
+                                        <attributes>
+                                            <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="NSColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="deviceRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" headIndent="36" minimumLineHeight="16" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="11">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="natural" location="36">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="deviceRGB"/>
+                                            <real key="NSStrokeWidth" value="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="deviceRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" headIndent="36" minimumLineHeight="16" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="11">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="natural" location="36">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="deviceRGB"/>
+                                            <real key="NSStrokeWidth" value="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Nnw-Py-t1c" firstAttribute="top" secondItem="7EZ-na-CyK" secondAttribute="bottom" id="HlZ-y2-jlt"/>
+                            <constraint firstItem="7EZ-na-CyK" firstAttribute="leading" secondItem="E6h-lD-WIs" secondAttribute="leading" id="IGd-M8-FHk"/>
+                            <constraint firstItem="tG1-7p-bQj" firstAttribute="top" secondItem="eWC-yc-aRj" secondAttribute="bottom" id="XHf-f2-EcY"/>
+                            <constraint firstItem="7EZ-na-CyK" firstAttribute="top" secondItem="tG1-7p-bQj" secondAttribute="bottom" id="c1Z-ZT-0WL"/>
+                            <constraint firstAttribute="trailing" secondItem="tG1-7p-bQj" secondAttribute="trailing" id="i3B-c5-AQP"/>
+                            <constraint firstAttribute="trailing" secondItem="7EZ-na-CyK" secondAttribute="trailing" id="pK8-A3-9DY"/>
+                            <constraint firstItem="tG1-7p-bQj" firstAttribute="leading" secondItem="E6h-lD-WIs" secondAttribute="leading" id="u9o-TY-vMq"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ff9-Xq-cG7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7713" y="-1124"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ztc-1p-csF">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="VlQ-qK-Zo2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="A20-en-gAH"/>
+                        <viewControllerLayoutGuide type="bottom" id="lap-S9-8mj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8A6-Yf-hw7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="1100"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jea-WP-sVj">
+                                <rect key="frame" x="0.0" y="64" width="600" height="987"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hCt-iN-kum">
+                                        <rect key="frame" x="10" y="0.0" width="600" height="1000"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breathing Techniques" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1B-ja-8l6">
+                                                <rect key="frame" x="156" y="30" width="288" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="60" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MrN-7y-cHy">
+                                                <rect key="frame" x="0.0" y="100" width="580" height="825"/>
+                                                <string key="text">Square Breathing: Shake off anxiety and clear your head.
+To begin square breathing, sit in a comfortable, upright position on the floor or in a chair. Inhale through your nose for four counts (1, 2, 3, 4). Hold that breath in for four counts. Exhale through your nose for four counts. Hold that breath out for four counts. That’s one cycle.
+
+Repeat 10 times, going at your own pace.
+
+Shoulder stretch: Release neck and shoulder tension.
+Interlace your fingers, and raise your arms above your head, with your palms facing upwards. Try to keep your arms in line with your ears, while you look straight ahead and relax your shoulder blades down your back (don’t shrug them up!) Hold for five full breaths in and out through your nose.Let your arms fall down to your sides, roll your shoulders backwards and forwards a few times, then repeat the stretch, holding for five full breaths.
+
+Eagle arms: Ease the deep-seated shoulder knots.
+Stand with your feet hip-distance apart. Hold your arms straight out from your sides, parallel to the floor. Swing your arms toward each other, bringing your left elbow over your right. Then bend your elbows, so the backs of your hands are touching. Now, hook one hand over the other so that your palms are facing each other. For a visual of this complicated explanation, watch this video.
+
+Once you have the arm wrap going, look straight ahead and try to keep your elbows lifted. Press your palms into each other, while you try to pull your elbows apart. Keep your shoulders relaxed. You should feel a powerful stretch in your neck and between your shoulder blades. Hold for five breaths.
+
+Unwrap your arms and hold them out to the side again. Swing them back toward each other, this time bringing the opposite elbow on top. Repeat the pose in the opposite position, holding for five breaths.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqn-jB-rFK">
+                                                <rect key="frame" x="48" y="938" width="504" height="40"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="BqM-zB-tlC"/>
+                                                </constraints>
+                                                <state key="normal" title="Log Panic Attack">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="Zem-3U-Td5" kind="show" id="LBi-6h-hqE"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1000" id="2Bc-9S-7Dn"/>
+                                            <constraint firstItem="u1B-ja-8l6" firstAttribute="centerX" secondItem="hCt-iN-kum" secondAttribute="centerX" id="74r-aB-BpE"/>
+                                            <constraint firstItem="MrN-7y-cHy" firstAttribute="top" secondItem="hCt-iN-kum" secondAttribute="top" constant="100" id="HRW-39-F4u"/>
+                                            <constraint firstAttribute="trailing" secondItem="MrN-7y-cHy" secondAttribute="trailing" constant="20" id="OXg-0X-Ecn"/>
+                                            <constraint firstAttribute="bottom" secondItem="aqn-jB-rFK" secondAttribute="bottom" constant="22" id="U6i-FD-w9g"/>
+                                            <constraint firstItem="u1B-ja-8l6" firstAttribute="top" secondItem="hCt-iN-kum" secondAttribute="top" constant="30" id="l4J-gJ-QWq"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="aqn-jB-rFK" secondAttribute="trailing" constant="40" id="lkl-z1-kP0"/>
+                                            <constraint firstAttribute="bottom" secondItem="MrN-7y-cHy" secondAttribute="bottom" constant="75" id="oaE-4s-hs4"/>
+                                            <constraint firstItem="aqn-jB-rFK" firstAttribute="leading" secondItem="hCt-iN-kum" secondAttribute="leadingMargin" constant="40" id="rmK-OI-78V"/>
+                                            <constraint firstItem="MrN-7y-cHy" firstAttribute="leading" secondItem="hCt-iN-kum" secondAttribute="leading" id="yaN-B6-EY1"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="hCt-iN-kum" secondAttribute="trailing" constant="10" id="Jhh-vx-g8g"/>
+                                    <constraint firstItem="hCt-iN-kum" firstAttribute="top" secondItem="jea-WP-sVj" secondAttribute="top" id="T6e-ux-5bs"/>
+                                    <constraint firstAttribute="bottom" secondItem="hCt-iN-kum" secondAttribute="bottom" id="bpV-0n-Sfu"/>
+                                    <constraint firstItem="hCt-iN-kum" firstAttribute="leading" secondItem="jea-WP-sVj" secondAttribute="leading" constant="10" id="xlo-La-Hjw"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hCt-iN-kum" firstAttribute="width" secondItem="8A6-Yf-hw7" secondAttribute="width" id="ErM-iV-xq9"/>
+                            <constraint firstItem="lap-S9-8mj" firstAttribute="top" secondItem="jea-WP-sVj" secondAttribute="bottom" id="IEg-6a-xYx"/>
+                            <constraint firstItem="jea-WP-sVj" firstAttribute="top" secondItem="A20-en-gAH" secondAttribute="bottom" id="e9L-a0-iaX"/>
+                            <constraint firstItem="jea-WP-sVj" firstAttribute="leading" secondItem="8A6-Yf-hw7" secondAttribute="leading" id="g1c-1f-1r7"/>
+                            <constraint firstAttribute="trailing" secondItem="jea-WP-sVj" secondAttribute="trailing" id="o7M-Ua-UfS"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="1100"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c5l-RP-hLv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7045" y="-1801"/>
+        </scene>
     </scenes>
     <resources>
         <image name="attackStarted.png" width="373" height="120"/>
+        <image name="breathing.png" width="460" height="92"/>
         <image name="callEmergency.png" width="459" height="92"/>
         <image name="calmingTechniques.png" width="395" height="90"/>
         <image name="finishLater.png" width="434" height="93"/>
+        <image name="graph1.png" width="1472" height="874"/>
+        <image name="graph2.png" width="1090" height="732"/>
+        <image name="graph3.png" width="1094" height="718"/>
+        <image name="graph4.png" width="1562" height="866"/>
+        <image name="home.png" width="24" height="24"/>
         <image name="logo.png" width="381" height="290"/>
+        <image name="meditation.png" width="460" height="93"/>
+        <image name="panic.png" width="24" height="24"/>
+        <image name="portalForward.png" width="480" height="92"/>
+        <image name="settings.png" width="24" height="24"/>
+        <image name="stretching.png" width="459" height="92"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="sCb-HI-FU9"/>
+    </inferredMetricsTieBreakers>
 </document>

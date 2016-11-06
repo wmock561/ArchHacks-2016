@@ -56,9 +56,17 @@ extension SurveyViewController : ORKTaskViewControllerDelegate {
 class SurveyViewController: UIViewController,UIDocumentInteractionControllerDelegate {
     
     let dataWorker = CoreDataWorker()
+    let webController = WebWorker()
     
+    @IBOutlet weak var inputField: UITextField!
+    
+    @IBOutlet weak var emailInput: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let taskViewController2 = ORKTaskViewController(task: SurveyTask, taskRunUUID: nil)
+        taskViewController2.delegate = self
+        presentViewController(taskViewController2, animated: true, completion: nil)
         
         // Do any additional setup after loading the view.
     }
@@ -73,9 +81,11 @@ class SurveyViewController: UIViewController,UIDocumentInteractionControllerDele
          taskViewController.delegate = self
          presentViewController(taskViewController, animated: true, completion: nil)*/
         
-        let taskViewController2 = ORKTaskViewController(task: SurveyTask, taskRunUUID: nil)
-        taskViewController2.delegate = self
-        presentViewController(taskViewController2, animated: true, completion: nil)
+        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        
     }
     
     func documentInteractionControllerViewControllerForPreview(controller: UIDocumentInteractionController) -> UIViewController {
@@ -91,6 +101,19 @@ class SurveyViewController: UIViewController,UIDocumentInteractionControllerDele
         
         /*Form one data parse*/
         var formOneText:String = ""
+        
+        /*if let test = task.result.stepResultForStepIdentifier("questionStepOne")?.results![0].valueForKey("answer")!{
+            print("Got into number 1")
+        }else{
+            return
+        }*/
+        
+        if(task.result.stepResultForStepIdentifier("questionStepOne")?.results![1].valueForKey("answer") != nil){
+            formOneText = (task.result.stepResultForStepIdentifier("questionStepThree")?.results![1].valueForKey("answer")! as? String)!
+        }
+        
+        
+        
         
         let formOneOptions = task.result.stepResultForStepIdentifier("questionStepOne")?.results![0].valueForKey("answer")!
         
@@ -219,7 +242,85 @@ class SurveyViewController: UIViewController,UIDocumentInteractionControllerDele
         
         print(formFourArray)
         
-        let masterArray = [formOneArray, formTwoArray,formThreeArray,formFourArray]
+        print("-------------------------")
+        
+        /*Form Five data parse*/
+        //var formFiveText:String = ""
+        
+        let formFiveOptions = task.result.stepResultForStepIdentifier("questionStepFive")?.results![0].valueForKey("answer")!
+        
+        /*if(task.result.stepResultForStepIdentifier("questionStepFive")?.results![1].valueForKey("answer") != nil){
+            formFiveText = (task.result.stepResultForStepIdentifier("questionStepFive")?.results![1].valueForKey("answer")! as? String)!
+        }*/
+        
+        
+        
+        print(task.result.stepResultForStepIdentifier("questionStepFive")?.results![0].valueForKey("answer")!.count!)
+        print("Form: \(formFiveOptions!)")
+        //print(formOneText!)
+        
+        var formFiveArray:[String] = []
+        
+        for index:Int in (formFiveOptions as? Array)! {
+            print("Index is: \(index)")
+            formFiveArray.append(String(index))
+        }
+        
+        //let formFiveArray:[String] = [formFiveOptions! as! String]
+        
+        /*for index:Int in (formFiveOptions as? Array)! {
+            print("Index is: \(index)")
+            formFiveArray.append(formFiveChoice[index])
+        }
+        
+        if(formFiveText != ""){
+            formFiveArray.append(formFiveText)
+            print("text data was full")
+        }*/
+        
+        
+        print(formFiveArray)
+        
+        print("-------------------------")
+        
+        /*Form Six data parse*/
+        //var formSixText:String = ""
+        
+        let formSixOptions = task.result.stepResultForStepIdentifier("questionStepSix")?.results![0].valueForKey("answer")!
+        
+        /*if(task.result.stepResultForStepIdentifier("questionStepSix")?.results![1].valueForKey("answer") != nil){
+            formSixText = (task.result.stepResultForStepIdentifier("questionStepSix")?.results![1].valueForKey("answer")! as? String)!
+        }*/
+        
+        
+        
+        print(task.result.stepResultForStepIdentifier("questionStepSix")?.results![0].valueForKey("answer")!.count!)
+        print(formSixOptions!)
+        //print(formOneText!)
+        
+        var formSixArray:[String] = []
+        
+        for index:Int in (formSixOptions as? Array)! {
+            print("Index is: \(index)")
+            formSixArray.append(String(index))
+        }
+
+        
+        /*for index:Int in (formSixOptions as? Array)! {
+            print("Index is: \(index)")
+            formSixArray.append(formSixChoice[index])
+        }
+        
+        if(formSixText != ""){
+            formSixArray.append(formSixText)
+            print("text data was full")
+        }
+        */
+        
+        
+        print(formSixArray)
+        
+        let masterArray = [formOneArray, formTwoArray,formThreeArray,formFourArray,formFiveArray, formSixArray]
         
         print("master \(masterArray)")
         
@@ -259,19 +360,6 @@ class SurveyViewController: UIViewController,UIDocumentInteractionControllerDele
             if (data != nil) {
                 print("Ran the request and the data was: \(data!)")
                 print("response is: " + String(response))
-                dispatch_async(dispatch_get_main_queue()){
-                    //self.performSegueWithIdentifier("afterInfo", sender: self)
-                    print("successful")
-                    //self.displayAlert()
-                    dispatch_async(dispatch_get_main_queue()){
-                        /*let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                        
-                        let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("TabBarController") as! UITabBarController
-                        self.presentViewController(nextViewController, animated:true, completion:nil)*/
-                        
-                        self.displayAlert()
-                    }
-                }
             }
             
         }
@@ -285,7 +373,15 @@ class SurveyViewController: UIViewController,UIDocumentInteractionControllerDele
         alert.addAction(UIAlertAction(title: "Yes", style: .Default, handler: { action in
             switch action.style{
             case .Default:
-                print("default")
+                
+                print("Hop on main thread")
+                //dispatch_async(dispatch_get_main_queue()){
+                    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                    let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("TabBarController") as! UITabBarController
+                    self.presentViewController(nextViewController, animated:true, completion:nil)
+
+                //}
+                
                 
             case .Cancel:
                 print("cancel")
@@ -294,21 +390,59 @@ class SurveyViewController: UIViewController,UIDocumentInteractionControllerDele
                 print("destructive")
             }
         }))
-        alert.addAction(UIAlertAction(title: "No", style: .Default, handler: { action in
-            switch action.style{
-            case .Default:
-                print("default")
-                
-            case .Cancel:
-                print("cancel")
-                
-            case .Destructive:
-                print("destructive")
-            }
-        }))
-        self.presentViewController(alert, animated: true, completion: nil)
+                self.presentViewController(alert, animated: true, completion: nil)
         
     }
+    
+    
+    @IBAction func shareResults(sender: AnyObject) {
+        let email = inputField.text
+        let token = dataWorker.getToken()
+        
+        let url = "http://ec2-35-162-212-55.us-west-2.compute.amazonaws.com/api/shareSurvey"
+        
+        let post:String = "token=\(token!.token!)&email=\(email!)"
+        
+        let escapedAddress = post.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
+        
+        print("escaped address" + escapedAddress!)
+        
+        
+        let postData: NSData = escapedAddress!.dataUsingEncoding(NSASCIIStringEncoding, allowLossyConversion: true)!
+        let postLength: String = "\(postData.length)"
+        let request: NSMutableURLRequest = NSMutableURLRequest()
+        request.URL = NSURL(string: url)
+        request.HTTPMethod = "POST"
+        request.setValue(postLength, forHTTPHeaderField: "Content-Length")
+        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        request.HTTPBody = postData
+        
+        //print("Request: " + String(request))
+        
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
+            (let data, let response, let error) in
+            //print("Ran the request and the data was: \(data)")
+            if (data != nil) {
+                print("Ran the request and the data was: \(data!)")
+                print("response is: " + String(response))
+                
+                
+                print("calling alert")
+                
+                dispatch_async(dispatch_get_main_queue()){
+                    self.displayAlert()
+                }
+                
+                
+            }
+        }
+        
+        task.resume()// run the call
+
+        
+    }
+
+    
     
     
     

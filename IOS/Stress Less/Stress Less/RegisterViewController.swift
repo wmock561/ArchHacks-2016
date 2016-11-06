@@ -94,7 +94,7 @@ class RegisterViewController: UIViewController {
                     print(userDataObject.token!)
                     
                     dispatch_async(dispatch_get_main_queue()){
-                        self.performSegueWithIdentifier("afterRegister", sender: self)
+                        self.performSegueWithIdentifier("Main", sender: self)
                     }
                     
                     

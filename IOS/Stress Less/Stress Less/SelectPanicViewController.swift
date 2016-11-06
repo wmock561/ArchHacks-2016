@@ -25,6 +25,26 @@ class SelectPanicViewController: UIViewController {
         UIApplication.sharedApplication().openURL(NSURL(string: "tel://18167520068")!)
     }
     
+    @IBAction func recordLater(sender: AnyObject) {
+        displayAlert()
+    }
+    
+    
+    func displayAlert(){
+        let alert = UIAlertController(title: "Save for later", message: "We will send you a notification in an hour so you can log it then", preferredStyle: UIAlertControllerStyle.Alert)
+        //alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
+            print("OK")
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            
+            let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("TabBarController") as! UITabBarController
+            self.presentViewController(nextViewController, animated:true, completion:nil)
+            
+        }))
+        self.presentViewController(alert, animated: true, completion: nil)
+        
+    }
+    
     
     
 

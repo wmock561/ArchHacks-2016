@@ -12,7 +12,9 @@ class WebWorker: NSObject {
     
     func login(username:String, password:String, completion: (result:NSDictionary?, error:String?)->Void){
         let url = "http://ec2-35-162-212-55.us-west-2.compute.amazonaws.com/api/login"
-        let post:String = "username=\(username)&password=\(password)"
+        let post:String = "email=\(username)&password=\(password)"
+        
+        print("post string: " + post)
         
         self.requestHandler(url, post: post){
             (result:NSDictionary?, error:String?) in
@@ -22,6 +24,7 @@ class WebWorker: NSObject {
         }
         
     }
+
     
     func register(email:String, password:String, completion: (result:NSDictionary?, error:String?)->Void){
         let url = "http://ec2-35-162-212-55.us-west-2.compute.amazonaws.com/api/register"
@@ -39,24 +42,6 @@ class WebWorker: NSObject {
     
     }
     
-    /*func extraInfo(token:String, firstName:String, lastName:String, age:String, gender:String, ethnicity:String, occupation:String, completion: (result:NSDictionary?, error:String?)->Void){
-    
-        let url = "http://ec2-35-162-10-43.us-west-2.compute.amazonaws.com/api/savePersonalInformation"
-        let post:String = "token=\(token)&firstName=\(firstName)&lastName=\(lastName)&age=\(age)&gender=\(gender)&ethnicity=\(ethnicity)&occupation=\(occupation)"
-        
-        let escapedAddress = post.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
-        
-        print("post string" + (escapedAddress)!)
-        
-        
-        
-        self.requestHandlerNoJSON(url, post: escapedAddress!){
-            (result:NSDictionary?, error:String?) in
-            if let result = result{
-                completion(result:result, error:error)
-            }
-        }
-    }*/
     
     func pin(token:String, pin:String, completion: (result:NSDictionary?, error:String?)->Void){
         let url = "http://ec2-35-162-212-55.us-west-2.compute.amazonaws.com/api/pin"
