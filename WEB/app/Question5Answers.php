@@ -10,6 +10,10 @@ class Question5Answers extends Model
 
     protected $fillable = ['answer'];
 
+    protected $casts = [
+    	'answer' => 'integer'
+    ];
+
     public function survey(){
     	return $this->belongsTo('App\Survey');
     }

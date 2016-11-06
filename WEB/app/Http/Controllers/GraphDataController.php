@@ -28,9 +28,11 @@ class GraphDataController extends Controller
     	$good = $locations->filter(function($value, $key){
     		return $value->count > 1;
     	});
+    	$array = array();
     	$good["other"] = $other;
-    	$good["count"] = $count;
-    	return $good;
+    	$array["data"] = $good->toArray();
+    	$array["count"] = $count;
+    	return $array;
     }
 
     public function triggerChart(){
@@ -52,9 +54,11 @@ class GraphDataController extends Controller
     	$good = $locations->filter(function($value, $key){
     		return $value->count > 1;
     	});
+    	$array = array();
     	$good["other"] = $other;
-    	$good["count"] = $count;
-    	return $good;
+    	$array["data"] = $good->toArray();
+    	$array["count"] = $count;
+    	return $array;
     }
 
     public function symptomChart(){
@@ -89,9 +93,11 @@ class GraphDataController extends Controller
     	$otherArray['count'] = $other;
     	$otherArray['severity'] = $otherDuration;
 
+		$array = array();
     	$good["other"] = $otherArray;
-    	$good["count"] = $count;
-    	return $good;
+    	$array["data"] = $good->toArray();
+    	$array["count"] = $count;
+    	return $array;
     }
 
     public function calmingChart(){
@@ -121,12 +127,15 @@ class GraphDataController extends Controller
     	$good = $locations->filter(function($value, $key){
     		return $value->count > 1;
     	});
+    	$good->toArray();
     	$otherArray = array();
     	$otherArray['count'] = $other;
     	$otherArray['duration'] = $otherDuration;
 
+    	$array = array();
     	$good["other"] = $otherArray;
-    	$good["count"] = $count;
-    	return $good;
+    	$array["data"] = $good->toArray();
+    	$array["count"] = $count;
+    	return $array;
     }
 }
