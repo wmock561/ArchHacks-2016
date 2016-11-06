@@ -1,24 +1,35 @@
 <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
-      function drawChart() {
+    google.charts.load('current', {
+        'packages': ['corechart']
+    });
+    google.charts.setOnLoadCallback(drawChart);
+    
+    $.get("/location", function (data) {
+        var parsed = JSON.parse(data);
+        
+        console.log(parsed);
 
-        var data = google.visualization.arrayToDataTable([
+    });
+
+
+    function drawChart() {
+
+        var masterData = google.visualization.arrayToDataTable([
           ['Task', 'Hours per Day'],
-          ['Work',     11],
-          ['Eat',      2],
-          ['Commute',  2],
+          ['Work', 11],
+          ['Eat', 2],
+          ['Commute', 2],
           ['Watch TV', 2],
-          ['Sleep',    7]
+          ['Sleep', 7]
         ]);
 
         var options = {
-          title: 'Location'
+            title: 'Location'
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('chart2'));
 
-        chart.draw(data, options);
-      }
-    </script>
+        chart.draw(masterData, options);
+    }
+</script>
 <div id="chart2" style="width: 900px; height: 500px"></div>
