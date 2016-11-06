@@ -34,7 +34,7 @@ class GraphDataController extends Controller
         $array["other"] = $other;
     	$array["data"] = $good;
     	$array["count"] = $count;
-    	return $array;
+    	return view('vis2', compact('array'));
     }
 
     public function triggerChart(){

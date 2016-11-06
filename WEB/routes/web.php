@@ -36,9 +36,7 @@ Route::get('/vis1', function () {
     return view('vis1', compact('mySurveys'));
 });
 
-Route::get('/vis2', function () {
-    return view('vis2');
-});
+Route::get('/vis2', 'GraphDataController@locationChart');
 
 Route::get('/vis3', function () {
     return view('vis3');

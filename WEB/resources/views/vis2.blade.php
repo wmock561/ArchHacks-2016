@@ -2,16 +2,7 @@
     google.charts.load('current', {
         'packages': ['corechart']
     });
-    google.charts.setOnLoadCallback(getData);
-
-    function getData() {
-
-        $.get("/location", function (data) {
-
-            drawChart(data);
-
-        });
-    }
+    google.charts.setOnLoadCallback(drawChart);
 
     function drawChart(chartData) {
 
@@ -21,13 +12,18 @@
         var masterDataArray = new Array();
 
         masterDataArray.push(['Location', 'Frequency']);
+        
+        @foreach($array->data as $chartData)
 
-        for (i = 0; i < chartData.data.length; i++) {
+            masterDataArray.push('{{ $chartData->answer }}', {{ (int)$chartData->count }});
+        
+        @endforeach
+        /*for (i = 0; i < chartData.data.length; i++) {
 
             masterDataArray.push([chartData.data[i].answer, parseInt(chartData.data[i].count]));
-        }
+        }*/
 
-        masterDataArray.push(['other', chartData.other]);
+        masterDataArray.push(['other', {{ $array->other }}]);
 
         console.log(masterDataArray);
         
