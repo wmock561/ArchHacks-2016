@@ -8,13 +8,7 @@
     
         $.get("/location", function (data) {
             
-            console.log(data);
-            
-            var parsed = JSON.parse(data);
-
-            console.log(parsed);
-            
-            drawChart(parsed);
+            drawChart(data);
 
         });
          
@@ -24,15 +18,24 @@
 
 
     function drawChart(chartData) {
+        
+        var location = new Array();
+        var numCount = new Array();
+        
+        var masterDataArray = new Array();
+        
+        masterDataArray.push(['Location','Frequency']);
+        
+        for(i=0;i<chartData.data.length-2;i++){
+            
+            masterDataArray.push([chartData.data[i].answer,chartData.data[i].count]);
+        }
+        
+        masterDataArray.push(['other',chartData.data[chartData.data.length-1]]);
+        
+        
 
-        var masterData = google.visualization.arrayToDataTable([
-          ['Task', 'Hours per Day'],
-          ['Work', 11],
-          ['Eat', 2],
-          ['Commute', 2],
-          ['Watch TV', 2],
-          ['Sleep', 7]
-        ]);
+        var masterData = google.visualization.arrayToDataTable([masterDataArray]);
 
         var options = {
             title: 'Location'
