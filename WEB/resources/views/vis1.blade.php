@@ -44,10 +44,16 @@
             var a = hms.split(':'); // split it at the colons
 
             // minutes are worth 60 seconds. Hours are worth 60 minutes.
-            var seconds = (+a[0]) * 60 * 60 + (+a[1]) * 60 + (+a[2]); 
-
-            console.log(seconds);
+            var seconds = (+a[0]) * 60 * 60 + (+a[1]) * 60 + (+a[2]);
         
+            timeofDay.push(seconds);
+        
+            //push severity answer
+            console.log('{{ $survey->question5_answer->answer }}');
+            severity.push('{{ $survey->question5_answer->answer }}');
+        
+            //push duration
+            duration.push('{{ $survey->question6_answer->answer }}');
 
         @endforeach
 

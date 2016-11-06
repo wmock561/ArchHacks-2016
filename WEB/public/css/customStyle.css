@@ -43,3 +43,18 @@ ul.noDot{
     padding-right: 10px;
     
 }
+
+img.logoutIcon {
+height: 30px;
+}
+
+.logout {
+position: absolute;
+top: 25px;
+right: 10px;
+}
+
+.logout a {
+color: #FFFFFF;
+font-size: 14px;
+}
