@@ -94,12 +94,12 @@
 
                 <div class="mdl-cell mdl-cell--5-col"></div>
 
-                <div class="mdl-cell mdl-cell--1-col logout">
+                <div class="mdl-cell mdl-cell--1-col">
 
-                    <img class="logoutIcon" src="img/logout.png" alt="logout" />
                     <a href="{{ url('/logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                    </a>
+                                            Logout
+                                        </a>
 
                     <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
                         {{ csrf_field() }}
@@ -145,7 +145,7 @@
                             <span class="mdl-list__item-primary-content">
                                 <ul class="noDot">
                                     <li>
-                                       @if (isset($mySurveys))
+                                       @if (isset($mySurveys[0]))
                                             <i class="material-icons mdl-list__item-icon">person</i>{{ $mySurveys[0]->user->personalInformation->firstName }} {{ $mySurveys[0]->user->personalInformation->lastName }}
                                         @endif
                                     </li>
@@ -193,9 +193,9 @@
                             <button id="yearButton3" class="chartNavButton">Year</button>
                             <button id="allButton3" class="chartNavButton">All</button>
                         </div>-->
-
+                        
                         <div id="chartDiv4"></div>
-
+                        
                         <!--<div id="selectionDiv4" style="display:none;">
                             <button id="dayButton4" class="chartNavButton">Day</button>
                             <button id="weekButton4" class="chartNavButton">Week</button>
@@ -203,9 +203,9 @@
                             <button id="yearButton4" class="chartNavButton">Year</button>
                             <button id="allButton4" class="chartNavButton">All</button>
                         </div>-->
-
+                        
                         <div id="chartDiv5"></div>
-
+                        
                         <!--<div id="selectionDiv5" style="display:none;">
                             <button id="dayButton5" class="chartNavButton">Day</button>
                             <button id="weekButton5" class="chartNavButton">Week</button>
