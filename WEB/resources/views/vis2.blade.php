@@ -1,29 +1,24 @@
 <script type="text/javascript">
-    google.charts.load('current', {
-        'packages': ['corechart']
-    });
-    google.charts.setOnLoadCallback(drawChart);
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
 
-    function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Year', 'Sales', 'Expenses'],
-          ['2004', 1000, 400],
-          ['2005', 1170, 460],
-          ['2006', 660, 1120],
-          ['2007', 1030, 540]
+          ['Task', 'Hours per Day'],
+          ['Work',     11],
+          ['Eat',      2],
+          ['Commute',  2],
+          ['Watch TV', 2],
+          ['Sleep',    7]
         ]);
 
         var options = {
-            title: 'Visualization 2',
-            curveType: 'linear',
-            legend: {
-                position: 'bottom'
-            }
+          title: 'Location'
         };
 
-        var chart = new google.visualization.LineChart(document.getElementById('curve_chart2'));
+        var chart = new google.visualization.PieChart(document.getElementById('chart2'));
 
         chart.draw(data, options);
-    }
-</script>
-<div id="curve_chart2" style="width: 900px; height: 500px"></div>
+      }
+    </script>
+<div id="chart2" style="width: 900px; height: 500px"></div>

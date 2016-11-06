@@ -39,6 +39,14 @@ Route::get('/vis3', function () {
     return view('vis3');
 });
 
+Route::get('/vis4', function () {
+    return view('vis4');
+});
+
+Route::get('/vis5', function () {
+    return view('vis5');
+});
+
 
 Auth::routes();
 
