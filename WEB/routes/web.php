@@ -45,9 +45,9 @@ Route::get('/vis4', 'GraphDataController@symptomChart');
 Route::get('/vis5', 'GraphDataController@calmingChart');
 
 Route::get('/networkVis', function () {
-    $mySurveys = Auth::user()->surveys;
+    $mySurveys2 = Auth::user()->surveys;
     //$surveys = Auth::user()->authorizedSurveys;
-    return view('networkVis', compact('mySurveys'));
+    return view('networkVis', compact('mySurveys2'));
 });
 
 Route::get('/settings', function(){
