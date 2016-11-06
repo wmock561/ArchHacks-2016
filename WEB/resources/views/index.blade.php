@@ -155,7 +155,7 @@
                                     @foreach ($surveys as $survey)
                                     <li>
                                         @if (isset($survey))
-                                            <i class="material-icons mdl-list__item-icon">person</i>{{ $survey->user->personalInformation->firstName }} {{ $survey->user->personalInformation->lastName }}
+                                            <a id="clearDiv"><i class="material-icons mdl-list__item-icon">person</i>{{ $survey->user->personalInformation->firstName }} {{ $survey->user->personalInformation->lastName }}</a>
                                         @endif
                                     </li>
                                     @endforeach
@@ -246,6 +246,16 @@
                     <script>
                         $("#resetGraphs").click(function () {
                             $("#careNetwork").click();
+                        });
+                    </script>
+                    
+                    <script>
+                        $("#clearDiv").click(function () {
+                            $('#chartDiv1').empty();
+                            $('#chartDiv2').empty();
+                            $('#chartDiv3').empty();
+                            $('#chartDiv4').empty();
+                            $('#chartDiv5').empty();
                         });
                     </script>
 
