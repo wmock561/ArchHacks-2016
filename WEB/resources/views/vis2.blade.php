@@ -24,7 +24,7 @@
 
         for (i = 0; i < chartData.data.length; i++) {
 
-            masterDataArray.push([chartData.data[i].answer, chartData.data[i].count]);
+            masterDataArray.push([chartData.data[i].answer, parseInt(chartData.data[i].count]));
         }
 
         masterDataArray.push(['other', chartData.other]);
