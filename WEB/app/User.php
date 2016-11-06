@@ -27,8 +27,6 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    protected $relations = ['surveys', 'personalInformation'];
-
     public function surveys(){
         return $this->hasMany('App\Survey');
     }

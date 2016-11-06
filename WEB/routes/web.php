@@ -15,6 +15,11 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
+Route::get('/location', 'GraphDataController@locationChart');
+Route::get('/trigger', 'GraphDataController@triggerChart');
+Route::get('/symptom', 'GraphDataController@symptomChart');
+Route::get('/calming', 'GraphDataController@calmingChart');
+
 Route::get('/index', function () {
     $surveys = Auth::user()->authorizedSurveys;
     $mySurveys = Auth::user()->surveys;

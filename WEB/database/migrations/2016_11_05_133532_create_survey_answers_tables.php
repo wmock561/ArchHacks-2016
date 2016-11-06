@@ -52,7 +52,16 @@ class CreateSurveyAnswersTables extends Migration
         Schema::create('question5_answers', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('survey_id')->unsigned();
-            $table->string('answer')->nullable();
+            $table->integer('answer')->nullable();
+            $table->timestamps();
+
+            $table->foreign('survey_id')->references('id')->on('surveys');
+        });
+
+        Schema::create('question6_answers', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('survey_id')->unsigned();
+            $table->integer('answer')->nullable();
             $table->timestamps();
 
             $table->foreign('survey_id')->references('id')->on('surveys');
@@ -71,5 +80,6 @@ class CreateSurveyAnswersTables extends Migration
         Schema::dropIfExists('question3_answers');
         Schema::dropIfExists('question4_answers');
         Schema::dropIfExists('question5_answers');
+        Schema::dropIfExists('question6_answers');
     }
 }

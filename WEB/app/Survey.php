@@ -11,12 +11,13 @@ class Survey extends Model
 
     protected $table = "surveys";
 
-    protected $relations = [
+    protected $with = [
 	    'question1_answers',
 	    'question2_answers',
 	    'question3_answers',
 	    'question4_answers',
 	    'question5_answers',
+	    'question6_answers',
 	    'user'
     ];
 
@@ -42,6 +43,10 @@ class Survey extends Model
 
     public function question5_answers(){
     	return $this->hasMany('App\Question5Answers');
+    }
+
+    public function question6_answers(){
+    	return $this->hasMany('App\Question6Answers');
     }
 
     public function users(){
