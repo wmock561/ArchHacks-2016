@@ -12,7 +12,7 @@ class SharingController extends Controller
     	$user = $request->user;
     	$survey = $user->surveys()->latest()->first();
     	$shareTo = User::where('email', '=', $request->input('email'))->first();
-    	if($shareTo != null && !$shareTo->exists){
+    	if($shareTo === null || !$shareTo->exists){
     		return response('', 404);
     	}
     	$survey->users()->attach($shareTo);
