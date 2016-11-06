@@ -20,7 +20,7 @@
         var severity = new Array();
         var duration = new Array();
 
-        @foreach($mySurveys as $survey)
+        @foreach($surveys as $survey)
         
             //PARSE DATE AND TIME INTO 2 HERE
         
