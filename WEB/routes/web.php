@@ -42,10 +42,7 @@ Route::get('/vis3', 'GraphDataController@triggerChart');
 
 Route::get('/vis4', 'GraphDataController@symptomChart');
 
-Route::get('/vis5', function () {
-    return view('vis5');
-});
-
+Route::get('/vis4', 'GraphDataController@calmingChart');
 
 Auth::routes();
 

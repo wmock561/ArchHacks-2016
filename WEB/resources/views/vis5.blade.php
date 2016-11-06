@@ -1,26 +1,39 @@
 <script type="text/javascript">
     google.charts.load('current', {packages: ['corechart', 'bar']});
-    google.charts.setOnLoadCallback(drawBasic);
+    google.charts.setOnLoadCallback(drawChart);
 
-    function drawBasic() {
+    function drawChart() {
+        
+        
+        var data = new google.visualization.DataTable();
 
-        var data = google.visualization.arrayToDataTable([
-        ['City', '2010 Population', ],
-        ['New York City, NY', 8175000],
-        ['Los Angeles, CA', 3792000],
-        ['Chicago, IL', 2695000],
-        ['Houston, TX', 2099000],
-        ['Philadelphia, PA', 1526000]
-      ]);
+        data.addColumn('string', 'Technique');
+        data.addColumn('number', 'Frequency');
+
+        var location = new Array();
+        var frequency = new Array();
+        
+        @foreach($array['data'] as $chartData)
+            data.addRow(['{{ $chartData->technique }}', {{ (int)$chartData->count }}]);
+        @endforeach
+        /*for (i = 0; i < chartData.data.length; i++) {
+
+            masterDataArray.push([chartData.data[i].answer, parseInt(chartData.data[i].count]));
+        }*/
+
+        data.addRow(['other', {{ (int)$array['other']['count'] }}]);
+        
+        console.log(data);
 
         var options = {
             title: 'Calming Techniques',
+            bars: 'horizontal',
             hAxis: {
-                title: 'Total Population',
-                minValue: 0
+                title: 'Count',
+                //minValue: 0
             },
             vAxis: {
-                title: 'City'
+                title: 'Techniques'
             }
         };
 
