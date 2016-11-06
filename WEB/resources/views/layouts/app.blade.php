@@ -48,7 +48,7 @@
                 </a>
                 </div>
                 
-                <div class="mdl-cell mdl-cell--5-col"></div>
+                <div class="mdl-cell mdl-cell--4-col"></div>
 
             
                 <div class="holder">
