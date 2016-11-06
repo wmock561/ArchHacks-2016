@@ -14,6 +14,25 @@
 
         <div>
             <h3>Test</h3>
+
+            <table>
+                <tr>
+                    <th>Q1</th>
+                    <th>Lastname</th>
+                    <th>Age</th>
+                </tr>
+                <tr>
+                    <td>$survey->question1_answers[0]->answer</td>
+                    <td>Smith</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>Eve</td>
+                    <td>Jackson</td>
+                    <td>94</td>
+                </tr>
+            </table>
+
             <p>Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Nostrud in laboris labore nisi amet do dolor eu fugiat consectetur elit cillum esse.</p>
             <button class="my_popup_close">Close</button>
         </div>
