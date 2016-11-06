@@ -50,9 +50,6 @@
 
             console.log(seconds);
         
-            timeofDay.push();
-            severity.push();
-            duration.push();
 
         @endforeach
 
@@ -83,7 +80,4 @@
         chart.draw(data, options);
     }
 </script>
-<?php
-    echo "The time is " . date("h:i:sa");
-?>
     <div id="chart1" style="width: 900px; height: 500px"></div>
