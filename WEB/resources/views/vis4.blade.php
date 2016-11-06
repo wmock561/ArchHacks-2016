@@ -1,31 +1,30 @@
 <script type="text/javascript">
     google.charts.load('current', {packages: ['corechart', 'bar']});
-    google.charts.setOnLoadCallback(drawBarChart);
+    google.charts.setOnLoadCallback(drawChart);
     
-    function drawBarChart() {
+    
+    function drawChart() {
+        
+        
+        var data = new google.visualization.DataTable();
 
-        var symptom = new Array();
-        var numCount = new Array();
+        data.addColumn('string', 'Symptom');
+        data.addColumn('number', 'Frequency');
 
-        var masterDataArray = new Array();
-
-        masterDataArray.push(['Symptom', 'Frequency', ]);
+        var location = new Array();
+        var frequency = new Array();
         
         @foreach($array['data'] as $chartData)
-            masterDataArray.push([ '{{ $chartData->symptom }}', {{ (int)$chartData->count }} ]);
+            data.addRow(['{{ $chartData->symptom }}', {{ (int)$chartData->count }}]);
         @endforeach
         /*for (i = 0; i < chartData.data.length; i++) {
 
             masterDataArray.push([chartData.data[i].answer, parseInt(chartData.data[i].count]));
         }*/
 
-        masterDataArray.push(['other', {{ (int)$array['other']['count'] }} ]);
-
-        console.log(masterDataArray);
-
-        var masterData = google.visualization.arrayToDataTable([masterDataArray]);
-
-        console.log(masterData);
+        data.addRow(['other', {{ (int)$array['other']['count'] }}]);
+        
+        console.log(data);
 
         var options = {
             title: 'Symptom',
@@ -41,7 +40,7 @@
 
         var chart = new google.visualization.BarChart(document.getElementById('chart4'));
 
-        chart.draw(masterData, options);
+        chart.draw(data, options);
     }
 </script>
 <div id="chart4" style="width: 900px; height: 500px"></div>
