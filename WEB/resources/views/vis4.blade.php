@@ -29,9 +29,10 @@
 
         var options = {
             title: 'Symptom',
+            bars: 'horizontal',
             hAxis: {
                 title: 'Count',
-                minValue: 0
+                //minValue: 0
             },
             vAxis: {
                 title: 'Symptoms'
