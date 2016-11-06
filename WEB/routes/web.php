@@ -50,7 +50,7 @@ Route::get('/settings', function(){
 });
 
 Route::post('/revokeAccess', function(Request $request){
-	dd($request);
+	dd($request->all());
 });
 
 Auth::routes();
