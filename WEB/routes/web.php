@@ -49,9 +49,7 @@ Route::get('/settings', function(){
 	return view('settings', compact('mySurveys'));
 });
 
-Route::post('/revokeAccess', function(Request $request){
-	dd($request->all());
-});
+Route::post('/revokeAccess','SharingController@revokeAccess');
 
 Auth::routes();
 

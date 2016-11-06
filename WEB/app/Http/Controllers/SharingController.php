@@ -17,4 +17,8 @@ class SharingController extends Controller
     	$survey->users()->attach($shareTo);
     	return response('', 200);
     }
+
+    public function revokeAccess(Request $request){
+    	dd($request);
+    }
 }
