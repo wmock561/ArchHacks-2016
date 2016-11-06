@@ -116,5 +116,6 @@ div.gTitle {
 }
 #my_popup{
     
-    background-color: white
+    background-color: white;
+    text-align: center;
 }
