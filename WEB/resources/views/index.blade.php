@@ -251,11 +251,7 @@
                     
                     <script>
                         $("#clearDiv").click(function () {
-                            $('#chartDiv1').empty();
-                            $('#chartDiv2').empty();
-                            $('#chartDiv3').empty();
-                            $('#chartDiv4').empty();
-                            $('#chartDiv5').empty();
+                            $('#chartHolder').empty();
                         });
                     </script>
 
