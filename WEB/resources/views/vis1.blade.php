@@ -37,7 +37,7 @@
             
             var dateArray = dt.split('-');
         
-            var finalDateArray = new Date(parseInt(dateArray[0]),parseInt(dateArray[1]),parseInt(dateArray[2]));
+            var finalDateArray = new Date(parseInt(dateArray[0]),parseInt(dateArray[1])-1,parseInt(dateArray[2]));
         
             console.log(finalDateArray);
         
