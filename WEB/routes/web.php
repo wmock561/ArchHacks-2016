@@ -51,6 +51,10 @@ Route::get('/settings', function(){
 
 Route::post('/revokeAccess','SharingController@revokeAccess');
 
+Route::get('/termsAndConditions', function(){
+	return view('terms');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');

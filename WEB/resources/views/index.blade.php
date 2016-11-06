@@ -82,43 +82,7 @@
 <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
 
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-        <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
-
-            <div class="mdl-layout--large-screen-only mdl-layout__header-row headerSize"></div>
-
-            <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-                <div class="mdl-cell mdl-cell--6-col">
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        <img src="img/Asset_5.png" alt="LOGO" id="logo" class="logo">
-                    </a>
-                </div>
-
-                <div class="mdl-cell mdl-cell--5-col"></div>
-
-                <div class="mdl-cell mdl-cell--1-col logout">
-                    
-                    <img class="logoutIcon" src="img/logout.png" alt="logout" />
-
-                    <a href="{{ url('/logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">Logout
-                    </a>
-
-                    <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                        {{ csrf_field() }}
-                    </form>
-                </div>
-
-            </div>
-
-            <div class="mdl-layout--large-screen-only mdl-layout__header-row headerSize"></div>
-
-            <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
-                <!--<a href="#tab3Ref" class="mdl-layout__tab" id="tab3">Overview</a>-->
-                <a href="#feedRef" class="mdl-layout__tab is-active" id="feed">Feed</a>
-                <a href="#careNetworkRef" class="mdl-layout__tab" id="careNetwork">Care Network</a>
-                <a href="#settingsRef" class="mdl-layout__tab" id="settings">Settings</a>
-            </div>
-        </header>
+        @include('header')
         <main class="mdl-layout__content">
 
             <!--<div class="mdl-layout__tab-panel" id="tab3Ref">
@@ -272,59 +236,7 @@
                 </section>
             </div>
 
-            <footer class="mdl-mega-footer">
-                <div class="mdl-mega-footer--middle-section">
-                    <div class="mdl-mega-footer--drop-down-section">
-                        <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
-                        <h1 class="mdl-mega-footer--heading">Features</h1>
-                        <ul class="mdl-mega-footer--link-list">
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Terms</a></li>
-                            <li><a href="#">Partners</a></li>
-                            <li><a href="#">Updates</a></li>
-                        </ul>
-                    </div>
-                    <div class="mdl-mega-footer--drop-down-section">
-                        <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
-                        <h1 class="mdl-mega-footer--heading">Details</h1>
-                        <ul class="mdl-mega-footer--link-list">
-                            <li><a href="#">Spec</a></li>
-                            <li><a href="#">Tools</a></li>
-                            <li><a href="#">Resources</a></li>
-                        </ul>
-                    </div>
-                    <div class="mdl-mega-footer--drop-down-section">
-                        <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
-                        <h1 class="mdl-mega-footer--heading">Technology</h1>
-                        <ul class="mdl-mega-footer--link-list">
-                            <li><a href="#">How it works</a></li>
-                            <li><a href="#">Patterns</a></li>
-                            <li><a href="#">Usage</a></li>
-                            <li><a href="#">Products</a></li>
-                            <li><a href="#">Contracts</a></li>
-                        </ul>
-                    </div>
-                    <div class="mdl-mega-footer--drop-down-section">
-                        <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
-                        <h1 class="mdl-mega-footer--heading">FAQ</h1>
-                        <ul class="mdl-mega-footer--link-list">
-                            <li><a href="#">Questions</a></li>
-                            <li><a href="#">Answers</a></li>
-                            <li><a href="#">Contact us</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="mdl-mega-footer--bottom-section">
-                    <div class="mdl-logo">
-                        More Information
-                    </div>
-                    <ul class="mdl-mega-footer--link-list">
-                        <li><a href="https://developers.google.com/web/starter-kit/">Web Starter Kit</a></li>
-                        <li><a href="#">Help</a></li>
-                        <li><a href="#">Privacy and Terms</a></li>
-                    </ul>
-                </div>
-            </footer>
+            @include('footer')
         </main>
     </div>
     <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
