@@ -36,25 +36,23 @@ img.logo {
     height: 45px;
 }
 
-ul.noDot{
-    
+ul.noDot {
     list-style-type: none;
     padding-left: 10px;
     padding-right: 10px;
-    
 }
 
 img.logoutIcon {
-height: 30px;
+    height: 30px;
 }
 
 .logout {
-position: absolute;
-top: 25px;
-right: 10px;
+    position: absolute;
+    top: 25px;
+    right: 10px;
 }
 
 .logout a {
-color: #FFFFFF;
-font-size: 14px;
+    color: #FFFFFF;
+    font-size: 14px;
 }
