@@ -31,12 +31,16 @@
             var dt = parsed[0];
             var time1 = parsed[1];
         
+            console.log('{{ $survey->created_at }}');//ONE
+        
             id.push('{{ $survey->created_at }}');//can be string so good to leave
             
             //date manipulation here
-            var ts = moment('{{ $survey->created_at }}').valueOf();
+            var dateNum = moment(dt).valueOf();
+            
+            console.log(dateNum);//TWO
         
-            date.push(ts);//TODO
+            date.push(dateNum);
         
             //time manipulation here
         
@@ -46,15 +50,20 @@
             // minutes are worth 60 seconds. Hours are worth 60 minutes.
             var seconds = ((+a[0]) * 60 * 60 + (+a[1]) * 60 + (+a[2]));
         
+            console.log(seconds);//THREE
+        
             timeofDay.push(parseInt(seconds));
         
             //push for severity
-        
-            //var sev =  $survey->question5_answers->first()';
+            
+            console.log({{$survey->question5_answers[0]->answer}});//FOUR
         
             severity.push({{$survey->question5_answers[0]->answer}});
         
             //push duration
+        
+            console.log({{$survey->question6_answers[0]->answer}});//FIVE
+        
             duration.push({{$survey->question6_answers[0]->answer}});
         
 
