@@ -48,12 +48,13 @@
         
             timeofDay.push(seconds);
         
-            //push severity answer
-            console.log('{{ $survey->question5_answer->answer }}');
+            //push for severity
+        
             severity.push('{{ $survey->question5_answer->answer }}');
         
             //push duration
             duration.push('{{ $survey->question6_answer->answer }}');
+        
 
         @endforeach
 
