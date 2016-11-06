@@ -2,32 +2,31 @@
       google.charts.load('current', {
         'packages': ['corechart']
     });
-    google.charts.setOnLoadCallback(drawPieChart);
+    google.charts.setOnLoadCallback(drawChart);
+    
+    
+    function drawChart() {
+        
+        
+        var data = new google.visualization.DataTable();
 
-    function drawPieChart() {
+        data.addColumn('string', 'Cause');
+        data.addColumn('number', 'Frequency');
 
         var location = new Array();
-        var numCount = new Array();
-
-        var masterDataArray = new Array();
-
-        masterDataArray.push(['Cause', 'Frequency']);
+        var frequency = new Array();
         
         @foreach($array['data'] as $chartData)
-            masterDataArray.push(['{{ $chartData->answer }}', {{ (int)$chartData->count }}]);
+            data.addRow(['{{ $chartData->answer }}', {{ (int)$chartData->count }}]);
         @endforeach
         /*for (i = 0; i < chartData.data.length; i++) {
 
             masterDataArray.push([chartData.data[i].answer, parseInt(chartData.data[i].count]));
         }*/
 
-        masterDataArray.push(['other', {{ (int)$array['other'] }}]);
-
-        console.log(masterDataArray);
-
-        var masterData = google.visualization.arrayToDataTable([masterDataArray]);
-
-        console.log(masterData);
+        data.addRow(['other', {{ (int)$array['other'] }}]);
+        
+        console.log(data);
 
         var options = {
             title: 'Cause'
@@ -35,7 +34,7 @@
 
         var chart = new google.visualization.PieChart(document.getElementById('chart3'));
 
-        chart.draw(masterData, options);
+        chart.draw(data, options);
     }
     </script>
 <div id="chart3" style="width: 900px; height: 500px"></div>
