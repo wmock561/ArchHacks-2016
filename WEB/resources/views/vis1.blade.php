@@ -50,7 +50,7 @@
         
             //push for severity
         
-            var sev = '{{ $survey->question5_answers->first()->answer}}';
+            var sev = '{{ $survey->question5_answers->first()}}';
             
             console.log(sev);
         
