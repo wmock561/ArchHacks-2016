@@ -148,7 +148,7 @@
                                 <ul class="noDot">
                                     <li>
                                        @if (isset($mySurveys[0]))
-                                            <i class="material-icons mdl-list__item-icon">person</i>{{ $mySurveys[0]->user->personalInformation->firstName }} {{ $mySurveys[0]->user->personalInformation->lastName }}
+                                            <a id="resetGraphs"><i class="material-icons mdl-list__item-icon">person</i>{{ $mySurveys[0]->user->personalInformation->firstName }} {{ $mySurveys[0]->user->personalInformation->lastName }}</a>
                                         @endif
                                     </li>
 
@@ -240,6 +240,12 @@
                             $('#selectionDiv3').show();
                             $('#selectionDiv4').show();
                             $('#selectionDiv5').show();*/
+                        });
+                    </script>
+                    
+                    <script>
+                        $("#resetGraphs").click(function () {
+                            $("#careNetwork").click();
                         });
                     </script>
 
