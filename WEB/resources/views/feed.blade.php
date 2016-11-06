@@ -13,9 +13,8 @@
     <!-- Add content to the popup -->
     <div id="my_popup">
 
-        <div>
+        <div class="popupStyle">
             <button class="my_popup_close">Close</button>
-
         </div>
 
     </div>

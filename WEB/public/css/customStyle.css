@@ -114,3 +114,7 @@ div.gTitle {
     letter-spacing: .02em;
     display: inline-block;
 }
+.popupStyle{
+    height: 20%;
+    width: 30%;
+}
