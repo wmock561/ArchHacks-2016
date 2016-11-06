@@ -7,6 +7,9 @@
     function getData(){
     
         $.get("/location", function (data) {
+            
+            console.log(data);
+            
             var parsed = JSON.parse(data);
 
             console.log(parsed);
