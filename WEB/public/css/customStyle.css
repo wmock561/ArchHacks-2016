@@ -56,3 +56,43 @@ img.logoutIcon {
     color: #FFFFFF;
     font-size: 14px;
 }
+
+.login button, .register button {
+color: #FFFFFF;
+font-size: 14px;
+text-decoration: underline;
+font-weight: 500;
+font-family: 'Roboto', 'Helvetica', sans-serif;
+background-color: transparent;
+background-repeat:no-repeat;
+border: none;
+cursor:pointer;
+overflow: hidden;
+outline:none;
+}
+
+.login, .register {
+position: absolute;
+top: 25px;
+right: 10px;
+}
+
+.login {
+right: 100px;
+}
+
+img.loginIcon, img.registerIcon {
+height: 30px;
+}
+
+img.logo {
+height: 45px;
+width: auto;
+}
+
+.padder {
+padding-top: 30px;
+font-family: Raleway,sans-serif;
+width: 1170px;
+margin: auto;
+}

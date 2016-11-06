@@ -24,12 +24,12 @@
         
         masterDataArray.push(['Location','Frequency']);
         
-        for(i=0;i<chartData.data.length-2;i++){
+        for(i=0;i<chartData.data.length-1;i++){
             
             masterDataArray.push([chartData.data[i].answer,chartData.data[i].count]);
         }
         
-        masterDataArray.push(['other',chartData.data[chartData.data.length-1]]);
+        masterDataArray.push(['other',chartData.other]);
         
         console.log(masterDataArray);
 
