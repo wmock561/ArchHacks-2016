@@ -44,6 +44,10 @@ Route::get('/vis4', 'GraphDataController@symptomChart');
 
 Route::get('/vis5', 'GraphDataController@calmingChart');
 
+Route::get('/settings', function(){
+	return view('settings');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');

@@ -245,6 +245,9 @@
                             $('#selectionDiv4').show();
                             $('#selectionDiv5').show();*/
                         });
+                        $('#settings').click(function(){
+                            $('#settingsSection').load('/settings');
+                        });
                     </script>
                     
                     <script>
