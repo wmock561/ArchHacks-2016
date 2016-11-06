@@ -58,5 +58,80 @@ class CoreDataWorker: NSObject {
     func saveSurveyData(){
     
     }
+    
+    func saveConsent(){
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate //set the correct appDelegate to the one apple gives us for core data
+        managedObjectContext = appDelegate.managedObjectContext //set variable to the managed context function in appDelegate
+        
+        let entityDescription = NSEntityDescription.entityForName("ResearchKitGeneral", inManagedObjectContext: managedObjectContext)
+        
+        // Initialize Item
+        let RKGDataObject = ResearchKitGeneral(entity: entityDescription!, insertIntoManagedObjectContext: self.managedObjectContext)
+        
+        RKGDataObject.consentGiven = true
+        
+        do {
+            try RKGDataObject.managedObjectContext?.save()
+            print("Saved Group")
+            //performSegueWithIdentifier("popBackToMyGroups", sender: nil)
+        } catch {
+            let saveError = error as NSError
+            print("\(saveError), \(saveError.userInfo)")
+        }
+
+    }
+    
+    func getConcent()->Bool{
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate //set the correct appDelegate to the one apple gives us for core data
+        
+        let managedContext = appDelegate.managedObjectContext//set variable to the managed context function in appDelegate
+        let fetchRequest = NSFetchRequest(entityName:"ResearchKitGeneral") // set a fetch to the the entity from core data of type MyGroups
+        
+        
+        do {
+            let fetchedResults = //set fetchedResults to below
+                try managedContext.executeFetchRequest(fetchRequest) as? [ResearchKitGeneral] //exicute the fetch for the type filler and downcast as a NSManagedObject
+            
+            if let results = fetchedResults { //unwrap optional and set the result to results
+                print(results) //print to console for error checking
+                if(results.count == 0){ //if the is nothing coming back from core data then return nil
+                    return false
+                }else{
+                    let result = results[0] 
+                    if(result.consentGiven == true){
+                        return true
+                    }
+                    return false
+                }
+            } else {
+                print("Could not fetch MyGroups data") //error checking
+            }
+        } catch {
+            return false //if the unwrap is unsuccesful then return nil
+        }
+        return false //do failed so return nil
+    }
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

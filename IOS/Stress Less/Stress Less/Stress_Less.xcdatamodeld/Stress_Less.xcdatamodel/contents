@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Automatic">
-    <entity name="ResearchKitGeneral" syncable="YES">
+    <entity name="ResearchKitGeneral" representedClassName=".ResearchKitGeneral" syncable="YES">
         <attribute name="consentGiven" optional="YES" attributeType="Boolean" syncable="YES"/>
     </entity>
     <entity name="SurveyData" syncable="YES">

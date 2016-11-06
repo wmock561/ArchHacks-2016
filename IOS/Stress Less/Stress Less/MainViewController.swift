@@ -9,11 +9,24 @@
 import UIKit
 
 class MainViewController: UIViewController {
+    
+    let dataWorker = CoreDataWorker()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        let consent = dataWorker.getConcent()
+        if(consent == true){
+            print("Got consent")
+        }else{
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("WelcomePage") as! UIViewController
+            self.presentViewController(nextViewController, animated:true, completion:nil)
+        }
     }
 
     override func didReceiveMemoryWarning() {

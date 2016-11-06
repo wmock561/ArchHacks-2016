@@ -12,7 +12,7 @@
 		D655473B1DCD6BFC004882FA /* Stress_Less.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D65547391DCD6BFC004882FA /* Stress_Less.xcdatamodeld */; };
 		D655473D1DCD6BFC004882FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D655473C1DCD6BFC004882FA /* Assets.xcassets */; };
 		D65547401DCD6BFC004882FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D655473E1DCD6BFC004882FA /* LaunchScreen.storyboard */; };
-		D65547481DCD6D53004882FA /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D65547471DCD6D53004882FA /* logo.png */; };
+		D65547481DCD6D53004882FA /* logoOld.png in Resources */ = {isa = PBXBuildFile; fileRef = D65547471DCD6D53004882FA /* logoOld.png */; };
 		D655474A1DCD71D7004882FA /* WebWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65547491DCD71D7004882FA /* WebWorker.swift */; };
 		D65547501DCD7538004882FA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D655474F1DCD7538004882FA /* LoginViewController.swift */; };
 		D65547521DCD7F26004882FA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65547511DCD7F26004882FA /* RegisterViewController.swift */; };
@@ -35,6 +35,10 @@
 		D65547D01DCE894C004882FA /* historical.png in Resources */ = {isa = PBXBuildFile; fileRef = D65547CC1DCE894C004882FA /* historical.png */; };
 		D65547D21DCE89F9004882FA /* attackStarted.png in Resources */ = {isa = PBXBuildFile; fileRef = D65547D11DCE89F9004882FA /* attackStarted.png */; };
 		D65547D41DCE8B71004882FA /* SelectPanicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65547D31DCE8B71004882FA /* SelectPanicViewController.swift */; };
+		D65547D61DCE969A004882FA /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65547D51DCE969A004882FA /* SurveyViewController.swift */; };
+		D65547D91DCE9B5F004882FA /* ResearchKitGeneral+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65547D71DCE9B5F004882FA /* ResearchKitGeneral+CoreDataProperties.swift */; };
+		D65547DA1DCE9B5F004882FA /* ResearchKitGeneral.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65547D81DCE9B5F004882FA /* ResearchKitGeneral.swift */; };
+		D65547DC1DCEAF7C004882FA /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D65547DB1DCEAF7C004882FA /* logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,7 +87,7 @@
 		D655473C1DCD6BFC004882FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D655473F1DCD6BFC004882FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D65547411DCD6BFC004882FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D65547471DCD6D53004882FA /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		D65547471DCD6D53004882FA /* logoOld.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoOld.png; sourceTree = "<group>"; };
 		D65547491DCD71D7004882FA /* WebWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebWorker.swift; sourceTree = "<group>"; };
 		D655474F1DCD7538004882FA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D65547511DCD7F26004882FA /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +109,10 @@
 		D65547CC1DCE894C004882FA /* historical.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = historical.png; sourceTree = "<group>"; };
 		D65547D11DCE89F9004882FA /* attackStarted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = attackStarted.png; sourceTree = "<group>"; };
 		D65547D31DCE8B71004882FA /* SelectPanicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPanicViewController.swift; sourceTree = "<group>"; };
+		D65547D51DCE969A004882FA /* SurveyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
+		D65547D71DCE9B5F004882FA /* ResearchKitGeneral+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ResearchKitGeneral+CoreDataProperties.swift"; path = "Stress Less/ResearchKitGeneral+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D65547D81DCE9B5F004882FA /* ResearchKitGeneral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResearchKitGeneral.swift; path = "Stress Less/ResearchKitGeneral.swift"; sourceTree = "<group>"; };
+		D65547DB1DCEAF7C004882FA /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +130,8 @@
 		D65547261DCD6BFC004882FA = {
 			isa = PBXGroup;
 			children = (
+				D65547D71DCE9B5F004882FA /* ResearchKitGeneral+CoreDataProperties.swift */,
+				D65547D81DCE9B5F004882FA /* ResearchKitGeneral.swift */,
 				D65547551DCDA3E2004882FA /* User+CoreDataProperties.swift */,
 				D65547561DCDA3E2004882FA /* User.swift */,
 				D65547311DCD6BFC004882FA /* Stress Less */,
@@ -167,12 +177,13 @@
 		D655474C1DCD71E9004882FA /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D65547DB1DCEAF7C004882FA /* logo.png */,
 				D65547D11DCE89F9004882FA /* attackStarted.png */,
 				D65547C91DCE894C004882FA /* callEmergency.png */,
 				D65547CA1DCE894C004882FA /* calmingTechniques.png */,
 				D65547CB1DCE894C004882FA /* finishLater.png */,
 				D65547CC1DCE894C004882FA /* historical.png */,
-				D65547471DCD6D53004882FA /* logo.png */,
+				D65547471DCD6D53004882FA /* logoOld.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -206,6 +217,7 @@
 				D65547BF1DCE1C8B004882FA /* ConsentDocument.swift */,
 				D65547C11DCE1CA7004882FA /* ConsentTask.swift */,
 				D65547C31DCE1CC4004882FA /* SurveyTask.swift */,
+				D65547D51DCE969A004882FA /* SurveyViewController.swift */,
 			);
 			name = "Research Kit";
 			sourceTree = "<group>";
@@ -302,13 +314,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D65547481DCD6D53004882FA /* logo.png in Resources */,
+				D65547481DCD6D53004882FA /* logoOld.png in Resources */,
 				D65547CD1DCE894C004882FA /* callEmergency.png in Resources */,
 				D65547D21DCE89F9004882FA /* attackStarted.png in Resources */,
 				D65547CE1DCE894C004882FA /* calmingTechniques.png in Resources */,
 				D65547D01DCE894C004882FA /* historical.png in Resources */,
 				D65547CF1DCE894C004882FA /* finishLater.png in Resources */,
 				D65547401DCD6BFC004882FA /* LaunchScreen.storyboard in Resources */,
+				D65547DC1DCEAF7C004882FA /* logo.png in Resources */,
 				D655473D1DCD6BFC004882FA /* Assets.xcassets in Resources */,
 				D655475D1DCDCAC6004882FA /* Main.storyboard in Resources */,
 			);
@@ -321,6 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D65547D91DCE9B5F004882FA /* ResearchKitGeneral+CoreDataProperties.swift in Sources */,
 				D655473B1DCD6BFC004882FA /* Stress_Less.xcdatamodeld in Sources */,
 				D65547C01DCE1C8B004882FA /* ConsentDocument.swift in Sources */,
 				D65547351DCD6BFC004882FA /* ViewController.swift in Sources */,
@@ -334,9 +348,11 @@
 				D65547D41DCE8B71004882FA /* SelectPanicViewController.swift in Sources */,
 				D65547581DCDA3E2004882FA /* User.swift in Sources */,
 				D65547521DCD7F26004882FA /* RegisterViewController.swift in Sources */,
+				D65547DA1DCE9B5F004882FA /* ResearchKitGeneral.swift in Sources */,
 				D65547501DCD7538004882FA /* LoginViewController.swift in Sources */,
 				D655475F1DCDCEE6004882FA /* PinViewController.swift in Sources */,
 				D65547C21DCE1CA7004882FA /* ConsentTask.swift in Sources */,
+				D65547D61DCE969A004882FA /* SurveyViewController.swift in Sources */,
 				D65547331DCD6BFC004882FA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

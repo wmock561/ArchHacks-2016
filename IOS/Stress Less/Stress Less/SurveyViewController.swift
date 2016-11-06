@@ -1,5 +1,5 @@
 //
-//  ConsentViewController.swift
+//  SurveyViewController.swift
 //  Stress Less
 //
 //  Created by Reiker Seiffe on 11/5/16.
@@ -10,82 +10,72 @@ import UIKit
 import ResearchKit
 import CoreData
 
-extension ConsentViewController : ORKTaskViewControllerDelegate {
+extension SurveyViewController : ORKTaskViewControllerDelegate {
     
     func taskViewController(taskViewController: ORKTaskViewController, didFinishWithReason reason: ORKTaskViewControllerFinishReason, error: NSError?) {
         //Handle results with taskViewController.result
         //print(taskViewController.result.stepResultForStepIdentifier("ConsentReviewStep")!.results![0].valueForKey("consented"))
         taskViewController.dismissViewControllerAnimated(true, completion: nil)
         
-        if(taskViewController.result.identifier == "ConsentTask"){
-            let result = taskViewController.result
-            if let stepResult = result.stepResultForStepIdentifier("ConsentReviewStep"),
-                let signatureResult = stepResult.results?.first as? ORKConsentSignatureResult {
-                let consentDocument = ConsentDocument
-                signatureResult.applyToDocument(consentDocument)
-                
-                consentDocument.makePDFWithCompletionHandler { (data, error) -> Void in
-                    let tempPath = NSTemporaryDirectory() as NSString
-                    let path = tempPath.stringByAppendingPathComponent("signature.pdf")
-                    data?.writeToFile(path, atomically: true)
-                    // print(path)
-                    /*self.documentInteractionController = UIDocumentInteractionController.init(URL: NSURL(fileURLWithPath: path))
-                     self.documentInteractionController?.delegate = self
-                     self.documentInteractionController?.presentPreviewAnimated(true)*/
-                }
-                if signatureResult.consented{
-                    /*let taskViewController2 = ORKTaskViewController(task: SurveyTask, taskRunUUID: nil)
-                    taskViewController2.delegate = self
-                    presentViewController(taskViewController2, animated: true, completion: nil)*/
-                    print("Signature submitted")
-                    
-                    dataWorker.saveConsent()
-                    
-                    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                    
-                    let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("TabBarController") as! UITabBarController
-                    self.presentViewController(nextViewController, animated:true, completion:nil)
-                }
-            }else{
-                print("Unable to get consent value")
-            }
-        }else{
-            //print(taskViewController.result.stepResultForStepIdentifier("questionStepOne")?.results![1].valueForKey("answer")!)
-            parseRKData(taskViewController)
-            
-        }
+        parseRKData(taskViewController)
+        
+        /*
+         if(taskViewController.result.identifier == "ConsentTask"){/*
+         let result = taskViewController.result
+         if let stepResult = result.stepResultForStepIdentifier("ConsentReviewStep"),
+         let signatureResult = stepResult.results?.first as? ORKConsentSignatureResult {
+         let consentDocument = ConsentDocument
+         signatureResult.applyToDocument(consentDocument)
+         
+         consentDocument.makePDFWithCompletionHandler { (data, error) -> Void in
+         let tempPath = NSTemporaryDirectory() as NSString
+         let path = tempPath.stringByAppendingPathComponent("signature.pdf")
+         data?.writeToFile(path, atomically: true)
+         // print(path)
+         /*self.documentInteractionController = UIDocumentInteractionController.init(URL: NSURL(fileURLWithPath: path))
+         self.documentInteractionController?.delegate = self
+         self.documentInteractionController?.presentPreviewAnimated(true)*/
+         }
+         if signatureResult.consented{
+         let taskViewController2 = ORKTaskViewController(task: SurveyTask, taskRunUUID: nil)
+         taskViewController2.delegate = self
+         presentViewController(taskViewController2, animated: true, completion: nil)
+         }
+         }else{
+         print("Unable to get consent value")
+         }*/
+         }else{
+         //print(taskViewController.result.stepResultForStepIdentifier("questionStepOne")?.results![1].valueForKey("answer")!)
+         parseRKData(taskViewController)
+         
+         }*/
     }
     
 }
 
-
-
-class ConsentViewController: UIViewController,UIDocumentInteractionControllerDelegate {
-    
-    
+class SurveyViewController: UIViewController,UIDocumentInteractionControllerDelegate {
     
     let dataWorker = CoreDataWorker()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     @IBAction func consentButton(sender: AnyObject) {
-        let taskViewController = ORKTaskViewController(task: ConsentTask, taskRunUUID: nil)
-        taskViewController.delegate = self
-        presentViewController(taskViewController, animated: true, completion: nil)
+        /*let taskViewController = ORKTaskViewController(task: ConsentTask, taskRunUUID: nil)
+         taskViewController.delegate = self
+         presentViewController(taskViewController, animated: true, completion: nil)*/
         
-        
-        /*let taskViewController2 = ORKTaskViewController(task: SurveyTask, taskRunUUID: nil)
+        let taskViewController2 = ORKTaskViewController(task: SurveyTask, taskRunUUID: nil)
         taskViewController2.delegate = self
-        presentViewController(taskViewController2, animated: true, completion: nil)*/
+        presentViewController(taskViewController2, animated: true, completion: nil)
     }
     
     func documentInteractionControllerViewControllerForPreview(controller: UIDocumentInteractionController) -> UIViewController {
@@ -234,7 +224,7 @@ class ConsentViewController: UIViewController,UIDocumentInteractionControllerDel
         print("master \(masterArray)")
         
         POSTData(masterArray)
- 
+        
         
     }
     
@@ -274,10 +264,12 @@ class ConsentViewController: UIViewController,UIDocumentInteractionControllerDel
                     print("successful")
                     //self.displayAlert()
                     dispatch_async(dispatch_get_main_queue()){
-                        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                        /*let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                         
                         let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("TabBarController") as! UITabBarController
-                        self.presentViewController(nextViewController, animated:true, completion:nil)
+                        self.presentViewController(nextViewController, animated:true, completion:nil)*/
+                        
+                        self.displayAlert()
                     }
                 }
             }
@@ -315,20 +307,20 @@ class ConsentViewController: UIViewController,UIDocumentInteractionControllerDel
             }
         }))
         self.presentViewController(alert, animated: true, completion: nil)
-    
+        
     }
     
     
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
 
 }
