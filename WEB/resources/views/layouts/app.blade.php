@@ -44,7 +44,7 @@
             <div class="mdl-layout--large-screen-only mdl-layout__header-row">
                <div class="mdl-cell mdl-cell--6-col">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="img/Asset_3.png" alt="LOGO" id="logo">
+                    <img src="img/Asset_5.png" alt="LOGO" id="logo" class="logo">
                 </a>
                 </div>
                 
@@ -54,8 +54,8 @@
                 <div class="holder">
 
                 @if (Auth::guest())
-                <div class="mdl-cell mdl-cell--1-col"><button onclick="window.location.href='/login'">Login</button></div>
-                <div class="mdl-cell mdl-cell--1-col"><button onclick="window.location.href='/register'">Register</button></div>
+                <div class="mdl-cell mdl-cell--1-col"><img src="img/login.png" alt="login" class="loginIcon"><button onclick="window.location.href='/login'">Login</button></div>
+                <div class="mdl-cell mdl-cell--1-col"><img src="img/register.png" alt="re" class="registerIcon"><button onclick="window.location.href='/register'">Register</button></div>
                 @else
                 <script>
                     window.location.href = '/index';
