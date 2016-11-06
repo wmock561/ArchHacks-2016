@@ -245,6 +245,7 @@
                     
                     <script>
                         $("#resetGraphs").click(function () {
+                            $('#chartHolder').show();
                             $("#careNetwork").click();
                         });
                     </script>
