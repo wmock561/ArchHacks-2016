@@ -9,7 +9,7 @@
 
         var masterDataArray = new Array();
 
-        masterDataArray.push(['Symptom', 'Frequency']);
+        masterDataArray.push(['Symptom', 'Frequency', ]);
         
         @foreach($array['data'] as $chartData)
             masterDataArray.push([ '{{ $chartData->symptom }}', {{ (int)$chartData->count }} ]);
