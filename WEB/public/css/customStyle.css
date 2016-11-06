@@ -130,3 +130,14 @@ div.gTitle {
 #my_popup button{
     margin: 0 auto;
 }
+
+#careNetworkRef {
+padding: 0px;
+}
+.noDot {
+width: 250px;
+}
+.noDot li {
+padding: 10px 20px;
+font-size: 20px;
+}
