@@ -75,10 +75,10 @@
         }
         
         var minDate = new Date();
-        minDate.setDate(date[0].getDate()-1);
+        minDate.setDate(date[0].getDate()-5);
         
         var maxDate = new Date();
-        maxDate.setDate(date[date.length-1].getDate()+1);
+        maxDate.setDate(date[date.length-1].getDate()+5);
         
         console.log(data);
         
