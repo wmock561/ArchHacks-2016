@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Survey;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -19,6 +20,10 @@ class SharingController extends Controller
     }
 
     public function revokeAccess(Request $request){
-    	dd($request);
+    	//dd($request);
+    	$survey = Survey::find($request->input('survey_id'));
+    	$survey->users()->detach($request->input('user_id'));
+
+    	return redirect('/index');
     }
 }
