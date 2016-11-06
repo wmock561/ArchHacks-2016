@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
 
     <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.blue-light_green.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -17,6 +18,10 @@
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/css/customStyles.css">
+    
+
 
     <!-- Scripts -->
     <script>
@@ -31,28 +36,22 @@
 </head>
 
 <body>
-    <div id="app">
+    <div id="app" >
         <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
+            
+            <div class="mdl-layout--large-screen-only mdl-layout__header-row headerSize"></div>
 
             <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+               <div class="mdl-cell mdl-cell--6-col">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="img/Asset_3.png" alt="LOGO" id="logo" height="96.3px" width="126.6px">
+                    <img src="img/Asset_3.png" alt="LOGO" id="logo">
                 </a>
-            </div>
+                </div>
+                
+                <div class="mdl-cell mdl-cell--5-col"></div>
 
-            <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-
-
-                <div class="mdl-cell mdl-cell--1-col"></div>
-                <div class="mdl-cell mdl-cell--1-col"></div>
-                <div class="mdl-cell mdl-cell--1-col"></div>
-                <div class="mdl-cell mdl-cell--1-col"></div>
-                <div class="mdl-cell mdl-cell--1-col"></div>
-                <div class="mdl-cell mdl-cell--1-col"></div>
-                <div class="mdl-cell mdl-cell--1-col"></div>
-                <div class="mdl-cell mdl-cell--1-col"></div>
-                <div class="mdl-cell mdl-cell--1-col"></div>
-                <div class="mdl-cell mdl-cell--1-col"></div>
+            
+                <div class="holder">
 
                 @if (Auth::guest())
                 <div class="mdl-cell mdl-cell--1-col"><button onclick="window.location.href='/login'">Login</button></div>
@@ -62,10 +61,15 @@
                     window.location.href = '/index';
                 </script>
                 @endif
+                
+                </div> 
 
             </div>
+            
+            <div class="mdl-layout--large-screen-only mdl-layout__header-row headerSize"></div>
 
         </header>
+
 
         @yield('content')
     </div>
