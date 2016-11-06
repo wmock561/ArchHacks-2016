@@ -24,7 +24,6 @@
 	<br>
 	<div class="mdl-cell mdl-cell--12-col">
 	@if (count($mySurveys) > 0)
-		{{ count($mySurveys) }}
 	<p>The following people have access to the following surveys.  At any time, you may revoke their access to your personal information.</p>
 	<ul>
 		@foreach ($mySurveys as $survey)
