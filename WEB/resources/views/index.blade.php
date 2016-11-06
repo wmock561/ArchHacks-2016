@@ -251,7 +251,7 @@
                     
                     <script>
                         $("#clearDiv").click(function () {
-                            $('#chartHolder').empty();
+                            $('#chartHolder').hide();
                         });
                     </script>
 
