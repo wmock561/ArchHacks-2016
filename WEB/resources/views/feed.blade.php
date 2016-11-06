@@ -22,7 +22,7 @@
                     <th>Age</th>
                 </tr>
                 <tr>
-                    <td>$survey->question1_answers[0]->answer</td>
+                    <td>{{$survey->question1_answers[0]->answer}}</td>
                     <td>Smith</td>
                     <td>50</td>
                 </tr>
