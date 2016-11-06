@@ -23,7 +23,7 @@
 
         data.addRow(['other', {{ (int)$array['other']['count'] }}]);
         
-        console.log(data);
+        var calmingColors = ["#E6EE9C", "#DCE775", "#D4E157", "#CDDC39", "#C0CA33", "#AFB42B", "#9E9D24", "#827717"];
 
         var options = {
             title: 'Calming Techniques',
@@ -34,7 +34,9 @@
             },
             vAxis: {
                 title: 'Techniques'
-            }
+            },
+            
+            colors: calmingColors;
         };
 
         var chart = new google.visualization.BarChart(document.getElementById('chart5'));

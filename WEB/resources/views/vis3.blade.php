@@ -26,10 +26,11 @@
 
         data.addRow(['other', {{ (int)$array['other'] }}]);
         
-        console.log(data);
+        var causeColors = ["#C5E1A5", "#AED581", "#9CCC65", "#8BC34A", "#7CB342", "#689F38", "#558B2F", "#33691E"];
 
         var options = {
-            title: 'Cause'
+            title: 'Cause',
+            colors: causeColors
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('chart3'));

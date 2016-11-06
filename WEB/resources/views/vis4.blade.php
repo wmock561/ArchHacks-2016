@@ -24,7 +24,7 @@
 
         data.addRow(['other', {{ (int)$array['other']['count'] }}]);
         
-        console.log(data);
+        var symptomColors = ["#FFE082", "#FFD54F", "#FFCA28", "#FFC107", "#FFB300", "#FFA000", "#FF8F00", "#FF6F00"];
 
         var options = {
             title: 'Symptom',
@@ -35,7 +35,8 @@
             },
             vAxis: {
                 title: 'Symptoms'
-            }
+            },
+            colors: symptomColors;
         };
 
         var chart = new google.visualization.BarChart(document.getElementById('chart4'));
