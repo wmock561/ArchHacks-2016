@@ -42,7 +42,7 @@ Route::get('/vis3', 'GraphDataController@triggerChart');
 
 Route::get('/vis4', 'GraphDataController@symptomChart');
 
-Route::get('/vis4', 'GraphDataController@calmingChart');
+Route::get('/vis5', 'GraphDataController@calmingChart');
 
 Auth::routes();
 

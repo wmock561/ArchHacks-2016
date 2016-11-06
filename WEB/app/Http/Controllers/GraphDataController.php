@@ -142,6 +142,6 @@ class GraphDataController extends Controller
         $array["other"] = $otherArray;
     	$array["data"] = $good;
     	$array["count"] = $count;
-        return view('vis4', compact('array'));
+        return view('vis5', compact('array'));
     }
 }
