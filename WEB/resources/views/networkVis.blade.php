@@ -1,4 +1,4 @@
-script type="text/javascript">
+<script type="text/javascript">
     google.charts.load('current', {packages: ['corechart', 'bar']});
     google.charts.setOnLoadCallback(drawChart);
 
@@ -38,9 +38,9 @@ script type="text/javascript">
             colors: calmingColors
         };
 
-        var chart = new google.visualization.BarChart(document.getElementById('chart5'));
+        var chart = new google.visualization.BarChart(document.getElementById('chart6'));
 
         chart.draw(data, options);
     }
 </script>
-<div id="chart5" style="width: 900px; height: 500px"></div>
+<div id="chart6" style="width: 900px; height: 500px"></div>
