@@ -74,6 +74,12 @@
             data.addRow([id[i], date[i], timeofDay[i], severity[i], duration[i]]);
         }
         
+        var minDate = new Date();
+        minDate.setDate(date[0].getDate()-1);
+        
+        var maxDate = new Date();
+        maxDate.setDate(date[date.length-1].getDate()+1);
+        
         console.log(data);
         
 
@@ -81,7 +87,11 @@
             title: 'Correlation between Date, Time of Day, duration and severity of Panic Attacks ',
             hAxis: {
                 title: 'Date',
-                format: 'M/d/yy'
+                format: 'M/d/yy',
+                viewWindow: {
+                    min: minDate,
+                    max: maxDate
+                }
             },
             vAxis: {
                 title: 'Time of Day'
