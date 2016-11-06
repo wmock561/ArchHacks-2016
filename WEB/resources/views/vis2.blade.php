@@ -1,7 +1,5 @@
 <script type="text/javascript">
-    google.charts.load('current', {
-        'packages': ['corechart']
-    });
+    google.charts.load('current', {'packages': ['corechart']});
     google.charts.setOnLoadCallback(getData);
     
     function getData(){
@@ -33,9 +31,11 @@
         
         masterDataArray.push(['other',chartData.data[chartData.data.length-1]]);
         
-        
+        console.log(masterDataArray);
 
         var masterData = google.visualization.arrayToDataTable([masterDataArray]);
+        
+        console.log(masterData);
 
         var options = {
             title: 'Location'
