@@ -52,7 +52,7 @@
         
             timeofDay.push();
             severity.push();
-            duration.push();*/
+            duration.push();
 
         @endforeach
 
