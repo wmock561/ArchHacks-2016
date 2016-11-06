@@ -164,6 +164,8 @@
                     </aside>
 
                     <div id="chartHolder">
+                        
+                        <img class="titleIcon" src="img/timing.png" alt="" /> <div class="gTitle">Timing and Duration</div>
 
                         <div id="chartDiv1"></div>
 
@@ -174,6 +176,8 @@
                             <button id="yearButton1" class="chartNavButton">Year</button>
                             <button id="allButton1" class="chartNavButton">All</button>
                         </div>-->
+                        
+                        <img class="titleIcon" src="img/location.png" alt="" /> <div class="gTitle">Location</div>
 
                         <div id="chartDiv2"></div>
 
@@ -184,6 +188,8 @@
                             <button id="yearButton2" class="chartNavButton">Year</button>
                             <button id="allButton2" class="chartNavButton">All</button>
                         </div>-->
+                        
+                        <img class="titleIcon" src="img/trigger.png" alt="" /> <div class="gTitle">Cause</div>
 
                         <div id="chartDiv3"></div>
 
@@ -194,6 +200,8 @@
                             <button id="yearButton3" class="chartNavButton">Year</button>
                             <button id="allButton3" class="chartNavButton">All</button>
                         </div>-->
+                        
+                        <img class="titleIcon" src="img/symptoms.png" alt="" /> <div class="gTitle">Symptoms</div>
 
                         <div id="chartDiv4"></div>
 
@@ -204,6 +212,8 @@
                             <button id="yearButton4" class="chartNavButton">Year</button>
                             <button id="allButton4" class="chartNavButton">All</button>
                         </div>-->
+                        
+                        <img class="titleIcon" src="img/relax.png" alt="" /> <div class="gTitle">Calming Techniques</div>
 
                         <div id="chartDiv5"></div>
 

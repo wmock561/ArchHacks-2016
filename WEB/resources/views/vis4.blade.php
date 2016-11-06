@@ -27,7 +27,6 @@
         var symptomColors = ["#FFE082", "#FFD54F", "#FFCA28", "#FFC107", "#FFB300", "#FFA000", "#FF8F00", "#FF6F00"];
 
         var options = {
-            title: 'Symptom',
             bars: 'horizontal',
             hAxis: {
                 title: 'Count',

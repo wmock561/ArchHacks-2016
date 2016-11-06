@@ -57,42 +57,60 @@ img.logoutIcon {
     font-size: 14px;
 }
 
-.login button, .register button {
-color: #FFFFFF;
-font-size: 14px;
-text-decoration: underline;
-font-weight: 500;
-font-family: 'Roboto', 'Helvetica', sans-serif;
-background-color: transparent;
-background-repeat:no-repeat;
-border: none;
-cursor:pointer;
-overflow: hidden;
-outline:none;
+.login button,
+.register button {
+    color: #FFFFFF;
+    font-size: 14px;
+    text-decoration: underline;
+    font-weight: 500;
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
 }
 
-.login, .register {
-position: absolute;
-top: 25px;
-right: 10px;
+.login,
+.register {
+    position: absolute;
+    top: 25px;
+    right: 10px;
 }
 
 .login {
-right: 100px;
+    right: 100px;
 }
 
-img.loginIcon, img.registerIcon {
-height: 30px;
+img.loginIcon,
+img.registerIcon {
+    height: 30px;
 }
 
 img.logo {
-height: 45px;
-width: auto;
+    height: 45px;
+    width: auto;
 }
 
 .padder {
-padding-top: 30px;
-font-family: Raleway,sans-serif;
-width: 1170px;
-margin: auto;
+    padding-top: 30px;
+    font-family: Raleway, sans-serif;
+    width: 1170px;
+    margin: auto;
+}
+
+img.titleIcon {
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    padding: 0px 15px 5px 15px;
+}
+
+div.gTitle {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: .02em;
+    display: inline-block;
 }

@@ -26,7 +26,6 @@
         var calmingColors = ["#E6EE9C", "#DCE775", "#D4E157", "#CDDC39", "#C0CA33", "#AFB42B", "#9E9D24", "#827717"];
 
         var options = {
-            title: 'Calming Techniques',
             bars: 'horizontal',
             hAxis: {
                 title: 'Count',
