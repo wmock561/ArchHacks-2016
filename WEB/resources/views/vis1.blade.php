@@ -54,10 +54,10 @@
             
             console.log(parseInt(sev));
         
-            //severity.push({{ $survey->question5_answers[0]->answer }});
+            //severity.push($survey->question5_answers[0]->answer);
         
             //push duration
-            //duration.push({{ $survey->question6_answers[0]->answer }});
+            //duration.push($survey->question6_answers[0]->answer);
         
 
         @endforeach
