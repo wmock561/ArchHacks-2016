@@ -5,8 +5,7 @@
         <h4>{{ $survey->user->personalInformation->firstName }} {{ $survey->user->personalInformation->lastName }} shared data with you.</h4> Summary of data here? Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Nostrud in laboris labore nisi amet do dolor eu fugiat consectetur elit cillum esse.
     </div>
     <div class="mdl-card__actions">
-        <a href="#" class="mdl-button">View Now</a>
-        <button class="my_popup_open">Open popup</button>
+        <a class="mdl-button my_popup_open">View Now ></a>
         <!--can open a overlay with info about that survey?-->
     </div>
 
