@@ -49,11 +49,11 @@
             var a = hms.split(':'); // split it at the colons
 
             // minutes are worth 60 seconds. Hours are worth 60 minutes.
-            var seconds = ((+a[0]) * 60 * 60 + (+a[1]) * 60 + (+a[2]));
+            var finalTimeArray = [parseInt(a[0]),parseInt(a[1]),parseInt(a[2])];
         
-            console.log(seconds);//THREE
+            console.log(finalTimeArray);
         
-            timeofDay.push(parseInt(seconds));
+            timeofDay.push(finalTimeArray);
         
             //push for severity
             
