@@ -46,7 +46,7 @@
             // minutes are worth 60 seconds. Hours are worth 60 minutes.
             var seconds = ((+a[0]) * 60 * 60 + (+a[1]) * 60 + (+a[2]));
         
-            timeofDay.push((int)seconds);
+            timeofDay.push(parseInt(seconds));
         
             //push for severity
         
