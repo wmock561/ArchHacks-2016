@@ -224,7 +224,7 @@
                     <script>
                         $("#clearDiv").click(function () {
                             $('#chartHolder').hide();
-                            //$('#networkChartDiv').load('/networkVis');//LOAD NETWORK CHART
+                            $('#networkChartDiv').load('/networkVis');//LOAD NETWORK CHART
                             $('#networkChartDiv').show();
                         });
                     </script>

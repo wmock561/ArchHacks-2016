@@ -2,44 +2,103 @@
     google.charts.load('current', {packages: ['corechart', 'bar']});
     google.charts.setOnLoadCallback(drawChart);
 
-    function drawChart() {
-        
-        
+google.charts.load('current', {
+        'packages': ['corechart']
+    });
+    google.charts.setOnLoadCallback(drawSeriesChart);
+
+    function drawSeriesChart() {
+
         var data = new google.visualization.DataTable();
 
-        data.addColumn('string', 'Technique');
-        data.addColumn('number', 'Frequency');
+        data.addColumn('string', 'ID');
+        data.addColumn('date', 'Date');
+        data.addColumn('timeofday', 'Time of Day');
+        data.addColumn('number', 'Severity');
+        data.addColumn('number', 'Duration');
 
-        var location = new Array();
-        var frequency = new Array();
+        var id = new Array();
+        var date = new Array();
+        var timeofDay = new Array();
+        var severity = new Array();
+        var duration = new Array();
+
+        @foreach($mySurveys as $survey)
         
-        @foreach($array['data'] as $chartData)
-            data.addRow(['{{ $chartData->technique }}', {{ (int)$chartData->count }}]);
+            //PARSE DATE AND TIME INTO 2 HERE
+        
+            var up = '{{ $survey->created_at }}';
+            
+            var parsed = up.split(' ');
+        
+            var dt = parsed[0];
+            var time1 = parsed[1];
+        
+            id.push(dt);//can be string so good to leave
+            
+            //date manipulation here
+            
+            var dateArray = dt.split('-');
+        
+            var finalDateArray = new Date(parseInt(dateArray[0]),parseInt(dateArray[1])-1,parseInt(dateArray[2]));
+        
+            date.push(finalDateArray);
+        
+            //time manipulation here
+        
+            var hms =  time1;  // your input string
+            var a = hms.split(':'); // split it at the colons
+
+            // minutes are worth 60 seconds. Hours are worth 60 minutes.
+            var finalTimeArray = [parseInt(a[0]),parseInt(a[1]),parseInt(a[2])];
+        
+            timeofDay.push(finalTimeArray);
+        
+            //push for severity
+        
+            severity.push({{$survey->question5_answers[0]->answer}});
+        
+            //push duration
+        
+            duration.push({{$survey->question6_answers[0]->answer}});
+        
+
         @endforeach
-        /*for (i = 0; i < chartData.data.length; i++) {
 
-            masterDataArray.push([chartData.data[i].answer, parseInt(chartData.data[i].count]));
-        }*/
-
-        data.addRow(['other', {{ (int)$array['other']['count'] }}]);
+        for (i = 0; i < id.length; i++) {
+            data.addRow([id[i], date[i], timeofDay[i], severity[i], duration[i]]);
+        }
         
-        var calmingColors = ["#E6EE9C", "#DCE775", "#D4E157", "#CDDC39", "#C0CA33", "#AFB42B", "#9E9D24", "#827717"];
+        var minDate = new Date();
+        minDate.setDate(date[0].getDate()-5);
+        
+        var maxDate = new Date();
+        maxDate.setDate(date[date.length-1].getDate()+5);
+        
 
         var options = {
-            bars: 'horizontal',
+            title: 'Correlation between Date, Time of Day, duration and severity of Panic Attacks FROM NETWORK',
             hAxis: {
-                title: 'Count',
-                //minValue: 0
+                format: 'M/d/yy',
+                viewWindow: {
+                    min: minDate,
+                    max: maxDate
+                }
             },
             vAxis: {
-                title: 'Techniques'
+                title: 'Time of Day'
             },
-            
-            colors: calmingColors
+            bubble: {
+                textStyle: {
+                    fontSize: 11
+                }
+            },
+            colorAxis: {
+                colors: ["#FFC107", "#F44336"]
+            }
         };
 
-        var chart = new google.visualization.BarChart(document.getElementById('chart6'));
-
+        var chart = new google.visualization.BubbleChart(document.getElementById('chart6'));
         chart.draw(data, options);
     }
 </script>
