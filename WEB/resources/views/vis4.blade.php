@@ -36,7 +36,7 @@
             vAxis: {
                 title: 'Symptoms'
             },
-            colors: symptomColors;
+            colors: symptomColors
         };
 
         var chart = new google.visualization.BarChart(document.getElementById('chart4'));

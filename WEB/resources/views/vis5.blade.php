@@ -36,7 +36,7 @@
                 title: 'Techniques'
             },
             
-            colors: calmingColors;
+            colors: calmingColors
         };
 
         var chart = new google.visualization.BarChart(document.getElementById('chart5'));
