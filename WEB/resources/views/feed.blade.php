@@ -14,6 +14,8 @@
     <div id="my_popup">
 
         <div class="popupStyle">
+           <h3>Test</h3>
+           <p>Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Nostrud in laboris labore nisi amet do dolor eu fugiat consectetur elit cillum esse.</p>
             <button class="my_popup_close">Close</button>
         </div>
 
