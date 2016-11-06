@@ -49,6 +49,10 @@ Route::get('/settings', function(){
 	return view('settings', compact('mySurveys'));
 });
 
+Route::post('/revokeAccess', function(Request $request){
+	dd($request);
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
