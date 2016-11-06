@@ -40,9 +40,7 @@ Route::get('/vis2', 'GraphDataController@locationChart');
 
 Route::get('/vis3', 'GraphDataController@triggerChart');
 
-Route::get('/vis4', function () {
-    return view('vis4');
-});
+Route::get('/vis4', 'GraphDataController@symptomChart');
 
 Route::get('/vis5', function () {
     return view('vis5');
