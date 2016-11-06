@@ -145,12 +145,16 @@
                             <span class="mdl-list__item-primary-content">
                                 <ul class="noDot">
                                     <li>
-                                        <i class="material-icons mdl-list__item-icon">person</i>{{ $mySurveys[0]->user->personalInformation->firstName }} {{ $mySurveys[0]->user->personalInformation->lastName }}
+                                       @if ( {{ isset($mySurveys) }} )
+                                            <i class="material-icons mdl-list__item-icon">person</i>{{ $mySurveys[0]->user->personalInformation->firstName }} {{ $mySurveys[0]->user->personalInformation->lastName }}
+                                        @endif
                                     </li>
 
                                     @foreach ($surveys as $survey)
                                     <li>
-                                        <i class="material-icons mdl-list__item-icon">person</i>{{ $survey->user->personalInformation->firstName }} {{ $survey->user->personalInformation->lastName }}
+                                        @if ( {{ isset($survey) }} )
+                                            <i class="material-icons mdl-list__item-icon">person</i>{{ $survey->user->personalInformation->firstName }} {{ $survey->user->personalInformation->lastName }}
+                                        @endif
                                     </li>
                                     @endforeach
                                 </ul>
