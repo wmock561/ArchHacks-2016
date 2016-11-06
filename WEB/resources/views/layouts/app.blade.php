@@ -54,8 +54,8 @@
                 <div class="holder">
 
                 @if (Auth::guest())
-                <div class="mdl-cell mdl-cell--1-col"><img src="img/login.png" alt="login" class="loginIcon"><button onclick="window.location.href='/login'">Login</button></div>
-                <div class="mdl-cell mdl-cell--1-col"><img src="img/register.png" alt="re" class="registerIcon"><button onclick="window.location.href='/register'">Register</button></div>
+                <div class="mdl-cell mdl-cell--1-col login"><img src="img/login.png" alt="login" class="loginIcon"><button onclick="window.location.href='/login'">Login</button></div>
+                <div class="mdl-cell mdl-cell--1-col register"><img src="img/register.png" alt="re" class="registerIcon"><button onclick="window.location.href='/register'">Register</button></div>
                 @else
                 <script>
                     window.location.href = '/index';
