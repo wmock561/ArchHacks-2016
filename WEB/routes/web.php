@@ -38,9 +38,7 @@ Route::get('/vis1', function () {
 
 Route::get('/vis2', 'GraphDataController@locationChart');
 
-Route::get('/vis3', function () {
-    return view('vis3');
-});
+Route::get('/vis3', 'GraphDataController@triggerChart');
 
 Route::get('/vis4', function () {
     return view('vis4');
