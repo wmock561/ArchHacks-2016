@@ -1,5 +1,7 @@
 
+<div class="mdl-cell mdl-cell--12-col">
 	<form action="#">
+
 	  <div class="mdl-textfield mdl-js-textfield">
 	    <input class="mdl-textfield__input" type="text" id="sample1">
 	    <label class="mdl-textfield__label" for="sample1">Email</label>
@@ -18,7 +20,10 @@
 	    <input type="submit" name="" class='mdl-textfield__input'>
 	  </div>
 	</form>
+	</div>
 	<br>
+	<div class="mdl-cell mdl-cell--12-col">
 	<ul>
 		<li>People who have acces</li>
 	</ul>
+	</div>
