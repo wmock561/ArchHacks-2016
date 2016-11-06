@@ -1,5 +1,5 @@
 <script type="text/javascript">
-    google.charts.load('current', {
+   google.charts.load('current', {
         'packages': ['corechart']
     });
     google.charts.setOnLoadCallback(drawSeriesChart);
@@ -20,71 +20,61 @@
         var severity = new Array();
         var duration = new Array();
 
-        @
-        foreach($mySurveys as $survey)
+        @foreach($mySurveys as $survey)
+        
+            //PARSE DATE AND TIME INTO 2 HERE
+        
+            var up = '{{ $survey->created_at }}';
+            
+            var parsed = up.split(' ');
+        
+            var dt = parsed[0];
+            var time1 = parsed[1];
+        
+            id.push(dt);//can be string so good to leave
+            
+            //date manipulation here
+            
+            var dateArray = dt.split('-');
+        
+            var finalDateArray = new Date(parseInt(dateArray[0]),parseInt(dateArray[1])-1,parseInt(dateArray[2]));
+        
+            date.push(finalDateArray);
+        
+            //time manipulation here
+        
+            var hms =  time1;  // your input string
+            var a = hms.split(':'); // split it at the colons
 
-        //PARSE DATE AND TIME INTO 2 HERE
+            // minutes are worth 60 seconds. Hours are worth 60 minutes.
+            var finalTimeArray = [parseInt(a[0]),parseInt(a[1]),parseInt(a[2])];
+        
+            timeofDay.push(finalTimeArray);
+        
+            //push for severity
+        
+            severity.push({{$survey->question5_answers[0]->answer}});
+        
+            //push duration
+        
+            duration.push({{$survey->question6_answers[0]->answer}});
+        
 
-        var up = '{{ $survey->created_at }}';
-
-        var parsed = up.split(' ');
-
-        var dt = parsed[0];
-        var time1 = parsed[1];
-
-        id.push(dt); //can be string so good to leave
-
-        //date manipulation here
-
-        var dateArray = dt.split('-');
-
-        var finalDateArray = new Date(parseInt(dateArray[0]), parseInt(dateArray[1]) - 1, parseInt(dateArray[2]));
-
-        date.push(finalDateArray);
-
-        //time manipulation here
-
-        var hms = time1; // your input string
-        var a = hms.split(':'); // split it at the colons
-
-        // minutes are worth 60 seconds. Hours are worth 60 minutes.
-        var finalTimeArray = [parseInt(a[0]), parseInt(a[1]), parseInt(a[2])];
-
-        timeofDay.push(finalTimeArray);
-
-        //push for severity
-
-        severity.push({
-            {
-                $survey - > question5_answers[0] - > answer
-            }
-        });
-
-        //push duration
-
-        duration.push({
-            {
-                $survey - > question6_answers[0] - > answer
-            }
-        });
-
-
-        @
-        endforeach
+        @endforeach
 
         for (i = 0; i < id.length; i++) {
             data.addRow([id[i], date[i], timeofDay[i], severity[i], duration[i]]);
         }
-
+        
         var minDate = new Date();
-        minDate.setDate(date[0].getDate() - 5);
-
+        minDate.setDate(date[0].getDate()-5);
+        
         var maxDate = new Date();
-        maxDate.setDate(date[date.length - 1].getDate() + 5);
-
+        maxDate.setDate(date[date.length-1].getDate()+5);
+        
 
         var options = {
-            title: 'Correlation between Date, Time of Day, duration and severity of Panic Attacks FROM NETWORK',
+            title: 'Correlation between Date, Time of Day, duration and severity of Panic Attacks ',
             hAxis: {
                 format: 'M/d/yy',
                 viewWindow: {
@@ -109,4 +99,4 @@
         chart.draw(data, options);
     }
 </script>
-<div id="chart6" style="width: 900px; height: 500px"></div>
+    <div id="chart6" style="width: 900px; height: 500px"></div>
