@@ -13,7 +13,7 @@
 
         masterDataArray.push(['Location', 'Frequency']);
         
-        @foreach($array->data as $chartData)
+        @foreach($array["data"] as $chartData)
 
             masterDataArray.push('{{ $chartData->answer }}', {{ (int)$chartData->count }});
         
