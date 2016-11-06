@@ -90,7 +90,7 @@
                 </section>
             </div>-->
             <div class="mdl-layout__tab-panel is-active" id="feedRef">
-                <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="feedSection">
+                <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="feedSection" style="margin-bottom:20px;">
                     <script>
                         $(document).ready(function () {
                             $('#feedSection').load('/feed');
@@ -231,7 +231,7 @@
 
                 </section>
             </div>
-            <div class="mdl-layout__tab-panel" id="settingsRef" style="margin-top:40px;">
+            <div class="mdl-layout__tab-panel" id="settingsRef">
                 <section class="section--center mdl-grid mdl-grid--no-spacing" id="settingsSection">
                 </section>
             </div>
