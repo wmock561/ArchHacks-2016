@@ -2,9 +2,9 @@
       google.charts.load('current', {
         'packages': ['corechart']
     });
-    google.charts.setOnLoadCallback(drawChart);
+    google.charts.setOnLoadCallback(drawPieChart);
 
-    function drawChart(chartData) {
+    function drawPieChart(chartData) {
 
         var location = new Array();
         var numCount = new Array();
