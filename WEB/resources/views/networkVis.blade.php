@@ -74,7 +74,7 @@
         
 
         var options = {
-            title: 'Correlation between Date, Time of Day, duration and severity of Panic Attacks',
+            title: 'Correlation between Date, Time of Day, duration and severity of Panic Attacks for {{$survey->user->personalInformation->firstName}} {{$survey->user->personalInformation->firstName}}',
             hAxis: {
                 format: 'M/d/yy',
                 viewWindow: {
