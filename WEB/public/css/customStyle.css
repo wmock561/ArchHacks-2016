@@ -1,0 +1,191 @@
+.inheritWidth {
+    width: inherit;
+}
+
+#chartHolder {
+    padding-left: 25px;
+    height: 600px;
+    overflow: scroll;
+}
+
+#selectionDiv1 {
+    padding-left: 25%;
+}
+
+#selectionDiv2 {
+    padding-left: 25%;
+}
+
+#selectionDiv3 {
+    padding-left: 25%;
+}
+
+#careNetworkSection {
+    padding-bottom: 40px;
+}
+
+.chartNavButton {
+    margin-left: 25px;
+}
+
+.headerSize {
+    height: 20px;
+}
+
+img.logo {
+    height: 45px;
+}
+
+ul.noDot {
+    list-style-type: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+img.logoutIcon {
+    height: 30px;
+}
+
+.logout {
+    position: absolute;
+    top: 25px;
+    right: 10px;
+}
+
+.logout a {
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+.login button,
+.register button {
+    color: #FFFFFF;
+    font-size: 12px;
+    text-decoration: underline;
+    font-weight: 500;
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}
+
+.login,
+.register {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+}
+
+.login {
+    right: 100px;
+}
+
+img.loginIcon,
+img.registerIcon {
+    height: 30px;
+}
+
+img.logo {
+    height: 45px;
+    width: auto;
+}
+
+.padder {
+    padding-top: 30px;
+    font-family: Raleway, sans-serif;
+    width: 1170px;
+    margin: auto;
+}
+
+img.titleIcon {
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    padding: 0px 15px 5px 15px;
+}
+
+div.gTitle {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: .02em;
+    display: inline-block;
+}
+
+#my_popup {
+    background-color: white;
+    text-align: center;
+    align-content: center;
+}
+
+#my_popup h3 {
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+#my_popup button {
+    margin: 0 auto;
+}
+
+#careNetworkRef {
+    padding: 0px;
+}
+
+.noDot {
+    width: 250px;
+}
+
+.noDot li {
+    padding: 10px 20px;
+    font-size: 20px;
+}
+.noDot a{
+    color: #222;
+}
+
+#chartHolder {
+    padding: 40px;
+}
+
+img.close {
+    height: 30px;
+    width: 30px;
+    top: 10px;
+    right: 10px;
+    position: absolute;
+    cursor: pointer;
+}
+
+thead {
+    border-bottom: 1px solid #d0d0d0;
+}
+
+#my_popup {
+    width: 600px;
+}
+
+table {
+    width: 550px;
+}
+
+th,
+td {
+    padding: 15px 5px;
+    display: table-cell;
+    text-align: left;
+    vertical-align: middle;
+    border-radius: 2px;
+}
+#settingsSubmit{
+    background-color: #0D47A1;
+    color: #FFFFFF;
+    font-weight: 500;
+    text-align: center;
+    margin: 50px 10px 20px 0px;
+    padding: 10px 5px;
+    border-radius: 5px;
+}
